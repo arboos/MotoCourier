@@ -18,7 +18,7 @@ public class PrometeoCop : MonoBehaviour
 {
 
     //CAR SETUP
-
+    
       [Space(20)]
       //[Header("CAR SETUP")]
       [Space(10)]
@@ -157,6 +157,10 @@ public class PrometeoCop : MonoBehaviour
       float RLWextremumSlip;
       WheelFrictionCurve RRwheelFriction;
       float RRWextremumSlip;
+      
+      Vector3 forwardTr;
+      Vector3 rightTr;
+      Vector3 leftTr;
 
     // Start is called before the first frame update
     void Start()
@@ -266,6 +270,9 @@ public class PrometeoCop : MonoBehaviour
     void Update()
     {
 
+      forwardTr = transform.position + transform.forward;
+      rightTr = transform.position + transform.right;
+      leftTr = transform.position - transform.right;
       //CAR DATA
 
       // We determine the speed of the car.
@@ -287,6 +294,11 @@ public class PrometeoCop : MonoBehaviour
       In this part of the code we specify what the car needs to do if the user presses W (throttle), S (reverse),
       A (turn left), D (turn right) or Space bar (handbrake).
       */
+
+
+      
+      
+      
       if (useTouchControls && touchControlsSetup){
 
         if(throttlePTI.buttonPressed){
@@ -327,7 +339,7 @@ public class PrometeoCop : MonoBehaviour
 
       }else{
 
-        if(Input.GetKey(KeyCode.W)){
+        /*if(Input.GetKey(KeyCode.W)){
           CancelInvoke("DecelerateCar");
           deceleratingCar = false;
           GoForward();
@@ -361,7 +373,7 @@ public class PrometeoCop : MonoBehaviour
         }
         if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f){
           ResetSteeringAngle();
-        }
+        }*/
 
       }
 
