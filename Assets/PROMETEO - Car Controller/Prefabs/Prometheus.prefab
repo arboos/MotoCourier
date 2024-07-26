@@ -63,8 +63,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4466888475822015697}
   - {fileID: 6399581921715410368}
@@ -110,14 +110,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fefceefe666bb4682b272ec8c5bdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 120
-  maxReverseSpeed: 45
-  accelerationMultiplier: 6
-  maxSteeringAngle: 35
-  steeringSpeed: 0.5
+  maxSpeed: 190
+  maxReverseSpeed: 120
+  accelerationMultiplier: 10
+  maxSteeringAngle: 45
+  steeringSpeed: 1
   brakeForce: 450
-  decelerationMultiplier: 2
-  handbrakeDriftMultiplier: 5
+  decelerationMultiplier: 3
+  handbrakeDriftMultiplier: 10
   bodyMassCenter: {x: 0, y: 0, z: 0}
   frontLeftMesh: {fileID: 8649133034589738184}
   frontLeftCollider: {fileID: 2239677824950174677}
@@ -137,8 +137,9 @@ MonoBehaviour:
   useSounds: 0
   carEngineSound: {fileID: 0}
   tireScreechSound: {fileID: 0}
-  useTouchControls: 0
-  throttleButton: {fileID: 0}
+  useTouchControls: 1
+  throttleButton: {fileID: 4597129196982652262, guid: ba7adce0955ba9047b407c0d6b28fdd1,
+    type: 3}
   reverseButton: {fileID: 0}
   turnRightButton: {fileID: 0}
   turnLeftButton: {fileID: 0}
