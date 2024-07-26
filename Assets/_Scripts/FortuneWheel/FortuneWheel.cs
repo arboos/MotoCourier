@@ -19,9 +19,9 @@ public class FortuneWheel : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isSpin) 
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine(SpinWheel());
+            Spin();
         }
 
         /*if (Input.GetKeyDown(KeyCode.X))
@@ -78,9 +78,9 @@ public class FortuneWheel : MonoBehaviour
     private void setWin() 
     {
         int randomSector = getRandomPrize();
-        float maxAngel = 360f / prizes.Count * (randomSector + 1);
-        float minAngel = 360f / prizes.Count * randomSector;
-        randomAngle = Random.Range(minAngel + 8, maxAngel - 8);
+        float maxAngle = 360f / prizes.Count * (randomSector + 1);
+        float minAngle = 360f / prizes.Count * randomSector;
+        randomAngle = Random.Range(minAngle + 8, maxAngle - 8);
     }
 
     private int getRandomPrize()
@@ -90,7 +90,7 @@ public class FortuneWheel : MonoBehaviour
         {
             return getRandomPrize();
         }
-        Debug.Log(randomSector);
+        Debug.Log("WIN:" + randomSector);
         return randomSector;
     }
 
@@ -101,5 +101,12 @@ public class FortuneWheel : MonoBehaviour
         accelerationTime = Random.Range(0, 4f);
         numberOfSpins = Random.Range(2, 6);
     }
-
+    
+    public void Spin()
+    {
+        if (!isSpin)
+        {
+            StartCoroutine(SpinWheel());
+        }
+    }
 }
