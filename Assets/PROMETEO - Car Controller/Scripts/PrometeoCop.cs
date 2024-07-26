@@ -12,6 +12,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class PrometeoCop : MonoBehaviour
@@ -174,6 +175,8 @@ public class PrometeoCop : MonoBehaviour
       carRigidbody = gameObject.GetComponent<Rigidbody>();
       carRigidbody.centerOfMass = bodyMassCenter;
 
+      GetComponent<NavMeshAgent>().destination = playerCar.transform.position;
+      
       //Initial setup to calculate the drift value of the car. This part could look a bit
       //complicated, but do not be afraid, the only thing we're doing here is to save the default
       //friction values of the car wheels so we can set an appropiate drifting value later.
@@ -275,6 +278,9 @@ public class PrometeoCop : MonoBehaviour
       forwardTr = transform.position + transform.forward * 5f;
       rightTr = transform.position + transform.right * 5f;
       leftTr = transform.position - transform.right * 5f;
+      
+      GetComponent<NavMeshAgent>().destination = playerCar.transform.position;
+
       //CAR DATA
 
       // We determine the speed of the car.
