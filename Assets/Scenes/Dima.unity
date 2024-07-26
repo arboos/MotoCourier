@@ -1271,6 +1271,8 @@ MonoBehaviour:
   fortuneWheel: {fileID: 987273917}
   spinButton: {fileID: 1441998298}
   timerText: {fileID: 19938265}
+  canSpin: 0
+  hoursToNextSpin: 24
 --- !u!1 &1502730827
 GameObject:
   m_ObjectHideFlags: 0

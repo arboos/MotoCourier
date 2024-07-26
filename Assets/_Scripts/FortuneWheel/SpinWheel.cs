@@ -10,7 +10,9 @@ public class SpinWheel : MonoBehaviour
     public Text timerText;
 
     private DateTime nextSpinTime;
-    private bool canSpin;
+    public bool canSpin;
+
+    public int hoursToNextSpin = 3;
 
     private void Start()
     {
@@ -32,7 +34,7 @@ public class SpinWheel : MonoBehaviour
         fortuneWheel.Spin();
 
         // Обновляем время следующего возможного нажатия
-        nextSpinTime = DateTime.Now.AddHours(3);
+        nextSpinTime = DateTime.Now.AddHours(hoursToNextSpin);
         PlayerPrefs.SetString("NextSpinTime", nextSpinTime.ToString());
         PlayerPrefs.Save();
 
