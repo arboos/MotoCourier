@@ -16,6 +16,7 @@ using UnityEngine.UI;
 
 public class PrometeoCop : MonoBehaviour
 {
+  public Transform playerCar;
 
     //CAR SETUP
     
@@ -162,6 +163,8 @@ public class PrometeoCop : MonoBehaviour
       Vector3 rightTr;
       Vector3 leftTr;
 
+      public int pointIndex = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -269,10 +272,9 @@ public class PrometeoCop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-      forwardTr = transform.position + transform.forward;
-      rightTr = transform.position + transform.right;
-      leftTr = transform.position - transform.right;
+      forwardTr = transform.position + transform.forward * 5f;
+      rightTr = transform.position + transform.right * 5f;
+      leftTr = transform.position - transform.right * 5f;
       //CAR DATA
 
       // We determine the speed of the car.
@@ -377,10 +379,38 @@ public class PrometeoCop : MonoBehaviour
 
       }
 
+      float fD = Vector3.Distance(forwardTr, playerCar.transform.position);
+      float rD = Vector3.Distance(rightTr, playerCar.transform.position);
+      float lD = Vector3.Distance(leftTr, playerCar.transform.position);
+
+      
+      // print("FD: " + fD);
+      // print("RD: " +rD);
+      // print("LD: " +lD);
+      
+      if (fD < rD && fD < lD)
+      {
+        print("Forward");
+        CancelInvoke("DecelerateCar");
+        deceleratingCar = false;
+        GoForward();
+      }
+      
+      if (rD < fD)
+      {
+        print("Right");
+        TurnRight();
+      }
+      
+      else if (lD < fD)
+      {
+        print("Left");
+        TurnLeft();
+      }
+
 
       // We call the method AnimateWheelMeshes() in order to match the wheel collider movements with the 3D meshes of the wheels.
       AnimateWheelMeshes();
-
     }
 
     // This method converts the car speed data from float to string, and then set the text of the UI carSpeedText with this value.
@@ -783,4 +813,10 @@ public class PrometeoCop : MonoBehaviour
       }
     }
 
+    private void OnDrawGizmos()
+    {
+      Gizmos.DrawCube(forwardTr, Vector3.one/3f);
+      Gizmos.DrawCube(rightTr, Vector3.one/3f);
+      Gizmos.DrawCube(leftTr, Vector3.one/3f);
+    }
 }
