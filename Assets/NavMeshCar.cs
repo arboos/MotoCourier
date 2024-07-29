@@ -6,10 +6,9 @@ using UnityEngine.AI;
 
 public class NavMeshCar : MonoBehaviour
 {
-    [SerializeField] private Transform playerT;
 
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
         StartCoroutine(MoveTo());
     }
@@ -19,7 +18,7 @@ public class NavMeshCar : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            GetComponent<NavMeshAgent>().destination = playerT.position;
+            GetComponent<NavMeshAgent>().destination = GameManager.Instance.player.position;
         }
     }
 }
