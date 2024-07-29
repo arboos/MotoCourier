@@ -17,7 +17,7 @@ public class CopSpawner : MonoBehaviour
             spawnPoints.Add(spawnPointsParent.GetChild(i));
         }
         SortPointsToDistance();
-        StartCoroutine(Spawner());
+        StartCoroutine(Spawner()); 
     }
 
     public void SortPointsToDistance()

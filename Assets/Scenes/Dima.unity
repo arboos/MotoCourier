@@ -843,9 +843,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wheel: {fileID: 1754031146}
-  rotationSpeed: 800
-  rotationTimeMaxSpeed: 1
-  accelerationTime: 0.8
+  rotationSpeed: 600
+  rotationTimeMaxSpeed: 2
+  accelerationTime: 0.4
   numberOfSpins: 4
   randomOptionForSpin: 0
   prizes:
