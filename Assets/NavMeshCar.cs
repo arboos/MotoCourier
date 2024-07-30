@@ -7,8 +7,8 @@ using UnityEngine.AI;
 
 public class NavMeshCar : MonoBehaviour
 {
-
-    // Update is called once per frame
+    
+    
     void Awake()
     {
         StartCoroutine(MoveTo());
@@ -19,23 +19,34 @@ public class NavMeshCar : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            GetComponent<NavMeshAgent>().destination = GameManager.Instance.player.position;
+            GetComponent<NavMeshAgent>().destination = PlayerInfo.Instance.transform.position;
         }
     }
+    
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        print(0);
-        if (other.CompareTag("PlayerFront"))
+        if (other.gameObject.CompareTag("PlayerFront"))
         {
-            print(3);
+            DestroyCar();
+        }
+        
+        else if (other.gameObject.CompareTag("PlayerDamagable"))
+        {
+            DealDamageToPlayer();
             DestroyCar();
         }
     }
-
+    
+    
+    private void DealDamageToPlayer()
+    {
+        print("Try to deal damage");
+        PlayerInfo.Instance.DealDamage(1);
+    }
+    
     private void DestroyCar()
     {
-        print(1);
         ParticleSystem tempParticles = Instantiate(ParticleBaseCollection.Instance.explosionCop_Particle);
         tempParticles.gameObject.transform.position = transform.position + Vector3.up*2;
         tempParticles.Play();

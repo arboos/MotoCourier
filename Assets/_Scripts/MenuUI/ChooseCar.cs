@@ -1,57 +1,79 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ChooseCar : MonoBehaviour
 {
-    public GameObject[] cars; 
+    [Header("Data")]
+    public CarData[] carDataArray; 
+    private GameObject currentCarInstance;
     private int currentIndex = 0; 
-    private const string SelectedCarKey = "SelectedCarIndex";
+    private const string SelectedCarKey = "SelectedCarName";
+
+    [Header("UI")]
+    public TextMeshProUGUI carNameText;
+    public Transform spawnPoint;
 
     void Start()
     {
-        // Load the saved car index from PlayerPrefs
-        currentIndex = PlayerPrefs.GetInt(SelectedCarKey, 0); // Default to 0 if no value is saved
+        string savedCarName = PlayerPrefs.GetString(SelectedCarKey, carDataArray[0].carName);
+        currentIndex = GetCarIndexByName(savedCarName);
         UpdateCarSelection();
     }
 
     public void NextCar()
     {
-        cars[currentIndex].SetActive(false);
-        
+        Destroy(currentCarInstance);
+
         currentIndex++;
-        if (currentIndex >= cars.Length)
+        if (currentIndex >= carDataArray.Length)
         {
             currentIndex = 0;
         }
-        
+
         UpdateCarSelection();
     }
 
     public void PreviousCar()
     {
-        cars[currentIndex].SetActive(false);
-        
+        Destroy(currentCarInstance);
+
         currentIndex--;
         if (currentIndex < 0)
         {
-            currentIndex = cars.Length - 1;
+            currentIndex = carDataArray.Length - 1;
         }
-        
+
         UpdateCarSelection();
     }
 
     void UpdateCarSelection()
     {
-        cars[currentIndex].SetActive(true);
+        if (carDataArray.Length == 0) return;
+
+        CarData carData = carDataArray[currentIndex];
+        currentCarInstance = Instantiate(carData.carPrefab, spawnPoint);
+        carNameText.text = carData.carName;
     }
 
     public void SelectCar()
     {
-        // Save the current car index to PlayerPrefs
-        PlayerPrefs.SetInt(SelectedCarKey, currentIndex);
+        PlayerPrefs.SetString(SelectedCarKey, carDataArray[currentIndex].carName);
         PlayerPrefs.Save();
 
-        Debug.Log("Car selected and saved: " + currentIndex);
+        Debug.Log("Car selected and saved: " + carDataArray[currentIndex].carName);
+    }
+
+    private int GetCarIndexByName(string carName)
+    {
+        for (int i = 0; i < carDataArray.Length; i++)
+        {
+            if (carDataArray[i].carName == carName)
+            {
+                return i;
+            }
+        }
+
+        return 0;
     }
 }
