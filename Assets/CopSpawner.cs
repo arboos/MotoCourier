@@ -26,8 +26,8 @@ public class CopSpawner : MonoBehaviour
         {
             for (int j = i; j < spawnPoints.Count - 1; j++)
             {
-                if (Vector3.Distance(GameManager.Instance.player.position, spawnPoints[i].position) >
-                    Vector3.Distance(GameManager.Instance.player.position, spawnPoints[j].position))
+                if (Vector3.Distance(PlayerInfo.Instance.transform.position, spawnPoints[i].position) >
+                    Vector3.Distance(PlayerInfo.Instance.transform.position, spawnPoints[j].position))
                 {
                     Transform tempI = spawnPoints[i];
                     spawnPoints[i] = spawnPoints[j];
