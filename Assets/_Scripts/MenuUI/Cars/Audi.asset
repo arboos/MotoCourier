@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6475b695ba2f6458afa8c5e1bdcffc, type: 3}
+  m_Name: Audi
+  m_EditorClassIdentifier: 
+  carName: Audi
+  carPrefab: {fileID: 5306259618547339612, guid: 9f0bf97fc2a7f2340b7818ac2d2d8b34,
+    type: 3}
