@@ -17,7 +17,7 @@ public class MapDisplayer : MonoBehaviour
         for (int i = 0; i < gameMaps.Length; i++)
         {
             Instantiate(gameMapPrefab, content);
-            gameMapPrefab.transform.
+            gameMapPrefab.GetComponent<MapPrefab>().gameMap = gameMaps[i];
         }
     }
 }
