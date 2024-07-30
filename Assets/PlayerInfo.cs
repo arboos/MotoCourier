@@ -14,7 +14,6 @@ public class PlayerInfo : MonoBehaviour
         {
             Instance = this;
         }
-
         else
         {
             Destroy(gameObject);

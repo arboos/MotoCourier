@@ -242,6 +242,7 @@ public class PrometeoCarController : MonoBehaviour
         }
 
         if(useTouchControls){
+          print("USE TOUCH CONTROLS!");
           if(throttleButton != null && reverseButton != null &&
           turnRightButton != null && turnLeftButton != null
           && handbrakeButton != null){
@@ -288,9 +289,12 @@ public class PrometeoCarController : MonoBehaviour
       A (turn left), D (turn right) or Space bar (handbrake).
       */
       if (useTouchControls && touchControlsSetup){
-
+        print("USE TOUCH CONTROLS & SETUP");
+        print("throttlePTI.buttonPressed: " + throttlePTI.buttonPressed);
         if(throttlePTI.buttonPressed){
           CancelInvoke("DecelerateCar");
+          print("USE TOUCH FORW!");
+
           deceleratingCar = false;
           GoForward();
         }
