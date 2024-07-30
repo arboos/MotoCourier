@@ -263,6 +263,30 @@ public class PrometeoCarController : MonoBehaviour
 
     }
 
+
+    public void InitializeControlsMobile()
+    {
+      if(useTouchControls){
+        print("USE TOUCH CONTROLS!");
+        if(throttleButton != null && reverseButton != null &&
+           turnRightButton != null && turnLeftButton != null
+           && handbrakeButton != null){
+
+          throttlePTI = throttleButton.GetComponent<PrometeoTouchInput>();
+          reversePTI = reverseButton.GetComponent<PrometeoTouchInput>();
+          turnLeftPTI = turnLeftButton.GetComponent<PrometeoTouchInput>();
+          turnRightPTI = turnRightButton.GetComponent<PrometeoTouchInput>();
+          handbrakePTI = handbrakeButton.GetComponent<PrometeoTouchInput>();
+          touchControlsSetup = true;
+
+        }else{
+          String ex = "Touch controls are not completely set up. You must drag and drop your scene buttons in the" +
+                      " PrometeoCarController component.";
+          Debug.LogWarning(ex);
+        }
+      }
+    }
+    
     // Update is called once per frame
     void Update()
     {

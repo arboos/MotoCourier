@@ -8,7 +8,7 @@ public class ParticleBaseCollection : MonoBehaviour
     public static ParticleBaseCollection Instance { get; private set; }
 
     public ParticleSystem explosionCop_Particle;
-    public ParticleSystem explosionCopDamage_Particle;
+    public ParticleSystem explosionCopDamage;
     
     private void Awake()
     {

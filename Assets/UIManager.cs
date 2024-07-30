@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
         {
             mobileInput.SetActive(true);
             PlayerInfo.Instance.gameObject.GetComponent<PrometeoCarController>().useTouchControls = true;
+            PlayerInfo.Instance.gameObject.GetComponent<PrometeoCarController>().InitializeControlsMobile();
         }
     }
 }
