@@ -1,27 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MapDisplayer : MonoBehaviour
 {
     [Header("Game Map")]
-    public GameMap gameMap;
+    public GameMap[] gameMaps;
 
-    [Header("References")] 
-    public Image image;
-    public TextMeshProUGUI textMeshProUGUI;
-    
-    void Start()
-    {
-        image.sprite = gameMap.mapImage;
-        textMeshProUGUI.text = gameMap.mapName;
-    }
+    [Header("Prefab")]
+    public GameObject gameMapPrefab;
+    public Transform content;
 
-    public void SetGameScene()
+    private void Start()
     {
-        SceneManager.LoadScene(gameMap.mapName);
+        for (int i = 0; i < gameMaps.Length; i++)
+        {
+            Instantiate(gameMapPrefab, content);
+            gameMapPrefab.transform.
+        }
     }
 }
