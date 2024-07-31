@@ -6,8 +6,7 @@ public class PrometeoTouchInput : MonoBehaviour
 {
 
     public bool changeScaleOnPressed = false;
-    [HideInInspector]
-    public bool buttonPressed = false;
+    public bool buttonPressed;
     RectTransform rectTransform;
     Vector3 initialScale;
     float scaleDownMultiplier = 0.85f;
@@ -18,14 +17,16 @@ public class PrometeoTouchInput : MonoBehaviour
     }
 
     public void ButtonDown(){
-      buttonPressed = true;
+      print("Button down");
+      this.buttonPressed = true;
       if(changeScaleOnPressed){
         rectTransform.localScale = initialScale * scaleDownMultiplier;
       }
     }
 
     public void ButtonUp(){
-      buttonPressed = false;
+      print("Button up");
+      this.buttonPressed = false;
       if(changeScaleOnPressed){
         rectTransform.localScale = initialScale;
       }
