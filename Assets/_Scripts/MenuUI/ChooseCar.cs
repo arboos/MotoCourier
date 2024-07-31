@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -13,6 +14,9 @@ public class ChooseCar : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI carNameText;
     public Transform spawnPoint;
+    public TextMeshProUGUI carDescriptionText;
+
+    public static Action OnChangeCar;
 
     void Start()
     {
@@ -23,6 +27,7 @@ public class ChooseCar : MonoBehaviour
 
     public void NextCar()
     {
+        OnChangeCar?.Invoke();
         Destroy(currentCarInstance);
 
         currentIndex++;
@@ -36,6 +41,7 @@ public class ChooseCar : MonoBehaviour
 
     public void PreviousCar()
     {
+        OnChangeCar?.Invoke();
         Destroy(currentCarInstance);
 
         currentIndex--;
@@ -54,10 +60,12 @@ public class ChooseCar : MonoBehaviour
         CarData carData = carDataArray[currentIndex];
         currentCarInstance = Instantiate(carData.carPrefab, spawnPoint);
         carNameText.text = carData.carName;
+        carDescriptionText.text = carData.carDescription;
     }
 
     public void SelectCar()
     {
+        OnChangeCar?.Invoke();
         PlayerPrefs.SetString(SelectedCarKey, carDataArray[currentIndex].carName);
         PlayerPrefs.Save();
 
@@ -75,5 +83,10 @@ public class ChooseCar : MonoBehaviour
         }
 
         return 0;
+    }
+
+    private void OnEnable()
+    {
+        this.transform.rotation = Quaternion.Euler(6, 180, 0);
     }
 }
