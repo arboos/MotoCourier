@@ -35,3 +35,13 @@ MonoBehaviour:
     \u043F\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0438\u0435, \u044D\u0442\u0430
     \u043C\u0430\u0448\u0438\u043D\u0430 \u0441\u0442\u0430\u043D\u0435\u0442 \u043D\u0430\u0434\u0435\u0436\u043D\u044B\u043C
     \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u043C \u043D\u0430 \u0434\u043E\u0440\u043E\u0433\u0435."
+  rarity: Epic
+  maxSpeed: 120
+  maxReverseSpeed: 0
+  accelerationMultiplier: 0
+  maxSteeringAngle: 0
+  steeringSpeed: 0
+  brakeForce: 0
+  decelerationMultiplier: 0
+  handbrakeDriftMultiplier: 0
+  bodyMassCenter: {x: 0, y: 0, z: 0}

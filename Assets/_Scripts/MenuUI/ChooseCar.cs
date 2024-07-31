@@ -15,6 +15,7 @@ public class ChooseCar : MonoBehaviour
     public TextMeshProUGUI carNameText;
     public Transform spawnPoint;
     public TextMeshProUGUI carDescriptionText;
+    public TextMeshProUGUI carRarity;
 
     public static Action OnChangeCar;
 
@@ -61,6 +62,7 @@ public class ChooseCar : MonoBehaviour
         currentCarInstance = Instantiate(carData.carPrefab, spawnPoint);
         carNameText.text = carData.carName;
         carDescriptionText.text = carData.carDescription;
+        carRarity.text = carData.rarity;
     }
 
     public void SelectCar()
