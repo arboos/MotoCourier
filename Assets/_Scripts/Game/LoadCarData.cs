@@ -13,15 +13,17 @@ public class LoadCarData : MonoBehaviour
 
     private void Start()
     {
-        prometeoCarController = GetComponent<PrometeoCarController>();
+        // Получаем доступ к информации текущей выбранной машины!
+        carData = Resources.Load<CarData>(resourceFilePath + PlayerPrefs.GetString("SelectedCarName").Replace(" ", ""));
+        GameObject carInstance = Instantiate(carData.carPrefab);
+        carInstance.AddComponent<Rigidbody>().mass = 950;
+
+        prometeoCarController = carInstance.GetComponent<PrometeoCarController>();
         LoadData();
     }
 
     public void LoadData()
     {
-        // Получаем доступ к информации текущей выбранной машины!
-        carData = Resources.Load<CarData>(resourceFilePath + PlayerPrefs.GetString("SelectedCarName").Replace(" ", ""));
-        
         prometeoCarController.maxSpeed = carData.maxSpeed;
         prometeoCarController.maxReverseSpeed = carData.maxReverseSpeed;
         prometeoCarController.accelerationMultiplier = carData.accelerationMultiplier;
