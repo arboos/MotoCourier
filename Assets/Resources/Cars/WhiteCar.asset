@@ -45,3 +45,4 @@ MonoBehaviour:
   decelerationMultiplier: 0
   handbrakeDriftMultiplier: 0
   bodyMassCenter: {x: 0, y: 0, z: 0}
+  cost: 800
