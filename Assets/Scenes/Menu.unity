@@ -549,6 +549,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &360523362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 360523364}
+  - component: {fileID: 360523363}
+  m_Layer: 0
+  m_Name: --[SavingManager]--
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &360523363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360523362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061280a2d972e064eb6cd4dc995b4e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 10000
+--- !u!4 &360523364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360523362}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8645964, y: -0.9966984, z: 1.6080526}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &396916574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,6 +1445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMaps:
   - {fileID: 11400000, guid: fe80823247db3bf46b732d97d659b78e, type: 2}
+  - {fileID: 11400000, guid: 06e42242ed94fd24ea8509ff91d5a620, type: 2}
   gameMapPrefab: {fileID: 4134653650055651108, guid: bcf4032b6fb432545850a424e225fbbb,
     type: 3}
   content: {fileID: 1348229997}
@@ -3210,10 +3256,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 842226260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1616450833
 MonoBehaviour:
@@ -3262,8 +3308,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3971,7 +4017,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930775152}
   m_LocalRotation: {x: 0, y: 0.9986295, z: -0.052335896, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -450}
+  m_LocalPosition: {x: 0, y: 0, z: -550}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4002,6 +4048,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1646349082}
   carDescriptionText: {fileID: 1619923340}
   carRarity: {fileID: 1077845324}
+  selectText: {fileID: 1616450833}
 --- !u!1 &2088306517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4220,3 +4267,4 @@ SceneRoots:
   - {fileID: 63090814}
   - {fileID: 746927725}
   - {fileID: 1769709052}
+  - {fileID: 360523364}

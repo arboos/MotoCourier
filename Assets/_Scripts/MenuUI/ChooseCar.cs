@@ -16,8 +16,7 @@ public class ChooseCar : MonoBehaviour
     public Transform spawnPoint;
     public TextMeshProUGUI carDescriptionText;
     public TextMeshProUGUI carRarity;
-
-    public static Action OnChangeCar;
+    public TextMeshProUGUI selectText;
 
     void Start()
     {
@@ -28,7 +27,6 @@ public class ChooseCar : MonoBehaviour
 
     public void NextCar()
     {
-        OnChangeCar?.Invoke();
         Destroy(currentCarInstance);
 
         currentIndex++;
@@ -42,7 +40,6 @@ public class ChooseCar : MonoBehaviour
 
     public void PreviousCar()
     {
-        OnChangeCar?.Invoke();
         Destroy(currentCarInstance);
 
         currentIndex--;
@@ -60,18 +57,51 @@ public class ChooseCar : MonoBehaviour
 
         CarData carData = carDataArray[currentIndex];
         currentCarInstance = Instantiate(carData.carPrefab, spawnPoint);
+        currentCarInstance.transform.localScale = new Vector3(250, 250, 250);
+        currentCarInstance.GetComponent<PrometeoCarController>().enabled = false;
         carNameText.text = carData.carName;
         carDescriptionText.text = carData.carDescription;
         carRarity.text = carData.rarity;
+
+        selectText.text = SavingManager.instance.GetBool($"Has{carData.carName}") ? PlayerPrefs.GetString(SelectedCarKey) == carData.carName ? "Equipped" : "Equip" : carData.cost.ToString(); //"Select"
     }
 
     public void SelectCar()
     {
-        OnChangeCar?.Invoke();
-        PlayerPrefs.SetString(SelectedCarKey, carDataArray[currentIndex].carName);
-        PlayerPrefs.Save();
+        // Getting car info
+        CarData carData = carDataArray[currentIndex];
+        
+        
+        
+        // Checking if has such skin
+        if (SavingManager.instance.GetBool($"Has{carData.carName}"))
+        {
+            PlayerPrefs.SetString(SelectedCarKey, carData.carName);
+            PlayerPrefs.Save();
 
-        Debug.Log("Car selected and saved: " + carDataArray[currentIndex].carName);
+            selectText.text = "Equipped";
+
+            Debug.Log("Car selected and saved (was in inventory): " + carData.carName);
+        }
+        else
+        {
+            // Checking if enough money 
+            if (SavingManager.instance.GetMoney() >= carData.cost)
+            {
+                SavingManager.instance.SetMoney(SavingManager.instance.GetMoney() - carData.cost);
+                PlayerPrefs.SetString(SelectedCarKey, carData.carName);
+                SavingManager.instance.SetBool($"Has{carData.carName}", true);
+                PlayerPrefs.Save();
+                
+                selectText.text = "Equipped";
+
+                Debug.Log("Car selected and saved (bought): " + carData.carName);
+            }
+            else
+            {
+                Debug.Log($"Not enough money to buy!");
+            }
+        }
     }
 
     private int GetCarIndexByName(string carName)

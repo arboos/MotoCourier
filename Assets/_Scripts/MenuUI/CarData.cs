@@ -22,16 +22,7 @@ public class CarData : ScriptableObject
     public int decelerationMultiplier;
     public int handbrakeDriftMultiplier;
     public Vector3 bodyMassCenter;
-    
-    /*[Header("Car Structure / Body")] 
-    public GameObject body;
 
-    [Header("Car Structure / Wheels")] 
-    public GameObject wheel;
-    public Vector3 FL_Wheel;
-    public Vector3 FR_Wheel;
-    public Vector3 RL_Wheel;
-    public Vector3 RR_Wheel;
-    */
-    
+    [Header("Shop Settings")] 
+    public int cost;
 }

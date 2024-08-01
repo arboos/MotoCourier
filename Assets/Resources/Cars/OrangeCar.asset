@@ -37,11 +37,12 @@ MonoBehaviour:
     \u043F\u0430\u0440\u0442\u043D\u0435\u0440\u043E\u043C \u043D\u0430 \u0434\u043E\u0440\u043E\u0433\u0435."
   rarity: Epic
   maxSpeed: 120
-  maxReverseSpeed: 0
-  accelerationMultiplier: 0
-  maxSteeringAngle: 0
-  steeringSpeed: 0
-  brakeForce: 0
-  decelerationMultiplier: 0
-  handbrakeDriftMultiplier: 0
+  maxReverseSpeed: 80
+  accelerationMultiplier: 6
+  maxSteeringAngle: 45
+  steeringSpeed: 1
+  brakeForce: 450
+  decelerationMultiplier: 3
+  handbrakeDriftMultiplier: 3
   bodyMassCenter: {x: 0, y: 0, z: 0}
+  cost: 1200

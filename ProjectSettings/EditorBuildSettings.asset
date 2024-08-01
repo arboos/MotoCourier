@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestCity.unity
     guid: ef0e297fc9319f44e98da79d2ecec5ad
+  - enabled: 1
+    path: Assets/Scenes/Dima.unity
+    guid: 25d0675e94e3b5e4c978d5cec82210ab
   m_configObjects: {}
