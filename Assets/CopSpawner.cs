@@ -5,12 +5,29 @@ using UnityEngine;
 
 public class CopSpawner : MonoBehaviour
 {
+    public static CopSpawner Instance { get; private set; }
+    
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Transform spawnPointsParent;
     [SerializeField] private List<Transform> spawnPoints;
+    
+    public List<GameObject> copsSpawned;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
+        copsSpawned = new List<GameObject>();
         spawnPoints = new List<Transform>();
         for (int i = 0; i < spawnPointsParent.childCount; i++)
         {
@@ -39,13 +56,20 @@ public class CopSpawner : MonoBehaviour
 
     public IEnumerator Spawner()
     {
-        for (int i = 0; i < 999; i++)
+        while (true)
         {
-            GameObject spawned = Instantiate(enemyPrefab);
-            SortPointsToDistance();
-            enemyPrefab.transform.position = spawnPoints[1].position;
+            for (int i = 0; i < 999; i++)
+            {
+                if (copsSpawned.Count < 5)
+                {
+                    GameObject spawned = Instantiate(enemyPrefab);
+                    SortPointsToDistance();
+                    enemyPrefab.transform.position = spawnPoints[1].position;
+                    copsSpawned.Add(spawned.gameObject);
+                }
 
-            yield return new WaitForSeconds(10f);
+                yield return new WaitForSeconds(2f);
+            }
         }
     }
 }

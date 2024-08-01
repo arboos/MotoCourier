@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5270849038062562899}
   - component: {fileID: 7143475373856637236}
   - component: {fileID: 7341135722726693484}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4911,7 +4911,7 @@ GameObject:
   - component: {fileID: 2468640516496931273}
   - component: {fileID: 3894387643710477795}
   - component: {fileID: 9167847251429208892}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9813,7 +9813,7 @@ GameObject:
   - component: {fileID: 4855211828642977510}
   - component: {fileID: 5136725146570867881}
   - component: {fileID: 8641452061887057656}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ExplosionCop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14673,7 +14673,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 40
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -14730,7 +14730,7 @@ GameObject:
   - component: {fileID: 5452985596312412505}
   - component: {fileID: 8060082378551910934}
   - component: {fileID: 1695956181461886568}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19630,7 +19630,7 @@ GameObject:
   - component: {fileID: 7512824339732945673}
   - component: {fileID: 911270373038662983}
   - component: {fileID: 2223497727564712383}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

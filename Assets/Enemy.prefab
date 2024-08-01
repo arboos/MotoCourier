@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1246506437252953081}
   - component: {fileID: 7120995536674017397}
   - component: {fileID: 3494291236474447440}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearRightWheel
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 4824576478460356341}
   - component: {fileID: 6631187680420768019}
   - component: {fileID: 3660533995496914660}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrontRightWheel
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,9 +175,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2440634589324386460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,9 +208,9 @@ GameObject:
   - component: {fileID: 5705715947967902707}
   - component: {fileID: 6767964277220109976}
   - component: {fileID: 6708192825043308142}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearLeftWheel
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,9 +290,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4900597329463406948}
   - component: {fileID: 2471029181884843720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrontLeftWheel
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -360,9 +360,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3434430046411922791}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Effects
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,9 +396,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7095964045039148978}
   - component: {fileID: 5739470544444048585}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrontRightWheel
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -467,9 +467,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4078051899528445134}
   - component: {fileID: 6796283321626200585}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearLeftWheel
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -540,9 +540,9 @@ GameObject:
   - component: {fileID: 1584750772404783725}
   - component: {fileID: 3405358088922940598}
   - component: {fileID: 5893783672658135757}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -579,7 +579,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 360
-  m_StoppingDistance: 1
+  m_StoppingDistance: 4
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
@@ -599,6 +599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfae317b05f04445beb8644806e6cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  lastPosition: {x: 0, y: 0, z: 0}
 --- !u!65 &5893783672658135757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -630,9 +632,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8477795020025647192}
   - component: {fileID: 2794564970795294844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RearRightWheel
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -700,9 +702,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193932871271938443}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -737,9 +739,9 @@ GameObject:
   - component: {fileID: 351773200632786690}
   - component: {fileID: 3390628577845850199}
   - component: {fileID: 2512012079580581579}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -822,9 +824,9 @@ GameObject:
   - component: {fileID: 7815790528407121420}
   - component: {fileID: 2494662634760217365}
   - component: {fileID: 2689553533293497816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FrontLeftWheel
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -903,9 +905,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7216867403631287656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wheels
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -936,9 +938,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3479629897639844104}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Meshes
-  m_TagString: Untagged
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -984,6 +986,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftTireSmoke_PS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Cop
       objectReference: {fileID: 0}
     - target: {fileID: 4121091811543137509, guid: ddf4ea2625767fd4bb4153e7e4009ad5,
         type: 3}
@@ -1073,6 +1085,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightTireSmoke_PS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Cop
       objectReference: {fileID: 0}
     - target: {fileID: 4121091811543137509, guid: ddf4ea2625767fd4bb4153e7e4009ad5,
         type: 3}
@@ -1233,6 +1255,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightTireSkid
       objectReference: {fileID: 0}
+    - target: {fileID: 7344874181333496819, guid: ab4ea67cd9337c341af0bd7182c60f92,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344874181333496819, guid: ab4ea67cd9337c341af0bd7182c60f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Cop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1336,6 +1368,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftTireSkid
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344874181333496819, guid: ab4ea67cd9337c341af0bd7182c60f92,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344874181333496819, guid: ab4ea67cd9337c341af0bd7182c60f92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Cop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class PlayerInfo : MonoBehaviour
 {
     public static PlayerInfo Instance { get; private set; }
+
+    public PlayerCopTrigger copTrigger;
     
     private void Awake()
     {
@@ -26,10 +28,23 @@ public class PlayerInfo : MonoBehaviour
     {
         print("Damage: " + damage);
         currentHealth -= damage;
-        UIManager.Instance.livesText.text = currentHealth.ToString();
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene(0);
+        }
+        switch (currentHealth)
+        {
+            case 3:
+                UIManager.Instance.healthImage.color = Color.green;
+                break;
+            
+            case 2:
+                UIManager.Instance.healthImage.color = Color.yellow;
+                break;
+            
+            case 1:
+                UIManager.Instance.healthImage.color = Color.red;
+                break;
         }
     }
 }
