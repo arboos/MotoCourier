@@ -17,6 +17,8 @@ public class ChooseCar : MonoBehaviour
     public TextMeshProUGUI carDescriptionText;
     public TextMeshProUGUI carRarity;
     public TextMeshProUGUI selectText;
+    public GameObject shopUI;
+    public GameObject lobbyUI;
 
     void Start()
     {
@@ -80,6 +82,8 @@ public class ChooseCar : MonoBehaviour
             PlayerPrefs.Save();
 
             selectText.text = "Equipped";
+            shopUI.SetActive(false);
+            lobbyUI.SetActive(true);
 
             Debug.Log("Car selected and saved (was in inventory): " + carData.carName);
         }
@@ -94,12 +98,41 @@ public class ChooseCar : MonoBehaviour
                 PlayerPrefs.Save();
                 
                 selectText.text = "Equipped";
+                
+                shopUI.SetActive(false);
+                lobbyUI.SetActive(true);
 
                 Debug.Log("Car selected and saved (bought): " + carData.carName);
             }
             else
             {
                 Debug.Log($"Not enough money to buy!");
+            }
+        }
+    }
+
+    public void Back()
+    {
+        CarData currentCarData = carDataArray[currentIndex];
+        string selectedCarName = PlayerPrefs.GetString(SelectedCarKey, carDataArray[0].carName);
+
+        // Проверка наличия текущего автомобиля и был ли он выбран
+        if (SavingManager.instance.GetBool($"Has{currentCarData.carName}") && currentCarData.carName == selectedCarName)
+        {
+            Debug.Log("Current car is already selected and in the inventory: " + currentCarData.carName);
+        }
+        else
+        {
+            // Если текущий автомобиль не выбран или отсутствует, восстановить последний сохраненный автомобиль
+            Destroy(currentCarInstance);
+            int savedCarIndex = GetCarIndexByName(selectedCarName);
+
+            // Проверка, чтобы не дублировать действия, если сохраненный автомобиль уже выбран
+            if (currentIndex != savedCarIndex)
+            {
+                currentIndex = savedCarIndex;
+                UpdateCarSelection();
+                Debug.Log("Switched to the last saved car: " + carDataArray[savedCarIndex].carName);
             }
         }
     }
