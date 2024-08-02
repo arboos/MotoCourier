@@ -73,7 +73,7 @@ public class PlayerCopTrigger : MonoBehaviour
                 UIManager.Instance.wastedCounter.text = (((int)timeToWaste) + 1).ToString();
                 if (timeToWaste <= 0)
                 {
-                    SceneManager.LoadScene(0);
+                    PlayerInfo.Instance.Death();
                 }
             }
             

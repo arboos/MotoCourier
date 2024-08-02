@@ -15,7 +15,8 @@ public class UIManager : MonoBehaviour
     
     public Image healthImage;
     public TextMeshProUGUI wastedCounter;
-    
+    public GameObject deathScreen;
+
     private void Awake()
     {
         if (Instance == null)

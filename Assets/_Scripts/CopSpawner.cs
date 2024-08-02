@@ -6,6 +6,8 @@ using UnityEngine;
 public class CopSpawner : MonoBehaviour
 {
     public static CopSpawner Instance { get; private set; }
+
+    public float spawnCooldown;
     
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Transform spawnPointsParent;
@@ -68,7 +70,7 @@ public class CopSpawner : MonoBehaviour
                     copsSpawned.Add(spawned.gameObject);
                 }
 
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(spawnCooldown);
             }
         }
     }

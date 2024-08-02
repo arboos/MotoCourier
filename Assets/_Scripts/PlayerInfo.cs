@@ -30,7 +30,7 @@ public class PlayerInfo : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            SceneManager.LoadScene(0);
+            Death();
         }
         switch (currentHealth)
         {
@@ -46,5 +46,11 @@ public class PlayerInfo : MonoBehaviour
                 UIManager.Instance.healthImage.color = Color.red;
                 break;
         }
+    }
+
+    public void Death()
+    {
+        UIManager.Instance.deathScreen.SetActive(true);
+        GetComponent<PrometeoCarController>().enabled = false;
     }
 }
