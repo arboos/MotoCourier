@@ -1,0 +1,18 @@
+{
+    "idSave": 14,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 8000,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "SelectedCarName": "Orange Car",
+    "ownedCars": [
+        "White Car",
+        "Orange Car"
+    ]
+}
