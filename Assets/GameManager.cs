@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        else
+        {
+            Debug.LogError("One more GameManger by name" + gameObject.name);
+            Destroy(gameObject);
+        }
     }
-    
 }

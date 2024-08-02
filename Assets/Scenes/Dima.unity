@@ -2976,6 +2976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6891511bb5d5848b33eb638b7ffa4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  copTrigger: {fileID: 0}
   currentHealth: 3
 --- !u!1 &2789422337649268362
 GameObject:

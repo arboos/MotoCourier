@@ -1570,7 +1570,7 @@ MonoBehaviour:
   frontRightCollider: {fileID: 3750309113966218133}
   rearLeftMesh: {fileID: 1488700969822692805}
   rearLeftCollider: {fileID: 9092625506157586259}
-  rearRightMesh: {fileID: 0}
+  rearRightMesh: {fileID: 3722293564441407146}
   rearRightCollider: {fileID: 7853091654426442863}
   useEffects: 1
   RLWParticleSystem: {fileID: 624022060807500072}
