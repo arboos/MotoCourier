@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class LoadCarData : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class LoadCarData : MonoBehaviour
     private void Start()
     {
         // Получаем доступ к информации текущей выбранной машины!
-        carData = Resources.Load<CarData>(resourceFilePath + PlayerPrefs.GetString("SelectedCarName").Replace(" ", ""));
+        carData = Resources.Load<CarData>(resourceFilePath + YandexGame.savesData.SelectedCarName.Replace(" ", ""));
         GameObject carInstance = Instantiate(carData.carPrefab);
         carInstance.AddComponent<Rigidbody>().mass = 950;
 
