@@ -11,16 +11,24 @@ public class DeathScreen : MonoBehaviour
     public Image timer;
 
     public float timerTime;
+    private bool buttonsInitialized = false;
     
-    [SerializeField] private Button respawnAds;
     [SerializeField] private Button respawnGem;
+    [SerializeField] private Button respawnAds;
     
 
     private void OnEnable()
     {
         timerTime = 5f;
+        if (!buttonsInitialized)
+        {
+            respawnAds.onClick.AddListener(delegate { RespawnAds(); });
+            respawnGem.onClick.AddListener(delegate { RespawnGem(); print("DELEGATE");});
+            print("BUTTONS INITIALIZED");
+            buttonsInitialized = true;
+        }
     }
-
+    
     private void Update()
     {
         timerTime -= Time.deltaTime;
@@ -35,7 +43,7 @@ public class DeathScreen : MonoBehaviour
             timer.fillAmount = timerTime / 5f;
         }
     }
-
+    
     public void RespawnAds()
     {
         YandexGame.RewVideoShow(0);
@@ -43,14 +51,7 @@ public class DeathScreen : MonoBehaviour
     
     public void RespawnGem()
     {
-        //-= gems
-        Respawn();
+        PlayerInfo.Instance.Respawn(1);
     }
-    
-    public void Respawn()
-    {
-        
-    }
-    
     
 }

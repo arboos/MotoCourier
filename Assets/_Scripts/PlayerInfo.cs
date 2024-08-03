@@ -9,6 +9,7 @@ public class PlayerInfo : MonoBehaviour
     public static PlayerInfo Instance { get; private set; }
 
     public PlayerCopTrigger copTrigger;
+    public int currentHealth = 3;
     
     private void Awake()
     {
@@ -21,8 +22,6 @@ public class PlayerInfo : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public int currentHealth;
 
     public void DealDamage(int damage)
     {
@@ -50,7 +49,30 @@ public class PlayerInfo : MonoBehaviour
 
     public void Death()
     {
+        GetComponent<Rigidbody>().isKinematic = true;
         UIManager.Instance.deathScreen.SetActive(true);
+        UIManager.Instance.wastedCounter.gameObject.SetActive(false);
         GetComponent<PrometeoCarController>().enabled = false;
+    }
+    
+    public void Respawn(int hp)
+    {
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<PrometeoCarController>().enabled = true;
+        currentHealth = hp;
+
+
+        GameObject[] cops = GameObject.FindGameObjectsWithTag("Cop");
+        foreach (var cop in cops)
+        {
+            Destroy(cop);
+        }
+        
+        copTrigger.wasted = false;
+        UIManager.Instance.wastedCounter.gameObject.SetActive(false);
+        copTrigger.timeToWaste = 4f;
+        copTrigger.RemoveMissing();
+
+        UIManager.Instance.deathScreen.SetActive(false);
     }
 }

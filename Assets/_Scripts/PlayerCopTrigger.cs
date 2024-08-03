@@ -56,7 +56,7 @@ public class PlayerCopTrigger : MonoBehaviour
         if (copsInside.Count >= 1 && wasted == false && playerRB.velocity.x <= 2f && playerRB.velocity.z <= 2f)
         {
             wasted = true;
-            timeToWaste = 3f;
+            timeToWaste = 4f;
         }
         else if (wasted)
         {
@@ -64,16 +64,19 @@ public class PlayerCopTrigger : MonoBehaviour
             {
                 wasted = false;
                 UIManager.Instance.wastedCounter.gameObject.SetActive(false);
-                timeToWaste = 3f;
+                timeToWaste = 4f;
             }
             else
             {
                 timeToWaste -= Time.deltaTime;
-                UIManager.Instance.wastedCounter.gameObject.SetActive(true);
-                UIManager.Instance.wastedCounter.text = (((int)timeToWaste) + 1).ToString();
-                if (timeToWaste <= 0)
+                if (timeToWaste <= 3f)
                 {
-                    PlayerInfo.Instance.Death();
+                    UIManager.Instance.wastedCounter.gameObject.SetActive(true);
+                    UIManager.Instance.wastedCounter.text = (((int)timeToWaste) + 1).ToString();
+                    if (timeToWaste <= 0)
+                    {
+                        PlayerInfo.Instance.Death();
+                    }
                 }
             }
             
