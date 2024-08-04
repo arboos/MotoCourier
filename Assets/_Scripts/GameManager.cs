@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour
     public void AddCoins(int count)
     {
        localCoins += count;
-       OnAddCoins?.Invoke();
+       //OnAddCoins?.Invoke();
+       UIManager.Instance.CoinAddReact();
     }
     
 }

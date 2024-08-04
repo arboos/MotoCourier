@@ -10,6 +10,10 @@ public class PlayerInfo : MonoBehaviour
 
     public PlayerCopTrigger copTrigger;
     public int currentHealth = 3;
+
+    public float speed;
+    
+    private Vector3 lastPosition;
     
     private void Awake()
     {
@@ -21,6 +25,12 @@ public class PlayerInfo : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void FixedUpdate()
+    {
+        speed = Mathf.Lerp(speed, (transform.position - lastPosition).magnitude, 0.7f /*adjust this number in order to make interpolation quicker or slower*/);
+        lastPosition = transform.position;
     }
 
     public void DealDamage(int damage)

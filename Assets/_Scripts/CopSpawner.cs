@@ -13,7 +13,6 @@ public class CopSpawner : MonoBehaviour
     public float spawnCooldown;
     
     [SerializeField] private GameObject enemyPrefab;
-    [SerializeField] private GameObject testTextPrefab;
     [SerializeField] private Transform spawnPointsParent;
     [SerializeField] private List<Transform> spawnPoints;
     
@@ -38,8 +37,6 @@ public class CopSpawner : MonoBehaviour
         for (int i = 0; i < spawnPointsParent.childCount; i++)
         {
             spawnPoints.Add(spawnPointsParent.GetChild(i));
-            GameObject sText = Instantiate(testTextPrefab, spawnPoints[i]);
-            sText.transform.position = spawnPointsParent.GetChild(i).transform.position + Vector3.up*2;
         }
         SortPointsToDistance();
         Spawner();
@@ -47,7 +44,6 @@ public class CopSpawner : MonoBehaviour
 
     public async UniTask SortPointsToDistance()
     {
-        print("SORT STARTED");
         for (int i = 0; i < spawnPoints.Count; i++)
         {
             for (int j = i; j < spawnPoints.Count - 1; j++)
@@ -61,12 +57,6 @@ public class CopSpawner : MonoBehaviour
                 }
             }
         }
-        
-        for (int i = 0; i < spawnPoints.Count; i++)
-        {
-            spawnPoints[i].GetChild(0).GetComponent<TextMeshPro>().text = i.ToString();
-        }
-        print("SORT ENDED _ " + PlayerInfo.Instance.transform.position);
     }
 
     public async void Spawner()
@@ -78,13 +68,9 @@ public class CopSpawner : MonoBehaviour
             {
                 if (copsSpawned.Count < 5)
                 {
-                    print("COP SPAWNED");
                     await SortPointsToDistance();
+                    
                     GameObject spawned = Instantiate(enemyPrefab);
-                    enemyPrefab.transform.position = spawnPoints[3].position;
-                    print(
-                        "EnemySpawned at " + spawnPoints[3].gameObject.transform.GetChild(0).GetComponent<TextMeshPro>()
-                            .text + " _ " + spawnPoints[3].name);
                     copsSpawned.Add(spawned.gameObject);
                 }
 
