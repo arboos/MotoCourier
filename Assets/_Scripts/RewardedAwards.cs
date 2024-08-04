@@ -25,10 +25,13 @@ public class RewardedAwards : MonoBehaviour
             PlayerInfo.Instance.Respawn(1);
         }
         
-        // Если ID = 1, то выдаём "+100 монет"
-        // if (id == 1)
-        //     AddMoney();
-
+        else if (id == 1)
+        {
+            EnergyManager.Instance.Award();
+        }
+             
+        YandexGame.SaveProgress();
+        
         // Если ID = 2, то выдаём "+оружие".
         // else if (id == 2)
         //     AddWeapon();

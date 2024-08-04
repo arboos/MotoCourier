@@ -17,7 +17,7 @@ public class LoadCarData : MonoBehaviour
         // Получаем доступ к информации текущей выбранной машины!
         carData = Resources.Load<CarData>(resourceFilePath + YandexGame.savesData.SelectedCarName.Replace(" ", ""));
         GameObject carInstance = Instantiate(carData.carPrefab);
-        carInstance.AddComponent<Rigidbody>().mass = 950;
+        carInstance.GetComponent<Rigidbody>().useGravity = true;
 
         prometeoCarController = carInstance.GetComponent<PrometeoCarController>();
         LoadData();
