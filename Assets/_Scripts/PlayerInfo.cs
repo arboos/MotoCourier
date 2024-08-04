@@ -60,19 +60,24 @@ public class PlayerInfo : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<PrometeoCarController>().enabled = true;
         currentHealth = hp;
-
-
-        GameObject[] cops = GameObject.FindGameObjectsWithTag("Cop");
-        foreach (var cop in cops)
-        {
-            Destroy(cop);
-        }
         
         copTrigger.wasted = false;
         UIManager.Instance.wastedCounter.gameObject.SetActive(false);
         copTrigger.timeToWaste = 4f;
         copTrigger.RemoveMissing();
 
+        StartCoroutine(DestroyCops());
+        
         UIManager.Instance.deathScreen.SetActive(false);
+    }
+
+    public IEnumerator DestroyCops()
+    {
+        yield return new WaitForSeconds(0.5f);
+        
+        foreach (var cop in CopSpawner.Instance.copsSpawned)
+        {
+            cop.GetComponent<NavMeshCar>().DestroyCar();
+        }
     }
 }

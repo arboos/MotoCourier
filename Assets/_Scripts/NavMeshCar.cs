@@ -71,4 +71,24 @@ public class NavMeshCar : MonoBehaviour
         CopSpawner.Instance.copsSpawned.Remove(gameObject);
         Destroy(gameObject);
     }
+    
+    public void DestroyWithLight()
+    {
+        //ParticleSystem tempParticles = Instantiate(ParticleBaseCollection.Instance.explosionCop_Particle);
+        //tempParticles.gameObject.transform.position = transform.position + Vector3.up*2;
+        //tempParticles.Play();
+        PlayerInfo.Instance.copTrigger.RemoveMissing();
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 20f);
+        foreach (var hitCollider in hitColliders)
+        {
+            if (hitCollider.gameObject.CompareTag("Cop"))
+            {
+                PlayerInfo.Instance.copTrigger.copsInside.Remove(hitCollider.gameObject);
+                CopSpawner.Instance.copsSpawned.Remove(hitCollider.gameObject);
+                Destroy(hitCollider.gameObject);
+            }
+        }
+        CopSpawner.Instance.copsSpawned.Remove(gameObject);
+        Destroy(gameObject);
+    }
 }
