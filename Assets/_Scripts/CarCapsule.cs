@@ -17,6 +17,11 @@ public class CarCapsule : MonoBehaviour
 
     [Header("UI")] 
     public Button openButton;
+    public GameObject carReceived;
+    public Transform spawnPoint;
+
+
+    private GameObject carInst;
 
     private void OnEnable()
     {
@@ -65,6 +70,11 @@ public class CarCapsule : MonoBehaviour
                 YandexGame.SaveProgress();
 
                 Debug.Log($"Player received car: {chosenCar.carName}");
+
+                carReceived.SetActive(true);
+                carInst = Instantiate(chosenCar.carPrefab, spawnPoint);
+                carInst.GetComponent<Rigidbody>().useGravity = false;
+                carCapsuleAnim.SetBool("IDLE", true);
             }
             else
             {
@@ -98,5 +108,11 @@ public class CarCapsule : MonoBehaviour
         {
             Debug.Log("No cars available to win. Disabling the open button.");
         }
+    }
+
+    public void Take()
+    {
+        Destroy(carInst);
+        carReceived.SetActive(false);
     }
 }

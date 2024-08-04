@@ -23,7 +23,7 @@ public class ChooseCar : MonoBehaviour
 
     void Start()
     {
-        YandexGame.ResetSaveProgress();
+        //YandexGame.ResetSaveProgress();
         moneyText.text = YandexGame.savesData.money.ToString();
         string savedCarName = YandexGame.savesData.SelectedCarName;
         if (string.IsNullOrEmpty(savedCarName)) {
