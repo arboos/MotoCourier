@@ -36,9 +36,9 @@ public class NavMeshCar : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerDamagable"))
         {
-            if (Mathf.Abs(Mathf.Abs(PlayerInfo.Instance.speed) - Mathf.Abs(speed)) < 0.05f) return;
+            if (Mathf.Abs(Mathf.Abs(PlayerInfo.Instance.speed) - Mathf.Abs(speed)) < 0.05f && PlayerInfo.Instance.speed <= 0.05f) return;
             
-            if (PlayerInfo.Instance.speed < speed)
+            if (PlayerInfo.Instance.speed > speed)
             {
                 DestroyCar();
             }

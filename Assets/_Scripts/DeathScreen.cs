@@ -23,8 +23,7 @@ public class DeathScreen : MonoBehaviour
         if (!buttonsInitialized)
         {
             respawnAds.onClick.AddListener(delegate { RespawnAds(); });
-            respawnGem.onClick.AddListener(delegate { RespawnGem(); print("DELEGATE");});
-            print("BUTTONS INITIALIZED");
+            respawnGem.onClick.AddListener(delegate { RespawnGem();});
             buttonsInitialized = true;
         }
     }

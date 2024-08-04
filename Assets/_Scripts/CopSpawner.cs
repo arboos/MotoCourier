@@ -71,6 +71,7 @@ public class CopSpawner : MonoBehaviour
                     await SortPointsToDistance();
                     
                     GameObject spawned = Instantiate(enemyPrefab);
+                    spawned.transform.position = spawnPoints[3].transform.position;
                     copsSpawned.Add(spawned.gameObject);
                 }
 
