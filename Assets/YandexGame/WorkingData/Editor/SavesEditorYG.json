@@ -1,5 +1,5 @@
 {
-    "idSave": 45,
+    "idSave": 46,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -15,5 +15,5 @@
         "White Car",
         "Orange Car"
     ],
-    "energy": 7
+    "energy": 10
 }
