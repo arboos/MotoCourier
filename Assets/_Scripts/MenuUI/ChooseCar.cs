@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using YG;
 
 public class ChooseCar : MonoBehaviour
 {
     [Header("Data")]
     public CarData[] carDataArray; 
     private GameObject currentCarInstance;
-    private int currentIndex = 0; 
-    private const string SelectedCarKey = "SelectedCarName";
+    private int currentIndex = 0;
 
     [Header("UI")]
     public TextMeshProUGUI carNameText;
@@ -19,10 +19,16 @@ public class ChooseCar : MonoBehaviour
     public TextMeshProUGUI selectText;
     public GameObject shopUI;
     public GameObject lobbyUI;
+    public TextMeshProUGUI moneyText;
 
     void Start()
     {
-        string savedCarName = PlayerPrefs.GetString(SelectedCarKey, carDataArray[0].carName);
+        //YandexGame.ResetSaveProgress();
+        moneyText.text = YandexGame.savesData.money.ToString();
+        string savedCarName = YandexGame.savesData.SelectedCarName;
+        if (string.IsNullOrEmpty(savedCarName)) {
+            savedCarName = carDataArray[0].carName;
+        }
         currentIndex = GetCarIndexByName(savedCarName);
         UpdateCarSelection();
     }
@@ -65,21 +71,18 @@ public class ChooseCar : MonoBehaviour
         carDescriptionText.text = carData.carDescription;
         carRarity.text = carData.rarity;
 
-        selectText.text = SavingManager.instance.GetBool($"Has{carData.carName}") ? PlayerPrefs.GetString(SelectedCarKey) == carData.carName ? "Equipped" : "Equip" : carData.cost.ToString(); //"Select"
+        bool hasCar = YandexGame.savesData.HasCar(carData.carName);
+        selectText.text = hasCar ? (YandexGame.savesData.SelectedCarName == carData.carName ? "Equipped" : "Equip") : carData.cost.ToString();
     }
 
     public void SelectCar()
     {
-        // Getting car info
         CarData carData = carDataArray[currentIndex];
         
-        
-        
-        // Checking if has such skin
-        if (SavingManager.instance.GetBool($"Has{carData.carName}"))
+        if (YandexGame.savesData.HasCar(carData.carName))
         {
-            PlayerPrefs.SetString(SelectedCarKey, carData.carName);
-            PlayerPrefs.Save();
+            YandexGame.savesData.SelectedCarName = carData.carName;
+            YandexGame.SaveProgress();
 
             selectText.text = "Equipped";
             shopUI.SetActive(false);
@@ -89,16 +92,14 @@ public class ChooseCar : MonoBehaviour
         }
         else
         {
-            // Checking if enough money 
-            if (SavingManager.instance.GetMoney() >= carData.cost)
+            if (YandexGame.savesData.money >= carData.cost)
             {
-                SavingManager.instance.SetMoney(SavingManager.instance.GetMoney() - carData.cost);
-                PlayerPrefs.SetString(SelectedCarKey, carData.carName);
-                SavingManager.instance.SetBool($"Has{carData.carName}", true);
-                PlayerPrefs.Save();
-                
+                YandexGame.savesData.money -= carData.cost;
+                YandexGame.savesData.SelectedCarName = carData.carName;
+                YandexGame.savesData.AddCar(carData.carName);
+                YandexGame.SaveProgress();
+
                 selectText.text = "Equipped";
-                
                 shopUI.SetActive(false);
                 lobbyUI.SetActive(true);
 
@@ -106,7 +107,7 @@ public class ChooseCar : MonoBehaviour
             }
             else
             {
-                Debug.Log($"Not enough money to buy!");
+                Debug.Log("Not enough money to buy!");
             }
         }
     }
@@ -114,20 +115,17 @@ public class ChooseCar : MonoBehaviour
     public void Back()
     {
         CarData currentCarData = carDataArray[currentIndex];
-        string selectedCarName = PlayerPrefs.GetString(SelectedCarKey, carDataArray[0].carName);
+        string selectedCarName = YandexGame.savesData.SelectedCarName;
 
-        // Проверка наличия текущего автомобиля и был ли он выбран
-        if (SavingManager.instance.GetBool($"Has{currentCarData.carName}") && currentCarData.carName == selectedCarName)
+        if (YandexGame.savesData.HasCar(currentCarData.carName) && currentCarData.carName == selectedCarName)
         {
             Debug.Log("Current car is already selected and in the inventory: " + currentCarData.carName);
         }
         else
         {
-            // Если текущий автомобиль не выбран или отсутствует, восстановить последний сохраненный автомобиль
             Destroy(currentCarInstance);
             int savedCarIndex = GetCarIndexByName(selectedCarName);
 
-            // Проверка, чтобы не дублировать действия, если сохраненный автомобиль уже выбран
             if (currentIndex != savedCarIndex)
             {
                 currentIndex = savedCarIndex;
