@@ -3999,7 +3999,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1129963279
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7671,7 +7671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1930775153
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8264,7 +8264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2033682938
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8300,6 +8300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carCapsuleAnim: {fileID: 683826840884585312}
+  carsInShop: {fileID: 1930775154}
+  openButton: {fileID: 1327445073}
 --- !u!1 &2038861773
 GameObject:
   m_ObjectHideFlags: 0
