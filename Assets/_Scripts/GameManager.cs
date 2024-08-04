@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    public static Action OnAddCoins;
+    
+    public int localCoins;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -19,4 +23,11 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void AddCoins(int count)
+    {
+       localCoins += count;
+       OnAddCoins?.Invoke();
+    }
+    
 }

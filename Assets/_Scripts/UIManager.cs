@@ -29,8 +29,19 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        GameManager.OnAddCoins += CoinAddReact;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnAddCoins -= CoinAddReact;
+    }
+    
     private void Start()
     {
+        
         if (YandexGame.Instance.infoYG.playerInfoSimulation.isMobile)
         {
             mobileInput.SetActive(true);
@@ -38,4 +49,11 @@ public class UIManager : MonoBehaviour
             PlayerInfo.Instance.gameObject.GetComponent<PrometeoCarController>().InitializeControlsMobile();
         }
     }
+
+    public void CoinAddReact()
+    {
+        
+    }
+
+
 }
