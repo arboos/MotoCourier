@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using Cysharp.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 
 public class CopSpawner : MonoBehaviour
@@ -26,7 +29,7 @@ public class CopSpawner : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
     private void Start()
     {
         copsSpawned = new List<GameObject>();
@@ -36,10 +39,10 @@ public class CopSpawner : MonoBehaviour
             spawnPoints.Add(spawnPointsParent.GetChild(i));
         }
         SortPointsToDistance();
-        StartCoroutine(Spawner()); 
+        Spawner();
     }
 
-    public void SortPointsToDistance()
+    public async UniTask SortPointsToDistance()
     {
         for (int i = 0; i < spawnPoints.Count; i++)
         {
@@ -56,21 +59,24 @@ public class CopSpawner : MonoBehaviour
         }
     }
 
-    public IEnumerator Spawner()
+    public async void Spawner()
     {
+        CancellationTokenSource _cancellationToken = new CancellationTokenSource();
         while (true)
         {
             for (int i = 0; i < 999; i++)
             {
                 if (copsSpawned.Count < 5)
                 {
+                    await SortPointsToDistance();
+                    
                     GameObject spawned = Instantiate(enemyPrefab);
-                    SortPointsToDistance();
-                    enemyPrefab.transform.position = spawnPoints[1].position;
+                    spawned.transform.position = spawnPoints[3].transform.position;
                     copsSpawned.Add(spawned.gameObject);
                 }
 
-                yield return new WaitForSeconds(spawnCooldown);
+                await UniTask.Delay(TimeSpan.FromSeconds(spawnCooldown), DelayType.DeltaTime, PlayerLoopTiming.Update,
+                    _cancellationToken.Token);
             }
         }
     }

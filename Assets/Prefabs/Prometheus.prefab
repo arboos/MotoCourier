@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 901333272}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Effects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copTrigger: {fileID: 2009390238692409158}
-  currentHealth: 3
+  currentHealth: 1
+  speed: 0
 --- !u!1 &934883528070179459
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +180,7 @@ GameObject:
   - component: {fileID: 4466888475822015697}
   - component: {fileID: 6112617016551088393}
   - component: {fileID: 2847525949359012301}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6399581921715410368}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5534550323598598708}
   - component: {fileID: 8706808774334851022}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RearRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4516980660217037521}
   - component: {fileID: 7877667524431639919}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2798787354462298965}
   - component: {fileID: 2239677824950174677}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +511,7 @@ GameObject:
   - component: {fileID: 2699983780271061893}
   - component: {fileID: 2756161245754795952}
   - component: {fileID: 4676782754994215813}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RearRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +594,7 @@ GameObject:
   - component: {fileID: 2897099083007925690}
   - component: {fileID: 4399079524712894408}
   - component: {fileID: 6139266636791369987}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -674,7 +675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9035664824923732194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,7 +714,7 @@ GameObject:
   - component: {fileID: 2009390238692409158}
   m_Layer: 10
   m_Name: CopTrigger
-  m_TagString: Untagged
+  m_TagString: PlayerDamagable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,10 +750,10 @@ SphereCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 5.48
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2009390238692409158
 MonoBehaviour:
@@ -779,7 +780,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3434165251668910925}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LookAt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +813,7 @@ GameObject:
   - component: {fileID: 6528361102885328038}
   - component: {fileID: 462318443112816071}
   - component: {fileID: 3679209736151578393}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RearLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7970770671749509622}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PointOfCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,7 +925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6226297478039142187}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LookAt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1084,7 +1085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2350058031404111781}
   - component: {fileID: 8615825633152659129}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RearLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1156,7 +1157,7 @@ GameObject:
   - component: {fileID: 1276657636418845578}
   - component: {fileID: 4216443941631913095}
   - component: {fileID: 2214269414136525247}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1237,7 +1238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2964096667791295286}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1308,7 +1309,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 771ce407ce807b74885ec23ebd1e6647, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.73
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -1463,7 +1464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4062929882995470553}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PointOfCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1507,6 +1508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftTireSmoke_PS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4121091811543137509, guid: ddf4ea2625767fd4bb4153e7e4009ad5,
         type: 3}
@@ -1602,6 +1608,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightTireSmoke_PS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121091811543088291, guid: ddf4ea2625767fd4bb4153e7e4009ad5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4121091811543137509, guid: ddf4ea2625767fd4bb4153e7e4009ad5,
         type: 3}
@@ -1768,6 +1779,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightTireSkid
       objectReference: {fileID: 0}
+    - target: {fileID: 7344874181333496819, guid: ab4ea67cd9337c341af0bd7182c60f92,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1877,6 +1893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftTireSkid
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344874181333496819, guid: ab4ea67cd9337c341af0bd7182c60f92,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

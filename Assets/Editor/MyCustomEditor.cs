@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using YG;
 
 public class MyCustomEditor : Editor
 {
@@ -7,5 +8,6 @@ public class MyCustomEditor : Editor
     private static void DeleteData()
     {
         PlayerPrefs.DeleteAll();
+        YandexGame.ResetSaveProgress();
     }
 }
