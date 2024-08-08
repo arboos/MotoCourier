@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor;
 using YG;
 
 public class ChooseCar : MonoBehaviour
@@ -23,8 +24,7 @@ public class ChooseCar : MonoBehaviour
 
     void Start()
     {
-        //YandexGame.ResetSaveProgress();
-        moneyText.text = YandexGame.savesData.money.ToString();
+        UpdateMoneyText();
         string savedCarName = YandexGame.savesData.SelectedCarName;
         if (string.IsNullOrEmpty(savedCarName)) {
             savedCarName = carDataArray[0].carName;
@@ -104,6 +104,7 @@ public class ChooseCar : MonoBehaviour
                 lobbyUI.SetActive(true);
 
                 Debug.Log("Car selected and saved (bought): " + carData.carName);
+                UpdateMoneyText();
             }
             else
             {
@@ -148,8 +149,68 @@ public class ChooseCar : MonoBehaviour
         return 0;
     }
 
+    public void UpdateMoneyText()
+    {
+        moneyText.text = YandexGame.savesData.money.ToString();
+    }
+
     private void OnEnable()
     {
         this.transform.rotation = Quaternion.Euler(6, 180, 0);
+    }
+}
+
+
+// -------------------------------- CUSTOM EDITOR --------------------------------
+
+
+[CustomEditor(typeof(ChooseCar))]
+public class ChooseCarEditor : Editor
+{
+    private int currentTab = 0;
+    private string[] tabNames = { "General", "Data Manage" };
+    
+    public override void OnInspectorGUI()
+    {
+        currentTab = GUILayout.Toolbar(currentTab, tabNames);
+
+        switch (currentTab)
+        {
+            case 0:
+                DrawGeneralSettings();
+                break;
+            case 1:
+                DrawDataCarManage();
+                break;
+        }
+    }
+
+    private void DrawGeneralSettings()
+    {
+        GUILayout.Label("General Settings", EditorStyles.boldLabel);
+        DrawDefaultInspector();
+    }
+
+    private void DrawDataCarManage()
+    {
+        GUILayout.Label("Data Manage", EditorStyles.boldLabel);
+        if (GUILayout.Button("Reset Data"))
+        {
+            Debug.Log("Data was reset");
+            YandexGame.ResetSaveProgress();
+        }
+        GUILayout.Label("By clicking this button you will reset data of obtained cars (IN-GAME ONLY)", EditorStyles.centeredGreyMiniLabel);
+        GUILayout.Label("Made for testing CarCapsule drop!", EditorStyles.centeredGreyMiniLabel);
+        GUILayout.Space(10);
+        
+        if (GUILayout.Button("Add 1000$"))
+        {
+            YandexGame.savesData.money += 1000;
+            YandexGame.SaveProgress();
+            ChooseCar chooseCar = (ChooseCar)target;
+            chooseCar.UpdateMoneyText();
+            Debug.Log($"Money after add: {YandexGame.savesData.money}");
+        }
+        GUILayout.Label("By clicking this button you will add to player's \n current balance 1000$ (IN-GAME ONLY)", EditorStyles.centeredGreyMiniLabel);
     }
 }
