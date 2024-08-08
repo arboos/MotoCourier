@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using YG;
 using Cysharp.Threading.Tasks;
+using UnityEditor;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -49,7 +50,8 @@ public class CarCapsule : MonoBehaviour
             Debug.Log("Animation delay completed, performing further actions...");
             
             carCapsuleAnim.SetBool("GiveReward", true);
-            
+            await UniTask.Delay(TimeSpan.FromSeconds(1.5f));
+
             // Giving random car which is not in inventory
             List<CarData> availableCars = new List<CarData>();
             
@@ -73,6 +75,7 @@ public class CarCapsule : MonoBehaviour
 
                 carReceived.SetActive(true);
                 carInst = Instantiate(chosenCar.carPrefab, spawnPoint);
+                carInst.GetComponent<PrometeoCarController>().enabled = false;
                 carInst.GetComponent<Rigidbody>().useGravity = false;
                 carCapsuleAnim.SetBool("IDLE", true);
             }
