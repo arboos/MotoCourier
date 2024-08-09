@@ -241,12 +241,18 @@ public class PrometeoCarController : MonoBehaviour
           }
         }
 
-        if(useTouchControls){
+        if(useTouchControls)
+        {
+          throttleButton = UIManager.Instance.throttleButton;
+          reverseButton = UIManager.Instance.breakesButton;
+          turnLeftButton = UIManager.Instance.turnLeftButton;
+          turnRightButton = UIManager.Instance.turnRightButton;
+          handbrakeButton = UIManager.Instance.handbrakeButton;
           print("USE TOUCH CONTROLS!");
           if(throttleButton != null && reverseButton != null &&
           turnRightButton != null && turnLeftButton != null
           && handbrakeButton != null){
-
+            print("Control TOUCH CONTROLS!");
             throttlePTI = throttleButton.GetComponent<PrometeoTouchInput>();
             reversePTI = reverseButton.GetComponent<PrometeoTouchInput>();
             turnLeftPTI = turnLeftButton.GetComponent<PrometeoTouchInput>();

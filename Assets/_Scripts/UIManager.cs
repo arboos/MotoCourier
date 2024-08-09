@@ -13,8 +13,16 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
 
+    [Header("Mobile input")]
     public GameObject mobileInput;
+    public GameObject throttleButton;
+    public GameObject breakesButton;
+    public GameObject turnRightButton;
+    public GameObject turnLeftButton;
+    public GameObject handbrakeButton;
 
+    
+    [Header("Active UI")]
     public TextMeshProUGUI coinsText;
     public Transform coinsImage;
     
