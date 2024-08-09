@@ -36,7 +36,7 @@ public class Coin : MonoBehaviour
     {
         //ADD COINS TO MANAGER
         meshAnimator.SetTrigger("Collect");
-        GameManager.Instance.AddCoins(1);
+        GameManager.Instance.AddCoins(25);
         GameObject coinAudio = Instantiate(SoundsBaseCollection.Instance.Coin_Collected);
         coinAudio.transform.position = transform.position;
         coinAudio.GetComponent<AudioSource>().Play();

@@ -70,7 +70,7 @@ public class UIManager : MonoBehaviour
     {
         if (coinReactionTween == null)
         {
-            coinReactionTween = coinsImage.DOPunchScale(new Vector3(1.1f, 1.1f, 1.1f), 0.1f).SetEase(Ease.InOutElastic);
+            coinReactionTween = coinsImage.DOPunchScale(new Vector3(1.05f, 1.05f, 1.05f), 0.1f).SetEase(Ease.InOutElastic);
             await coinReactionTween.ToUniTask();
             coinsText.text = GameManager.Instance.localCoins.ToString();
             coinReactionTween = null;
