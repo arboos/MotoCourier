@@ -1520,7 +1520,7 @@ GameObject:
   - component: {fileID: 3000609611480154935}
   m_Layer: 5
   m_Name: OrangeCar
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
