@@ -13,19 +13,27 @@ public class RotateObject : MonoBehaviour
 
     private float timeSinceLastRotation = 0f; 
     private bool isAutoRotating = false;
+
+    public Camera rayCastCamera;
     
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            isRotating = true;
-            isAutoRotating = false;
-            timeSinceLastRotation = 0f;
-            initialMousePosition = Input.mousePosition;
             RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //if ()
+            Ray ray = rayCastCamera.ScreenPointToRay(Input.mousePosition);
+            
+            if (Physics.Raycast(ray, out hit, 1000f, LayerMask.GetMask("UI")))
+            {
+                if (hit.transform.CompareTag("Player"))
+                {
+                    isRotating = true;
+                    isAutoRotating = false;
+                    timeSinceLastRotation = 0f;
+                    initialMousePosition = Input.mousePosition;
+                }
+            }
         }
         else if (Input.GetMouseButtonUp(0))
         {

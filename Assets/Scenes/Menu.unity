@@ -4709,6 +4709,7 @@ MonoBehaviour:
   gameMaps:
   - {fileID: 11400000, guid: fe80823247db3bf46b732d97d659b78e, type: 2}
   - {fileID: 11400000, guid: 06e42242ed94fd24ea8509ff91d5a620, type: 2}
+  - {fileID: 11400000, guid: f1248194058d48a45bd383df5a24d537, type: 2}
   gameMapPrefab: {fileID: 4134653650055651108, guid: bcf4032b6fb432545850a424e225fbbb,
     type: 3}
   content: {fileID: 1348229997}
@@ -10987,7 +10988,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 25
   autoRotateSpeed: 15
-  autoRotateDelay: 0
+  autoRotateDelay: 2
+  rayCastCamera: {fileID: 1769709051}
 --- !u!1 &1655561849
 GameObject:
   m_ObjectHideFlags: 0
