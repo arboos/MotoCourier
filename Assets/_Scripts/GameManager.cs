@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public static Action OnAddCoins;
+    public static Action OnDealDamage;
+    public static Action OnTakeHealth;
     
     public int localCoins;
     

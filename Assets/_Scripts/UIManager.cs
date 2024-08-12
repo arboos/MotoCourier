@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using YG;
 using DG.Tweening;
+using Vector2 = UnityEngine.Vector2;
 
 public class UIManager : MonoBehaviour
 {
@@ -26,12 +27,17 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI coinsText;
     public Transform coinsImage;
     
-    public Image healthImage;
+    public Transform healthImage;
+    public TextMeshProUGUI healthText;
     public TextMeshProUGUI wastedCounter;
     public GameObject deathScreen;
 
 
     private Tween coinReactionTween;
+    private Tween healthImageScaleReactionTween;
+    private Tween healthImagePositionReactionTween;
+    
+    private Tween healthImagePositionTakeHealthReactionTween;
     
     private void Awake()
     {
@@ -48,16 +54,19 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         GameManager.OnAddCoins += CoinAddReact;
+        GameManager.OnDealDamage += DealDamageReact;
+        GameManager.OnTakeHealth += TakeHealthReact;
     }
 
     private void OnDisable()
     {
         GameManager.OnAddCoins -= CoinAddReact;
+        GameManager.OnDealDamage -= DealDamageReact;
+        GameManager.OnTakeHealth -= TakeHealthReact;
     }
     
     private void Start()
     {
-        
         if (YandexGame.Instance.infoYG.playerInfoSimulation.isMobile)
         {
             mobileInput.SetActive(true);
@@ -70,11 +79,33 @@ public class UIManager : MonoBehaviour
     {
         if (coinReactionTween == null)
         {
-            //coinReactionTween = coinsImage.DOPunchScale(new Vector3(1.05f, 1.05f, 1.05f), 0.1f).SetEase(Ease.InOutElastic);
             coinReactionTween = coinsImage.DOPunchScale(new Vector3(0.4f, 0.4f, 0.4f), 0.1f).SetEase(Ease.InOutElastic);
             await coinReactionTween.ToUniTask();
             coinsText.text = GameManager.Instance.localCoins.ToString();
             coinReactionTween = null;
+        }
+    }
+
+    public async void DealDamageReact()
+    {
+        if (healthImageScaleReactionTween == null)
+        {
+            print("DEALDAMAGEREACT");
+
+            healthImageScaleReactionTween = healthImage.DOPunchScale(new Vector3(1f, 1f, 1f), 1f).SetEase(Ease.Linear);
+            await healthImageScaleReactionTween.ToUniTask();
+            healthImageScaleReactionTween = null;
+        }
+    }
+
+    public async void TakeHealthReact()
+    {
+        if (healthImagePositionTakeHealthReactionTween == null)
+        {
+            print("TAKE HEALTH REACT");
+            healthImagePositionTakeHealthReactionTween = healthImage.DOPunchScale(new Vector3(0.5f, 0.5f, 0.5f), 1.5f).SetEase(Ease.InQuad);
+            await healthImagePositionTakeHealthReactionTween.ToUniTask();
+            healthImagePositionTakeHealthReactionTween = null;
         }
     }
 }

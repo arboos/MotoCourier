@@ -1,5 +1,5 @@
 {
-    "idSave": 184,
+    "idSave": 189,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -10,10 +10,10 @@
         true,
         false
     ],
-    "SelectedCarName": "White Car",
+    "SelectedCarName": "Orange Car",
     "ownedCars": [
         "Orange Car",
         "White Car"
     ],
-    "energy": 9
+    "energy": 10
 }

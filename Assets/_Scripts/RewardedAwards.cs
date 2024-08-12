@@ -22,7 +22,7 @@ public class RewardedAwards : MonoBehaviour
     {
         if (id == 0)
         {
-            PlayerInfo.Instance.Respawn(1);
+            PlayerInfo.Instance.Respawn();
         }
         
         else if (id == 1)

@@ -41,20 +41,32 @@ public class PlayerInfo : MonoBehaviour
         {
             Death();
         }
-        switch (currentHealth)
-        {
-            case 3:
-                UIManager.Instance.healthImage.color = Color.green;
-                break;
-            
-            case 2:
-                UIManager.Instance.healthImage.color = Color.yellow;
-                break;
-            
-            case 1:
-                UIManager.Instance.healthImage.color = Color.red;
-                break;
-        }
+
+        UIManager.Instance.healthText.text = currentHealth.ToString();
+        GameManager.OnDealDamage?.Invoke();
+        // switch (currentHealth)
+        // {
+        //     case 3:
+        //         UIManager.Instance.healthImage.color = Color.green;
+        //         break;
+        //     
+        //     case 2:
+        //         UIManager.Instance.healthImage.color = Color.yellow;
+        //         break;
+        //     
+        //     case 1:
+        //         UIManager.Instance.healthImage.color = Color.red;
+        //         break;
+        // }
+    }
+    
+    public void TakeHealth(int count)
+    {
+        print("health+= : " + count);
+        currentHealth += count;
+
+        UIManager.Instance.healthText.text = currentHealth.ToString();
+        GameManager.OnTakeHealth?.Invoke();
     }
 
     public void Death()
@@ -65,16 +77,17 @@ public class PlayerInfo : MonoBehaviour
         GetComponent<PrometeoCarController>().enabled = false;
     }
     
-    public void Respawn(int hp)
+    public void Respawn()
     {
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<PrometeoCarController>().enabled = true;
-        currentHealth = hp;
         
         copTrigger.wasted = false;
         UIManager.Instance.wastedCounter.gameObject.SetActive(false);
         copTrigger.timeToWaste = 4f;
         copTrigger.RemoveMissing();
+        
+        TakeHealth(1);
 
         StartCoroutine(DestroyCops());
         

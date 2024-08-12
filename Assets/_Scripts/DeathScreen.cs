@@ -50,7 +50,7 @@ public class DeathScreen : MonoBehaviour
     
     public void RespawnGem()
     {
-        PlayerInfo.Instance.Respawn(1);
+        PlayerInfo.Instance.Respawn();
     }
     
 }
