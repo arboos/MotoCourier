@@ -13,6 +13,7 @@ public class RotateObject : MonoBehaviour
 
     private float timeSinceLastRotation = 0f; 
     private bool isAutoRotating = false;
+    
 
     void Update()
     {
@@ -22,6 +23,9 @@ public class RotateObject : MonoBehaviour
             isAutoRotating = false;
             timeSinceLastRotation = 0f;
             initialMousePosition = Input.mousePosition;
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //if ()
         }
         else if (Input.GetMouseButtonUp(0))
         {
