@@ -1,16 +1,16 @@
 {
-    "idSave": 348,
+    "idSave": 375,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 300,
+    "money": 4500,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "NissanGTR50",
+    "SelectedCarName": "BMWM3E36",
     "ownedCars": [
         "Orange Car",
         "White Car",
@@ -22,7 +22,8 @@
         "YellowCar",
         "Dodge Challenger 2008",
         "Chevrolet Camaro",
-        "NissanGTR50"
+        "NissanGTR50",
+        "BMWM3E36"
     ],
-    "energy": 4
+    "energy": 9
 }
