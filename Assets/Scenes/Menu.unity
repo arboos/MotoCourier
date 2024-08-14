@@ -12830,6 +12830,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ede7478662f6ce047ae9e8cfc963f917, type: 2}
   - {fileID: 11400000, guid: ec769fbeeceaaff40aadd88e59d3db79, type: 2}
   - {fileID: 11400000, guid: c9bfb55f9faad7a48b39add2f6d811da, type: 2}
+  - {fileID: 11400000, guid: e28c6985dca216e448b1d3d71b88a7ce, type: 2}
+  - {fileID: 11400000, guid: 6bd6c1f827fdebf42983fb9441df0163, type: 2}
   carNameText: {fileID: 519218217}
   spawnPoint: {fileID: 1646349082}
   carDescriptionText: {fileID: 1619923340}

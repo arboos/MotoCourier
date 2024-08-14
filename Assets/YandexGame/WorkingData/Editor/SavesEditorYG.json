@@ -1,16 +1,16 @@
 {
-    "idSave": 292,
+    "idSave": 317,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 3500,
+    "money": 2700,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "NissanSkyline",
+    "SelectedCarName": "YellowCar",
     "ownedCars": [
         "Orange Car",
         "White Car",
@@ -18,7 +18,8 @@
         "Purple Car",
         "MazdaRX-7",
         "ToyotaAE-86",
-        "NissanSkyline"
+        "NissanSkyline",
+        "YellowCar"
     ],
-    "energy": 4
+    "energy": 5
 }
