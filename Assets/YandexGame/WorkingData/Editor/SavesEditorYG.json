@@ -1,9 +1,9 @@
 {
-    "idSave": 223,
+    "idSave": 270,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 7100,
+    "money": 4700,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
@@ -15,7 +15,9 @@
         "Orange Car",
         "White Car",
         "Green Car",
-        "Purple Car"
+        "Purple Car",
+        "MazdaRX-7",
+        "ToyotaAE-86"
     ],
-    "energy": 9
+    "energy": 0
 }

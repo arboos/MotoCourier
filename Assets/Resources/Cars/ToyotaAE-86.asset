@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d6475b695ba2f6458afa8c5e1bdcffc, type: 3}
-  m_Name: PurpleCar
+  m_Name: ToyotaAE-86
   m_EditorClassIdentifier: 
-  carName: Purple Car
-  carPrefab: {fileID: 8701164611604439024, guid: f6ed8acc7519254488622fae0762fc20,
+  carName: ToyotaAE-86
+  carPrefab: {fileID: 920515573396237786, guid: 0ca7660f2abfff34490d0f79ac5a6db3,
     type: 3}
   carDescription: ///
-  rarity: Epic
+  rarity: Ledendary
   maxSpeed: 120
   maxReverseSpeed: 80
   accelerationMultiplier: 6
@@ -26,4 +26,4 @@ MonoBehaviour:
   decelerationMultiplier: 3
   handbrakeDriftMultiplier: 3
   bodyMassCenter: {x: 0, y: 0, z: 0}
-  cost: 1000
+  cost: 1200
