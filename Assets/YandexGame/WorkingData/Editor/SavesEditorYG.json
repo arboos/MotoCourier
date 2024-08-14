@@ -1,16 +1,16 @@
 {
-    "idSave": 317,
+    "idSave": 340,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 2700,
+    "money": 1100,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "YellowCar",
+    "SelectedCarName": "Dodge Challenger 2008",
     "ownedCars": [
         "Orange Car",
         "White Car",
@@ -19,7 +19,9 @@
         "MazdaRX-7",
         "ToyotaAE-86",
         "NissanSkyline",
-        "YellowCar"
+        "YellowCar",
+        "Dodge Challenger 2008",
+        "Chevrolet Camaro"
     ],
-    "energy": 5
+    "energy": 9
 }
