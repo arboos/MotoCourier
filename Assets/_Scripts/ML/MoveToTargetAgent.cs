@@ -5,6 +5,7 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
+using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
 public class MoveToTargetAgent : Agent
@@ -44,7 +45,6 @@ public class MoveToTargetAgent : Agent
     
     public override void OnActionReceived(ActionBuffers actions)
     {
-        print("OnActionRecieved();");
         forward = actions.ContinuousActions[0];
         backward = actions.ContinuousActions[1];
         right = actions.ContinuousActions[2];
@@ -84,28 +84,26 @@ public class MoveToTargetAgent : Agent
     
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation((Vector3)envHelper.cops[0].position);
-        sensor.AddObservation((Vector3)envHelper.cops[1].position);
-        sensor.AddObservation((Vector3)envHelper.cops[2].position);
+        sensor.AddObservation((Vector3)transform.position);
         sensor.AddObservation((Vector3)target.position);
     }
 
     private void FixedUpdate()
     {
-        lastPosDistance = Vector3.Distance(lastPosition, target.position);
-        currentPosDistance = Vector3.Distance(transform.position, target.position);
-        
-        AddReward(lastPosDistance - currentPosDistance);
-
+        // lastPosDistance = Vector3.Distance(lastPosition, target.position);
+        // currentPosDistance = Vector3.Distance(transform.position, target.position);
+        //
         lastPosition = transform.position;
+
+        AddReward(-0.005f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerDamagable"))
         {
-            print("TARGET COMPLETE: +500f");
-            AddReward(500f);
+            print("TARGET COMPLETE: +1");
+            AddReward(1f);
             EndEpisode();
         }
     }
@@ -115,7 +113,7 @@ public class MoveToTargetAgent : Agent
         if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Cop"))
         {
             print("WALL || COP COLLISION: -10f");
-            AddReward(-10f);
+            AddReward(-0.01f);
             EndEpisode();
         }
     }

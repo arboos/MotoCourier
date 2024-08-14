@@ -1,0 +1,56 @@
+{
+    "MoveToTarget": {
+        "checkpoints": [
+            {
+                "steps": 16033,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-16033.onnx",
+                "reward": -18.33434647321701,
+                "creation_time": 1723578603.758287,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-16033.pt"
+                ]
+            },
+            {
+                "steps": 41412,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-41412.onnx",
+                "reward": null,
+                "creation_time": 1723580097.3993323,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-41412.pt"
+                ]
+            },
+            {
+                "steps": 41412,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-41412.onnx",
+                "reward": null,
+                "creation_time": 1723582593.1191785,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-41412.pt"
+                ]
+            },
+            {
+                "steps": 41412,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-41412.onnx",
+                "reward": null,
+                "creation_time": 1723582904.2369335,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-41412.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 41412,
+            "file_path": "results\\ppo\\MoveToTarget.onnx",
+            "reward": null,
+            "creation_time": 1723582904.2369335,
+            "auxillary_file_paths": [
+                "results\\ppo\\MoveToTarget\\MoveToTarget-41412.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.0+cpu"
+    }
+}
