@@ -22,7 +22,7 @@ MonoBehaviour:
   accelerationMultiplier: 6
   maxSteeringAngle: 45
   steeringSpeed: 1
-  brakeForce: 400
+  brakeForce: 450
   decelerationMultiplier: 3
   handbrakeDriftMultiplier: 3
   bodyMassCenter: {x: 0, y: 0, z: 0}

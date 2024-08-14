@@ -65,7 +65,7 @@ public class ChooseCar : MonoBehaviour
 
         CarData carData = carDataArray[currentIndex];
         currentCarInstance = Instantiate(carData.carPrefab, spawnPoint);
-        currentCarInstance.transform.localScale = new Vector3(250, 250, 250);
+        currentCarInstance.transform.localScale = new Vector3(currentCarInstance.transform.localScale.x * 200, currentCarInstance.transform.localScale.x * 200, currentCarInstance.transform.localScale.z * 200);
         currentCarInstance.GetComponent<PrometeoCarController>().enabled = false;
         carNameText.text = carData.carName;
         carDescriptionText.text = carData.carDescription;
