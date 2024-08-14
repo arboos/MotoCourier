@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d6475b695ba2f6458afa8c5e1bdcffc, type: 3}
-  m_Name: PurpleCar
+  m_Name: ChevroletCamaro
   m_EditorClassIdentifier: 
-  carName: Purple Car
-  carPrefab: {fileID: 8701164611604439024, guid: f6ed8acc7519254488622fae0762fc20,
+  carName: Chevrolet Camaro
+  carPrefab: {fileID: 4830527368437521726, guid: 8185e9b0476d3024da9d7eebd3ea79d2,
     type: 3}
-  carDescription: ///
-  rarity: Epic
+  carDescription: 222
+  rarity: Rare
   maxSpeed: 120
   maxReverseSpeed: 80
   accelerationMultiplier: 6
@@ -26,4 +26,4 @@ MonoBehaviour:
   decelerationMultiplier: 3
   handbrakeDriftMultiplier: 3
   bodyMassCenter: {x: 0, y: 0, z: 0}
-  cost: 1000
+  cost: 800

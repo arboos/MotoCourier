@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d6475b695ba2f6458afa8c5e1bdcffc, type: 3}
-  m_Name: PurpleCar
+  m_Name: MazdaRX-7
   m_EditorClassIdentifier: 
-  carName: Purple Car
-  carPrefab: {fileID: 8701164611604439024, guid: f6ed8acc7519254488622fae0762fc20,
+  carName: MazdaRX-7
+  carPrefab: {fileID: 3248139659785394444, guid: 28328f8258141174ea285dd5e64df46d,
     type: 3}
-  carDescription: ///
-  rarity: Epic
+  carDescription: '***'
+  rarity: Legendary
   maxSpeed: 120
   maxReverseSpeed: 80
   accelerationMultiplier: 6
@@ -26,4 +26,4 @@ MonoBehaviour:
   decelerationMultiplier: 3
   handbrakeDriftMultiplier: 3
   bodyMassCenter: {x: 0, y: 0, z: 0}
-  cost: 1000
+  cost: 1200
