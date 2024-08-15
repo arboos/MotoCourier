@@ -25,20 +25,24 @@ public class MoveToTargetAgent : Agent
     public float right;
     public float left;
 
+    public Rigidbody rb;
+
     private void Start()
     {
         envHelper = GetComponentInParent<EnvHelper>();
         carController = GetComponent<PrometeoCopController>();
+        rb = GetComponent<Rigidbody>();
         lastPosition = transform.position;
     }
     
     public override void OnEpisodeBegin()
     { 
-        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        rb.velocity = Vector3.zero;
         
         int spawnA = Random.Range(0, envHelper.copSpawnPos.Length);
         
         transform.position = envHelper.copSpawnPos[spawnA].position;
+        transform.rotation = Quaternion.Euler(0f,Random.Range(0f, 360f), 0f);
         
         target.transform.position = envHelper.playerSpawnPos[Random.Range(0, envHelper.playerSpawnPos.Length)].position;
     }
@@ -49,6 +53,7 @@ public class MoveToTargetAgent : Agent
         backward = actions.ContinuousActions[1];
         right = actions.ContinuousActions[2];
         left = actions.ContinuousActions[3];
+        float none = actions.ContinuousActions[4];
 
         if (forward > 0f)
         {
@@ -72,8 +77,6 @@ public class MoveToTargetAgent : Agent
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        print("Heuristic");
-        
         ActionSegment<float> continuousActions = actionsOut.ContinuousActions;
 
         continuousActions[0] = Input.GetKey(KeyCode.W) ? 1f : -1f;
@@ -84,17 +87,49 @@ public class MoveToTargetAgent : Agent
     
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation((Vector3)transform.position);
-        sensor.AddObservation((Vector3)target.position);
+        sensor.AddObservation((Vector3)transform.localPosition);
+        sensor.AddObservation((Quaternion)(transform.localRotation));
+        sensor.AddObservation((Vector3)target.localPosition);
+        sensor.AddObservation((Vector3)rb.velocity);
+        
+        GetObservationRay(sensor, transform.forward);
+        GetObservationRay(sensor, -transform.forward);
+        GetObservationRay(sensor, transform.right);
+        GetObservationRay(sensor, -transform.right);
+        
+        GetObservationRay(sensor, transform.right + transform.forward);
+        GetObservationRay(sensor, transform.right - transform.forward);
+        GetObservationRay(sensor, transform.right + transform.forward);
+        GetObservationRay(sensor, transform.right - transform.forward);
     }
 
+    private void GetObservationRay(VectorSensor sensor, Vector3 rayDirection)
+    {
+        Ray forwardRay = new Ray(transform.position + transform.up, rayDirection * 50f);
+        RaycastHit hit;
+        
+        if (Physics.Raycast(forwardRay, out hit, 100f, LayerMask.GetMask("Default")))
+        {
+            if (hit.transform.CompareTag("Wall"))
+            {
+                sensor.AddObservation((Vector3)hit.transform.localPosition);
+                sensor.AddObservation((float)Vector3.Distance(hit.point, transform.position));
+            }
+            if (hit.transform.CompareTag("Player"))
+            {
+                sensor.AddObservation((Vector3)hit.transform.localPosition);
+                sensor.AddObservation((float)Vector3.Distance(hit.point, transform.position));
+            }
+        }
+    }
+    
     private void FixedUpdate()
     {
         // lastPosDistance = Vector3.Distance(lastPosition, target.position);
         // currentPosDistance = Vector3.Distance(transform.position, target.position);
         //
         lastPosition = transform.position;
-
+        
         AddReward(-0.005f);
     }
 
@@ -103,7 +138,9 @@ public class MoveToTargetAgent : Agent
         if (other.CompareTag("PlayerDamagable"))
         {
             print("TARGET COMPLETE: +1");
+            MLStats.Instance.Wins++;
             AddReward(1f);
+            envHelper.groundMat.color = Color.green;
             EndEpisode();
         }
     }
@@ -112,9 +149,26 @@ public class MoveToTargetAgent : Agent
     {
         if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Cop"))
         {
-            print("WALL || COP COLLISION: -10f");
-            AddReward(-0.01f);
+            print("WALL || COP COLLISION: -0.5f");
+            envHelper.groundMat.color = Color.red;
+
+            MLStats.Instance.Loses++;
+            AddReward(-0.5f);
             EndEpisode();
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(transform.position + transform.up, transform.forward * 25f);
+        Gizmos.DrawRay(transform.position + transform.up, -transform.forward * 25f);
+        Gizmos.DrawRay(transform.position + transform.up, transform.right * 25f);
+        Gizmos.DrawRay(transform.position + transform.up, -transform.right * 25f);
+        
+        Gizmos.DrawRay(transform.position + transform.up, ((transform.forward + transform.right) * 25f));
+        Gizmos.DrawRay(transform.position + transform.up, ((transform.forward - transform.right) * 25f));
+        Gizmos.DrawRay(transform.position + transform.up, ((-transform.forward + transform.right) * 25f));
+        Gizmos.DrawRay(transform.position + transform.up, ((-transform.forward - transform.right) * 25f));
+        
     }
 }
