@@ -1,5 +1,5 @@
 {
-    "idSave": 380,
+    "idSave": 382,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -10,7 +10,7 @@
         true,
         false
     ],
-    "SelectedCarName": "ToyotaAE-86",
+    "SelectedCarName": "NissanGTR50",
     "ownedCars": [
         "Orange Car",
         "White Car",
@@ -25,5 +25,5 @@
         "NissanGTR50",
         "BMWM3E36"
     ],
-    "energy": 5
+    "energy": 4
 }
