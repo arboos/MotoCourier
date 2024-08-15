@@ -12,6 +12,8 @@ public class LoadCarData : MonoBehaviour
     
     private PrometeoCarController prometeoCarController;
 
+    [Header("Environment")] public CameraFollow cameraFollow;
+
     private void Start()
     {
         // Получаем доступ к информации текущей выбранной машины!
@@ -21,6 +23,9 @@ public class LoadCarData : MonoBehaviour
 
         prometeoCarController = carInstance.GetComponent<PrometeoCarController>();
         LoadData();
+
+        // Setting up camera
+        cameraFollow.carTransform = carInstance.transform;
     }
 
     public void LoadData()
