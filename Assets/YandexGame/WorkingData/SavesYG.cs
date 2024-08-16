@@ -23,6 +23,8 @@ namespace YG
         public string SelectedCarName;
         public List<string> ownedCars = new List<string>();
         public int energy = 10;
+        public string lastShopUpdateTime;
+        public List<string> carsInShop = new List<string>();
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
