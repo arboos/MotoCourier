@@ -2,33 +2,6 @@
     "MoveToTarget": {
         "checkpoints": [
             {
-                "steps": 24499968,
-                "file_path": "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-24499968.onnx",
-                "reward": -1.31843739346816,
-                "creation_time": 1723728870.923756,
-                "auxillary_file_paths": [
-                    "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-24499968.pt"
-                ]
-            },
-            {
-                "steps": 24999981,
-                "file_path": "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-24999981.onnx",
-                "reward": -1.325675573703405,
-                "creation_time": 1723729122.0120058,
-                "auxillary_file_paths": [
-                    "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-24999981.pt"
-                ]
-            },
-            {
-                "steps": 25499991,
-                "file_path": "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-25499991.onnx",
-                "reward": -1.353499898314476,
-                "creation_time": 1723729373.548383,
-                "auxillary_file_paths": [
-                    "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-25499991.pt"
-                ]
-            },
-            {
                 "steps": 25999976,
                 "file_path": "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-25999976.onnx",
                 "reward": -1.382980181519034,
@@ -45,15 +18,42 @@
                 "auxillary_file_paths": [
                     "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-26323214.pt"
                 ]
+            },
+            {
+                "steps": 26357050,
+                "file_path": "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-26357050.onnx",
+                "reward": -3.9344444157164773,
+                "creation_time": 1723815636.6831508,
+                "auxillary_file_paths": [
+                    "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-26357050.pt"
+                ]
+            },
+            {
+                "steps": 26499987,
+                "file_path": "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-26499987.onnx",
+                "reward": -3.662228647244069,
+                "creation_time": 1723815807.372684,
+                "auxillary_file_paths": [
+                    "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-26499987.pt"
+                ]
+            },
+            {
+                "steps": 26534370,
+                "file_path": "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-26534370.onnx",
+                "reward": -3.767692267894745,
+                "creation_time": 1723815831.2697644,
+                "auxillary_file_paths": [
+                    "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-26534370.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 26323214,
+            "steps": 26534370,
             "file_path": "results\\TestNoWalls8\\MoveToTarget.onnx",
-            "reward": -1.4333605497586923,
-            "creation_time": 1723729912.8068461,
+            "reward": -3.767692267894745,
+            "creation_time": 1723815831.2697644,
             "auxillary_file_paths": [
-                "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-26323214.pt"
+                "results\\TestNoWalls8\\MoveToTarget\\MoveToTarget-26534370.pt"
             ]
         }
     },

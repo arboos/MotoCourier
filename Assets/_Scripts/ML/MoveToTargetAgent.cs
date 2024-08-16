@@ -27,6 +27,8 @@ public class MoveToTargetAgent : Agent
 
     public Rigidbody rb;
 
+    public float aliveTime;
+
     private void Start()
     {
         envHelper = GetComponentInParent<EnvHelper>();
@@ -38,7 +40,7 @@ public class MoveToTargetAgent : Agent
     public override void OnEpisodeBegin()
     { 
         rb.velocity = Vector3.zero;
-        
+        aliveTime = 0f;
         int spawnA = Random.Range(0, envHelper.copSpawnPos.Length);
         
         transform.position = envHelper.copSpawnPos[spawnA].position;
@@ -129,8 +131,17 @@ public class MoveToTargetAgent : Agent
         // currentPosDistance = Vector3.Distance(transform.position, target.position);
         //
         lastPosition = transform.position;
+        aliveTime += 1f / 60f;
         
         AddReward(-0.005f);
+
+        if (aliveTime >= 30f)
+        {
+            
+            envHelper.groundMat.color = Color.yellow;
+            AddReward(-5f);
+            EndEpisode();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -149,26 +160,25 @@ public class MoveToTargetAgent : Agent
     {
         if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Cop"))
         {
-            print("WALL || COP COLLISION: -0.5f");
+            print("WALL || COP COLLISION: -3f");
             envHelper.groundMat.color = Color.red;
 
             MLStats.Instance.Loses++;
-            AddReward(-0.5f);
+            AddReward(-1f);
             EndEpisode();
         }
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(transform.position + transform.up, transform.forward * 25f);
-        Gizmos.DrawRay(transform.position + transform.up, -transform.forward * 25f);
-        Gizmos.DrawRay(transform.position + transform.up, transform.right * 25f);
-        Gizmos.DrawRay(transform.position + transform.up, -transform.right * 25f);
-        
-        Gizmos.DrawRay(transform.position + transform.up, ((transform.forward + transform.right) * 25f));
-        Gizmos.DrawRay(transform.position + transform.up, ((transform.forward - transform.right) * 25f));
-        Gizmos.DrawRay(transform.position + transform.up, ((-transform.forward + transform.right) * 25f));
-        Gizmos.DrawRay(transform.position + transform.up, ((-transform.forward - transform.right) * 25f));
-        
+        // Gizmos.DrawRay(transform.position + transform.up, transform.forward * 25f);
+        // Gizmos.DrawRay(transform.position + transform.up, -transform.forward * 25f);
+        // Gizmos.DrawRay(transform.position + transform.up, transform.right * 25f);
+        // Gizmos.DrawRay(transform.position + transform.up, -transform.right * 25f);
+        //
+        // Gizmos.DrawRay(transform.position + transform.up, ((transform.forward + transform.right) * 25f));
+        // Gizmos.DrawRay(transform.position + transform.up, ((transform.forward - transform.right) * 25f));
+        // Gizmos.DrawRay(transform.position + transform.up, ((-transform.forward + transform.right) * 25f));
+        // Gizmos.DrawRay(transform.position + transform.up, ((-transform.forward - transform.right) * 25f));
     }
 }
