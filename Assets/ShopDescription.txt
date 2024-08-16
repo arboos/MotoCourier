@@ -5,3 +5,4 @@ Fortune wheel & capsule
 Resources
 
 
+Принцыпы ООП

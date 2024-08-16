@@ -8,9 +8,10 @@ using YG;
 public class ChooseCar : MonoBehaviour
 {
     [Header("Data")]
-    public CarData[] carDataArray; 
+    public CarContainer carContainer; // Reference to CarContainer
     private GameObject currentCarInstance;
     private int currentIndex = 0;
+    private List<CarData> ownedCars = new List<CarData>();
 
     [Header("UI")]
     public TextMeshProUGUI carNameText;
@@ -22,15 +23,44 @@ public class ChooseCar : MonoBehaviour
     public GameObject lobbyUI;
     public TextMeshProUGUI moneyText;
 
-    void Start()
+    void OnEnable()
     {
         UpdateMoneyText();
-        string savedCarName = YandexGame.savesData.SelectedCarName;
-        if (string.IsNullOrEmpty(savedCarName)) {
-            savedCarName = carDataArray[0].carName;
+        PopulateOwnedCars();
+
+        if (ownedCars.Count == 0)
+        {
+            // Если нету ни одной машины, выдаем первую машину из CarContainer
+            var defaultCar = carContainer.carDataArray[0];
+            YandexGame.savesData.AddCar(defaultCar.carName);
+            YandexGame.savesData.SelectedCarName = defaultCar.carName;
+            YandexGame.SaveProgress();
+        
+            // Обновляем список машин
+            PopulateOwnedCars();
         }
+
+        string savedCarName = YandexGame.savesData.SelectedCarName;
         currentIndex = GetCarIndexByName(savedCarName);
         UpdateCarSelection();
+    }
+
+    private void OnDisable()
+    {
+        Destroy(currentCarInstance);
+    }
+
+
+    void PopulateOwnedCars()
+    {
+        ownedCars.Clear();
+        foreach (var carData in carContainer.carDataArray)
+        {
+            if (YandexGame.savesData.HasCar(carData.carName))
+            {
+                ownedCars.Add(carData);
+            }
+        }
     }
 
     public void NextCar()
@@ -38,7 +68,7 @@ public class ChooseCar : MonoBehaviour
         Destroy(currentCarInstance);
 
         currentIndex++;
-        if (currentIndex >= carDataArray.Length)
+        if (currentIndex >= ownedCars.Count)
         {
             currentIndex = 0;
         }
@@ -53,7 +83,7 @@ public class ChooseCar : MonoBehaviour
         currentIndex--;
         if (currentIndex < 0)
         {
-            currentIndex = carDataArray.Length - 1;
+            currentIndex = ownedCars.Count - 1;
         }
 
         UpdateCarSelection();
@@ -61,9 +91,9 @@ public class ChooseCar : MonoBehaviour
 
     void UpdateCarSelection()
     {
-        if (carDataArray.Length == 0) return;
+        if (ownedCars.Count == 0) return;
 
-        CarData carData = carDataArray[currentIndex];
+        CarData carData = ownedCars[currentIndex];
         currentCarInstance = Instantiate(carData.carPrefab, spawnPoint);
         currentCarInstance.transform.localScale = new Vector3(currentCarInstance.transform.localScale.x * 200, currentCarInstance.transform.localScale.x * 200, currentCarInstance.transform.localScale.z * 200);
         currentCarInstance.GetComponent<PrometeoCarController>().enabled = false;
@@ -77,7 +107,7 @@ public class ChooseCar : MonoBehaviour
 
     public void SelectCar()
     {
-        CarData carData = carDataArray[currentIndex];
+        CarData carData = ownedCars[currentIndex];
         
         if (YandexGame.savesData.HasCar(carData.carName))
         {
@@ -90,32 +120,11 @@ public class ChooseCar : MonoBehaviour
 
             Debug.Log("Car selected and saved (was in inventory): " + carData.carName);
         }
-        else
-        {
-            if (YandexGame.savesData.money >= carData.cost)
-            {
-                YandexGame.savesData.money -= carData.cost;
-                YandexGame.savesData.SelectedCarName = carData.carName;
-                YandexGame.savesData.AddCar(carData.carName);
-                YandexGame.SaveProgress();
-
-                selectText.text = "Equipped";
-                shopUI.SetActive(false);
-                lobbyUI.SetActive(true);
-
-                Debug.Log("Car selected and saved (bought): " + carData.carName);
-                UpdateMoneyText();
-            }
-            else
-            {
-                Debug.Log("Not enough money to buy!");
-            }
-        }
     }
 
     public void Back()
     {
-        CarData currentCarData = carDataArray[currentIndex];
+        CarData currentCarData = ownedCars[currentIndex];
         string selectedCarName = YandexGame.savesData.SelectedCarName;
 
         if (YandexGame.savesData.HasCar(currentCarData.carName) && currentCarData.carName == selectedCarName)
@@ -131,16 +140,16 @@ public class ChooseCar : MonoBehaviour
             {
                 currentIndex = savedCarIndex;
                 UpdateCarSelection();
-                Debug.Log("Switched to the last saved car: " + carDataArray[savedCarIndex].carName);
+                Debug.Log("Switched to the last saved car: " + ownedCars[savedCarIndex].carName);
             }
         }
     }
 
     private int GetCarIndexByName(string carName)
     {
-        for (int i = 0; i < carDataArray.Length; i++)
+        for (int i = 0; i < ownedCars.Count; i++)
         {
-            if (carDataArray[i].carName == carName)
+            if (ownedCars[i].carName == carName)
             {
                 return i;
             }
@@ -154,11 +163,17 @@ public class ChooseCar : MonoBehaviour
         moneyText.text = YandexGame.savesData.money.ToString();
     }
 
-    private void OnEnable()
-    {
-        this.transform.rotation = Quaternion.Euler(6, 180, 0);
-    }
+    // private void OnEnable()
+    // {
+    //     this.transform.rotation = Quaternion.Euler(6, 180, 0);
+    //     PopulateOwnedCars();
+    //     
+    //     CarData carData = ownedCars[currentIndex];
+    //     bool hasCar = YandexGame.savesData.HasCar(carData.carName);
+    //     selectText.text = hasCar ? (YandexGame.savesData.SelectedCarName == carData.carName ? "Equipped" : "Equip") : carData.cost.ToString();
+    // }
 }
+
 
 
 // -------------------------------- CUSTOM EDITOR --------------------------------
@@ -198,6 +213,7 @@ public class ChooseCarEditor : Editor
         {
             Debug.Log("Data was reset");
             YandexGame.ResetSaveProgress();
+            YandexGame.SaveProgress();
         }
         GUILayout.Label("By clicking this button you will reset data of obtained cars (IN-GAME ONLY)", EditorStyles.centeredGreyMiniLabel);
         GUILayout.Label("Made for testing CarCapsule drop!", EditorStyles.centeredGreyMiniLabel);
