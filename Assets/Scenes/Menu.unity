@@ -341,6 +341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarTemplate (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -776,6 +781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OffersTemplate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644720955842617965, guid: 44fc70ce56cc9be4a81237d2bb36950e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5676684938123269592, guid: 44fc70ce56cc9be4a81237d2bb36950e,
         type: 3}
@@ -1287,6 +1297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GemTemplate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6542949454073418286, guid: 74a9f7fda486fc84ca35aa1a01753fb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1659,6 +1674,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CoinTemplate (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922563247927194175, guid: 8ca51cec82c6e8044b357b36326fb456,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7182407473222598852, guid: 8ca51cec82c6e8044b357b36326fb456,
         type: 3}
@@ -2976,6 +2996,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarTemplate (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4052,7 +4077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4465.0034, y: 0}
+  m_AnchoredPosition: {x: 0.0009765625, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &521504203
@@ -4207,6 +4232,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CarTemplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4406,6 +4436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GemTemplate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542949454073418286, guid: 74a9f7fda486fc84ca35aa1a01753fb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4793,6 +4828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OffersTemplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644720955842617965, guid: 44fc70ce56cc9be4a81237d2bb36950e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5676684938123269592, guid: 44fc70ce56cc9be4a81237d2bb36950e,
         type: 3}
@@ -5542,6 +5582,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CarTemplate (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6566,6 +6611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CoinTemplate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922563247927194175, guid: 8ca51cec82c6e8044b357b36326fb456,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7182407473222598852, guid: 8ca51cec82c6e8044b357b36326fb456,
         type: 3}
@@ -8937,6 +8987,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarTemplate (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9502,6 +9557,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CarTemplate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10423,6 +10483,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CarTemplate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13248,6 +13313,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GemTemplate (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6542949454073418286, guid: 74a9f7fda486fc84ca35aa1a01753fb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13598,6 +13668,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 661029452}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1676810506}
+        m_TargetAssemblyTypeName: UnownedCarList, Assembly-CSharp
+        m_MethodName: DebugPrintUnownedCars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13956,6 +14038,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GiftTemplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892102299323850196, guid: 153b913d92a92b44f9fb21578b4352aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8781792055602679796, guid: 153b913d92a92b44f9fb21578b4352aa,
         type: 3}
@@ -14657,6 +14744,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1676810503}
+  - component: {fileID: 1676810504}
+  - component: {fileID: 1676810505}
+  - component: {fileID: 1676810506}
   m_Layer: 5
   m_Name: --[NEWSHOP]--
   m_TagString: Untagged
@@ -14686,6 +14776,72 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1676810504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676810502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e62c1eb83d2dc148826e1f6704a9064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offersAmount: 2
+  carsAmount: 5
+  offerPrefab: {fileID: 1644720955842617965, guid: 44fc70ce56cc9be4a81237d2bb36950e,
+    type: 3}
+  giftPrefab: {fileID: 2892102299323850196, guid: 153b913d92a92b44f9fb21578b4352aa,
+    type: 3}
+  wheelPrefab: {fileID: 2892102299323850196, guid: 153b913d92a92b44f9fb21578b4352aa,
+    type: 3}
+  capsulePrefab: {fileID: 2892102299323850196, guid: 153b913d92a92b44f9fb21578b4352aa,
+    type: 3}
+  carPrefab: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
+    type: 3}
+  resourcesPrefabs:
+  - {fileID: 1922563247927194175, guid: 8ca51cec82c6e8044b357b36326fb456, type: 3}
+  - {fileID: 6542949454073418286, guid: 74a9f7fda486fc84ca35aa1a01753fb6, type: 3}
+  spawnPoint: {fileID: 521504202}
+--- !u!114 &1676810505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676810502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04ea4461d87dc94ab4b2b17b057e9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carDataArray:
+  - {fileID: 11400000, guid: 822dda869048dbb4f8fecec9f5571a27, type: 2}
+  - {fileID: 11400000, guid: 72d71e662c2eb7045a30577230b91fdc, type: 2}
+  - {fileID: 11400000, guid: 71c9f4c683ef6e4489d333a1f13dd464, type: 2}
+  - {fileID: 11400000, guid: ede7478662f6ce047ae9e8cfc963f917, type: 2}
+  - {fileID: 11400000, guid: ec769fbeeceaaff40aadd88e59d3db79, type: 2}
+  - {fileID: 11400000, guid: caef1b334f2851c4a96bbe8be70c5085, type: 2}
+  - {fileID: 11400000, guid: 8e1012e1a289a064490e6c3c40be35bc, type: 2}
+  - {fileID: 11400000, guid: 904a701a0f3abec4ba28da4126823bbb, type: 2}
+  - {fileID: 11400000, guid: e28c6985dca216e448b1d3d71b88a7ce, type: 2}
+  - {fileID: 11400000, guid: 6bd6c1f827fdebf42983fb9441df0163, type: 2}
+  - {fileID: 11400000, guid: c9bfb55f9faad7a48b39add2f6d811da, type: 2}
+  - {fileID: 11400000, guid: da902a52e57b2794eba48f50f9e99d03, type: 2}
+--- !u!114 &1676810506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676810502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d369b468df0430f41be05053be4802d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carContainer: {fileID: 1676810505}
 --- !u!1 &1677807385
 GameObject:
   m_ObjectHideFlags: 0
@@ -15616,6 +15772,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GemTemplate (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6542949454073418286, guid: 74a9f7fda486fc84ca35aa1a01753fb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15804,6 +15965,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CoinTemplate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922563247927194175, guid: 8ca51cec82c6e8044b357b36326fb456,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7182407473222598852, guid: 8ca51cec82c6e8044b357b36326fb456,
         type: 3}
@@ -16028,6 +16194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CarTemplate (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16748,6 +16919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarTemplate (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16802,19 +16978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2dc1bf55b3641542be28756efea90f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carDataArray:
-  - {fileID: 11400000, guid: 822dda869048dbb4f8fecec9f5571a27, type: 2}
-  - {fileID: 11400000, guid: 72d71e662c2eb7045a30577230b91fdc, type: 2}
-  - {fileID: 11400000, guid: 71c9f4c683ef6e4489d333a1f13dd464, type: 2}
-  - {fileID: 11400000, guid: ede7478662f6ce047ae9e8cfc963f917, type: 2}
-  - {fileID: 11400000, guid: ec769fbeeceaaff40aadd88e59d3db79, type: 2}
-  - {fileID: 11400000, guid: c9bfb55f9faad7a48b39add2f6d811da, type: 2}
-  - {fileID: 11400000, guid: e28c6985dca216e448b1d3d71b88a7ce, type: 2}
-  - {fileID: 11400000, guid: 6bd6c1f827fdebf42983fb9441df0163, type: 2}
-  - {fileID: 11400000, guid: 8e1012e1a289a064490e6c3c40be35bc, type: 2}
-  - {fileID: 11400000, guid: caef1b334f2851c4a96bbe8be70c5085, type: 2}
-  - {fileID: 11400000, guid: 904a701a0f3abec4ba28da4126823bbb, type: 2}
-  - {fileID: 11400000, guid: da902a52e57b2794eba48f50f9e99d03, type: 2}
+  carContainer: {fileID: 1676810505}
   carNameText: {fileID: 519218217}
   spawnPoint: {fileID: 1646349082}
   carDescriptionText: {fileID: 1619923340}
@@ -17753,7 +17917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carCapsuleAnim: {fileID: 683826840884585312}
-  carsInShop: {fileID: 1930775154}
+  carsInShop: {fileID: 0}
   openButton: {fileID: 1327445073}
   carReceived: {fileID: 372165571}
   spawnPoint: {fileID: 1677807386}
@@ -19060,6 +19224,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CoinTemplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922563247927194175, guid: 8ca51cec82c6e8044b357b36326fb456,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7182407473222598852, guid: 8ca51cec82c6e8044b357b36326fb456,
         type: 3}
@@ -21321,6 +21490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GemTemplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542949454073418286, guid: 74a9f7fda486fc84ca35aa1a01753fb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
