@@ -1,5 +1,5 @@
 {
-    "idSave": 487,
+    "idSave": 562,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -15,12 +15,12 @@
         "Orange Car"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "16.08.2024 15:39:12",
+    "lastShopUpdateTime": "16.08.2024 16:11:31",
     "carsInShop": [
-        "YellowCar",
-        "MazdaRX-7",
         "GreenCar",
+        "YellowCar",
+        "DodgeChallenger2008",
         "WhiteCar",
-        "ToyotaAE-86"
+        "MazdaRX-7"
     ]
 }
