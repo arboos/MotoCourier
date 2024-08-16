@@ -360,10 +360,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 35.25
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 10.891121, y: 0, z: 8.712906, w: 5.537842}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -494,15 +494,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.7
+  m_fontSize: 55.85
   m_fontSizeBase: 56.7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 25.814102, y: 0, z: 27.33252, w: 0}
+  m_margin: {x: 25.814102, y: 0, z: 27.33252, w: 9.603699}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -649,6 +649,13 @@ MonoBehaviour:
   carNameText: {fileID: 6024129561380066603}
   carSpawnPointTransform: {fileID: 3315290565121785076}
   rarityText: {fileID: 4445309134076963986}
+  raritiesImages:
+  - {fileID: 21300000, guid: dad47e9b3f72d4253bd4959b57289345, type: 3}
+  - {fileID: 21300000, guid: fb3e8ff77824f466aa94f46ebe089001, type: 3}
+  - {fileID: 21300000, guid: 534931a9afbea4c82b4c2260a63529fc, type: 3}
+  - {fileID: 21300000, guid: d96f1c6be6b8d42e7a8e1d30ba2f963f, type: 3}
+  rarityImage: {fileID: 8298971621813254282}
+  carData: {fileID: 0}
 --- !u!114 &1525381276608964867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1462,8 +1469,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278251775
-  m_fontColor: {r: 1, g: 0.93979645, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

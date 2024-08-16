@@ -16,7 +16,7 @@ MonoBehaviour:
   carPrefab: {fileID: 7532750628291047865, guid: 58abf31a24a26854ba516620a60da135,
     type: 3}
   carDescription: 111
-  rarity: Rare
+  rarity: Epic
   maxSpeed: 120
   maxReverseSpeed: 80
   accelerationMultiplier: 6
