@@ -25,6 +25,7 @@ namespace YG
         public int energy = 10;
         public string lastShopUpdateTime;
         public List<string> carsInShop = new List<string>();
+        public string musicState = "true";
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 

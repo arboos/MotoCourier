@@ -1,26 +1,28 @@
 {
-    "idSave": 562,
+    "idSave": 784,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 10000,
+    "money": 9200,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "Orange Car",
+    "SelectedCarName": "YellowCar",
     "ownedCars": [
-        "Orange Car"
+        "Orange Car",
+        "YellowCar"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "16.08.2024 16:11:31",
+    "lastShopUpdateTime": "16.08.2024 18:32:22",
     "carsInShop": [
-        "GreenCar",
-        "YellowCar",
+        "PurpleCar",
+        "ChevroletCamaro",
         "DodgeChallenger2008",
-        "WhiteCar",
-        "MazdaRX-7"
-    ]
+        "ToyotaAE-86",
+        "BMWM3E36"
+    ],
+    "musicState": "true"
 }
