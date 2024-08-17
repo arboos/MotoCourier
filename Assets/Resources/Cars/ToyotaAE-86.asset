@@ -16,7 +16,7 @@ MonoBehaviour:
   carPrefab: {fileID: 920515573396237786, guid: 0ca7660f2abfff34490d0f79ac5a6db3,
     type: 3}
   carDescription: ///
-  rarity: Muthyc
+  rarity: Mythic
   maxSpeed: 120
   maxReverseSpeed: 80
   accelerationMultiplier: 6

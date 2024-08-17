@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEditor;
+using UnityEngine.UI;
 using YG;
 
 public class ChooseCar : MonoBehaviour
@@ -22,6 +23,8 @@ public class ChooseCar : MonoBehaviour
     public GameObject shopUI;
     public GameObject lobbyUI;
     public TextMeshProUGUI moneyText;
+    public Sprite[] raritiesImages;
+    public Image rarityImage;
 
     void OnEnable()
     {
@@ -100,6 +103,7 @@ public class ChooseCar : MonoBehaviour
         carNameText.text = carData.carName;
         carDescriptionText.text = carData.carDescription;
         carRarity.text = carData.rarity;
+        rarityImage.sprite = GetRarityImage(carData.rarity);
 
         bool hasCar = YandexGame.savesData.HasCar(carData.carName);
         selectText.text = hasCar ? (YandexGame.savesData.SelectedCarName == carData.carName ? "Equipped" : "Equip") : carData.cost.ToString();
@@ -172,6 +176,23 @@ public class ChooseCar : MonoBehaviour
     //     bool hasCar = YandexGame.savesData.HasCar(carData.carName);
     //     selectText.text = hasCar ? (YandexGame.savesData.SelectedCarName == carData.carName ? "Equipped" : "Equip") : carData.cost.ToString();
     // }
+    
+    private Sprite GetRarityImage(string rarity)
+    {
+        switch (rarity)
+        {
+            case "Rare":
+                return raritiesImages[0];
+            case "Epic":
+                return raritiesImages[1];
+            case "Mythic":
+                return raritiesImages[2];
+            case "Legendary":
+                return raritiesImages[3];
+        }
+
+        return raritiesImages[3];
+    }
 }
 
 
