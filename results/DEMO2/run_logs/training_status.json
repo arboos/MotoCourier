@@ -1,0 +1,47 @@
+{
+    "DemoMoveToTarget": {
+        "checkpoints": [
+            {
+                "steps": 499997,
+                "file_path": "results\\DEMO2\\DemoMoveToTarget\\DemoMoveToTarget-499997.onnx",
+                "reward": -1.0956955503349874,
+                "creation_time": 1723809182.4648118,
+                "auxillary_file_paths": [
+                    "results\\DEMO2\\DemoMoveToTarget\\DemoMoveToTarget-499997.pt"
+                ]
+            },
+            {
+                "steps": 500021,
+                "file_path": "results\\DEMO2\\DemoMoveToTarget\\DemoMoveToTarget-500021.onnx",
+                "reward": -1.095693067806523,
+                "creation_time": 1723809182.4872267,
+                "auxillary_file_paths": [
+                    "results\\DEMO2\\DemoMoveToTarget\\DemoMoveToTarget-500021.pt"
+                ]
+            },
+            {
+                "steps": 768080,
+                "file_path": "results\\DEMO2\\DemoMoveToTarget\\DemoMoveToTarget-768080.onnx",
+                "reward": -1.0950220841692575,
+                "creation_time": 1723809353.1185963,
+                "auxillary_file_paths": [
+                    "results\\DEMO2\\DemoMoveToTarget\\DemoMoveToTarget-768080.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 768080,
+            "file_path": "results\\DEMO2\\DemoMoveToTarget.onnx",
+            "reward": -1.0950220841692575,
+            "creation_time": 1723809353.1185963,
+            "auxillary_file_paths": [
+                "results\\DEMO2\\DemoMoveToTarget\\DemoMoveToTarget-768080.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.0+cpu"
+    }
+}

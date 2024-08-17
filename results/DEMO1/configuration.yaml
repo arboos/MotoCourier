@@ -67,7 +67,7 @@ checkpoint_settings:
   initialize_from: null
   load_model: false
   resume: true
-  force: true
+  force: false
   train_model: false
   inference: false
   results_dir: results

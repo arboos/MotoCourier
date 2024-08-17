@@ -7,15 +7,6 @@
     "DemoMoveToTarget": {
         "checkpoints": [
             {
-                "steps": 7499978,
-                "file_path": "results\\DEMO1\\DemoMoveToTarget\\DemoMoveToTarget-7499978.onnx",
-                "reward": 0.8931948383133133,
-                "creation_time": 1723737665.69599,
-                "auxillary_file_paths": [
-                    "results\\DEMO1\\DemoMoveToTarget\\DemoMoveToTarget-7499978.pt"
-                ]
-            },
-            {
                 "steps": 7999985,
                 "file_path": "results\\DEMO1\\DemoMoveToTarget\\DemoMoveToTarget-7999985.onnx",
                 "reward": 0.8027631969828355,
@@ -50,15 +41,24 @@
                 "auxillary_file_paths": [
                     "results\\DEMO1\\DemoMoveToTarget\\DemoMoveToTarget-9499974.pt"
                 ]
+            },
+            {
+                "steps": 0,
+                "file_path": "results\\DEMO1\\DemoMoveToTarget\\DemoMoveToTarget-0.onnx",
+                "reward": null,
+                "creation_time": 1723808911.1612363,
+                "auxillary_file_paths": [
+                    "results\\DEMO1\\DemoMoveToTarget\\DemoMoveToTarget-0.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 2000010,
+            "steps": 0,
             "file_path": "results\\DEMO1\\DemoMoveToTarget.onnx",
-            "reward": 0.47789476419750015,
-            "creation_time": 1723734329.0485444,
+            "reward": null,
+            "creation_time": 1723808911.1612363,
             "auxillary_file_paths": [
-                "results\\DEMO1\\DemoMoveToTarget\\DemoMoveToTarget-2000010.pt"
+                "results\\DEMO1\\DemoMoveToTarget\\DemoMoveToTarget-0.pt"
             ]
         }
     }
