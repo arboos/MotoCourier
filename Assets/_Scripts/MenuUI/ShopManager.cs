@@ -31,6 +31,7 @@ public class ShopManager : MonoBehaviour
     public ScrollToItem scrollToItem;
 
     private DateTime lastUpdateTime;
+    public static Action OnShopUpdate;
 
     private void OnEnable()
     {
@@ -122,6 +123,9 @@ public class ShopManager : MonoBehaviour
         
         // Set up correct view 
         Invoke(nameof(MoveToStartOfShop), 0.05f);
+        
+        OnShopUpdate?.Invoke();
+        Debug.Log("Updating shop");
     }
 
     public void LoadSavedShop()

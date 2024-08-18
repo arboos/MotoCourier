@@ -1,27 +1,28 @@
 {
-    "idSave": 1248,
+    "idSave": 1401,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 10000,
+    "money": 8800,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "Orange Car",
+    "SelectedCarName": "NissanSkyline",
     "ownedCars": [
-        "Orange Car"
+        "Orange Car",
+        "NissanSkyline"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "18.08.2024 0:42:01",
+    "lastShopUpdateTime": "18.08.2024 1:40:42",
     "carsInShop": [
-        "GreenCar",
-        "ChevroletCamaro",
-        "NissanGTR50",
+        "NissanSkyline",
+        "PurpleCar",
+        "YellowCar",
         "MazdaRX-7",
-        "NissanSkyline"
+        "BMWM3E36"
     ],
     "musicState": "true"
 }

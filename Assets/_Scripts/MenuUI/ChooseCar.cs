@@ -167,16 +167,6 @@ public class ChooseCar : MonoBehaviour
         moneyText.text = YandexGame.savesData.money.ToString();
     }
 
-    // private void OnEnable()
-    // {
-    //     this.transform.rotation = Quaternion.Euler(6, 180, 0);
-    //     PopulateOwnedCars();
-    //     
-    //     CarData carData = ownedCars[currentIndex];
-    //     bool hasCar = YandexGame.savesData.HasCar(carData.carName);
-    //     selectText.text = hasCar ? (YandexGame.savesData.SelectedCarName == carData.carName ? "Equipped" : "Equip") : carData.cost.ToString();
-    // }
-    
     private Sprite GetRarityImage(string rarity)
     {
         switch (rarity)

@@ -16,19 +16,14 @@ public class SetUpItem : MonoBehaviour
     public Sprite[] raritiesImages;
     public Image rarityImage;
 
-    //private UnownedCarList unownedCarList;
+    [Header("Preview")]
+    public GameObject ItemPreview;
+
+    [Header("Car Data")]
     public CarData carData;
 
     private void Start()
     {
-        // Getting list with unowned cars
-        //unownedCarList = FindObjectOfType<UnownedCarList>();
-        //List<CarData> unownedCars = unownedCarList.GetUnownedCars();
-        
-        // choosing random from it
-        //int randomCarIndex = Random.Range(0, unownedCars.Count);
-        //carData = unownedCars[randomCarIndex];
-        
         // Setting up item in shop
         carNameText.text = carData.carName;
         GameObject carInstance = Instantiate(carData.carPrefab, carSpawnPointTransform);
@@ -37,23 +32,12 @@ public class SetUpItem : MonoBehaviour
         rarityImage.sprite = GetRarityImage(carData.rarity);
     }
 
-    public void BuyItem()
+    public void ShowItem()
     {
-        if (YandexGame.savesData.money >= carData.cost)
-        {
-            YandexGame.savesData.money -= carData.cost;
-            YandexGame.savesData.SelectedCarName = carData.carName;
-            YandexGame.savesData.AddCar(carData.carName);
-            YandexGame.SaveProgress();
-
-            Debug.Log("Car selected and saved (bought): " + carData.carName);
-
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Debug.Log("Not enough money to buy!");
-        }
+        Transform previewSpawnPoint = transform.parent.parent.parent.parent;
+        GameObject itemPreview = Instantiate(ItemPreview, previewSpawnPoint);
+        itemPreview.GetComponent<SetUpPreview>().carData = carData;
+        itemPreview.GetComponent<SetUpPreview>().itemInShop = this.gameObject;
     }
 
     private Sprite GetRarityImage(string rarity)

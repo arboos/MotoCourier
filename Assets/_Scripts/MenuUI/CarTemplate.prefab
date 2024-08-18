@@ -655,6 +655,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 534931a9afbea4c82b4c2260a63529fc, type: 3}
   - {fileID: 21300000, guid: d96f1c6be6b8d42e7a8e1d30ba2f963f, type: 3}
   rarityImage: {fileID: 8298971621813254282}
+  ItemPreview: {fileID: 9199382530095477910, guid: 70e702d3f61aec741ada4b0347bf93f7,
+    type: 3}
   carData: {fileID: 0}
 --- !u!114 &1525381276608964867
 MonoBehaviour:
@@ -702,7 +704,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8308865620610757146}
         m_TargetAssemblyTypeName: SetUpItem, Assembly-CSharp
-        m_MethodName: BuyItem
+        m_MethodName: ShowItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
