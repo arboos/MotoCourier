@@ -51,6 +51,8 @@ public class SetUpPreview : MonoBehaviour
 
     public void DestroyItself()
     {
+        ShopManager.OnShopUpdate -= DestroyItself;
+        
         Destroy(this.gameObject);
         Debug.Log("Destroyed preview object");
     }

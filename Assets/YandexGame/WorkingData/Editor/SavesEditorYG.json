@@ -1,28 +1,29 @@
 {
-    "idSave": 1401,
+    "idSave": 1461,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 8800,
+    "money": 7600,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "NissanSkyline",
+    "SelectedCarName": "ToyotaAE-86",
     "ownedCars": [
         "Orange Car",
-        "NissanSkyline"
+        "NissanSkyline",
+        "ToyotaAE-86"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "18.08.2024 1:40:42",
+    "lastShopUpdateTime": "18.08.2024 1:56:11",
     "carsInShop": [
-        "NissanSkyline",
-        "PurpleCar",
+        "DodgeChallenger2008",
         "YellowCar",
-        "MazdaRX-7",
-        "BMWM3E36"
+        "WhiteCar",
+        "BMWM3E36",
+        "MazdaRX-7"
     ],
     "musicState": "true"
 }
