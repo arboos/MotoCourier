@@ -28,6 +28,7 @@ public class ShopManager : MonoBehaviour
 
     [Header("References")] 
     public UnownedCarList unownedCarList;
+    public ScrollToItem scrollToItem;
 
     private DateTime lastUpdateTime;
 
@@ -118,6 +119,9 @@ public class ShopManager : MonoBehaviour
 
         // Save the shop state
         YandexGame.SaveProgress();
+        
+        // Set up correct view 
+        Invoke(nameof(MoveToStartOfShop), 0.05f);
     }
 
     public void LoadSavedShop()
@@ -147,6 +151,8 @@ public class ShopManager : MonoBehaviour
         {
             Instantiate(resourcesPrefabs[i], spawnPoint);
         }
+        
+        Invoke(nameof(MoveToStartOfShop), 0.05f);
     }
 
     // DATA MANAGEMENT
@@ -172,5 +178,10 @@ public class ShopManager : MonoBehaviour
             SaveLastUpdateTime();
             CreateShop();
         }
+    }
+
+    private void MoveToStartOfShop()
+    {
+        scrollToItem.OnClickScrollTo("OffersTemplate(Clone)");
     }
 }

@@ -1,33 +1,27 @@
 {
-    "idSave": 988,
+    "idSave": 1248,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 3000,
+    "money": 10000,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "MazdaRX-7",
+    "SelectedCarName": "Orange Car",
     "ownedCars": [
-        "Orange Car",
-        "YellowCar",
-        "ToyotaAE-86",
-        "Green Car",
-        "Purple Car",
-        "BMWM3E36",
-        "NissanSkyline",
-        "MazdaRX-7"
+        "Orange Car"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "16.08.2024 20:55:55",
+    "lastShopUpdateTime": "18.08.2024 0:42:01",
     "carsInShop": [
-        "DodgeChallenger2008",
+        "GreenCar",
         "ChevroletCamaro",
-        "WhiteCar",
-        "NissanGTR50"
+        "NissanGTR50",
+        "MazdaRX-7",
+        "NissanSkyline"
     ],
     "musicState": "true"
 }

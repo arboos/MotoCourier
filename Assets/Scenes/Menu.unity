@@ -653,7 +653,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &63090814
 RectTransform:
@@ -6785,7 +6785,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.0009765625, y: 0}
-  m_SizeDelta: {x: -1869.7029, y: 0}
+  m_SizeDelta: {x: -1870.0001, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &521504203
 MonoBehaviour:
@@ -8276,7 +8276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: -165}
+  m_AnchoredPosition: {x: -40.000122, y: -165}
   m_SizeDelta: {x: 175, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &630966630
@@ -8643,7 +8643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: 85}
+  m_AnchoredPosition: {x: -40.000122, y: 85}
   m_SizeDelta: {x: 175, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &654251121
@@ -10610,7 +10610,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d8c74f70156d74f2b898c64f9ff764cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1a76f95358d94ca080a3e48691f8e5f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10865,7 +10865,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d8c74f70156d74f2b898c64f9ff764cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1a76f95358d94ca080a3e48691f8e5f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12468,7 +12468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: -40}
+  m_AnchoredPosition: {x: -40.000122, y: -40}
   m_SizeDelta: {x: 175, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &947678674
@@ -14106,7 +14106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9316653827d554a708a2aaa3dc5fb397, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac729c6a63c5c46578bef27ddfc3c0fe, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14773,7 +14773,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CoinTemplate(Clone)
+          m_StringArgument: CoinsResources(Clone)
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1142179761
@@ -15349,7 +15349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 23.859985, y: -50}
+  m_AnchoredPosition: {x: 23.859863, y: -50}
   m_SizeDelta: {x: 450, y: 650}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1187870536
@@ -20017,7 +20017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13bb59864f8ee4bd0948e2f4bebb30dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac729c6a63c5c46578bef27ddfc3c0fe, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22408,6 +22408,7 @@ RectTransform:
   - {fileID: 1403384549}
   - {fileID: 842226260}
   - {fileID: 1069510791}
+  - {fileID: 7964013858073838844}
   m_Father: {fileID: 63090814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -22632,11 +22633,12 @@ MonoBehaviour:
   carPrefab: {fileID: 3071403200214833114, guid: c82c217e02069d148a021c6d377e8acd,
     type: 3}
   resourcesPrefabs:
-  - {fileID: 1922563247927194175, guid: 8ca51cec82c6e8044b357b36326fb456, type: 3}
+  - {fileID: 3830077351140762951, guid: c95ac762446d469418ff35fcbd67c8df, type: 3}
   - {fileID: 6542949454073418286, guid: 74a9f7fda486fc84ca35aa1a01753fb6, type: 3}
   spawnPoint: {fileID: 521504202}
   countdownText: {fileID: 1771886557}
   unownedCarList: {fileID: 1676810506}
+  scrollToItem: {fileID: 1468570261}
 --- !u!114 &1676810505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24733,7 +24735,6 @@ RectTransform:
   - {fileID: 1480255580}
   - {fileID: 275732248}
   - {fileID: 1171918284}
-  - {fileID: 7964013858073838844}
   - {fileID: 478745195}
   m_Father: {fileID: 63090814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27792,7 +27793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -40, y: 40}
+  m_AnchoredPosition: {x: -40.000122, y: 40}
   m_SizeDelta: {x: 417.54, y: 139.51}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2118587680
@@ -31176,7 +31177,7 @@ RectTransform:
   - {fileID: 4536518709090852904}
   - {fileID: 2580704207914289250}
   - {fileID: 1808611979009476679}
-  m_Father: {fileID: 1872917406}
+  m_Father: {fileID: 1656510416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
