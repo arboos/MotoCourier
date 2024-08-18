@@ -91,7 +91,7 @@ public class ShopManager : MonoBehaviour
         {
             Instantiate(offerPrefab, spawnPoint);
         }
-
+        
         Instantiate(giftPrefab, spawnPoint);
         Instantiate(wheelPrefab, spawnPoint);
         Instantiate(capsulePrefab, spawnPoint);
@@ -126,6 +126,9 @@ public class ShopManager : MonoBehaviour
         
         OnShopUpdate?.Invoke();
         Debug.Log("Updating shop");
+
+        YandexGame.savesData.gotGiftToday = false;
+        YandexGame.SaveProgress();
     }
 
     public void LoadSavedShop()
@@ -141,7 +144,7 @@ public class ShopManager : MonoBehaviour
             Instantiate(offerPrefab, spawnPoint);
         }
 
-        Instantiate(giftPrefab, spawnPoint);
+        if (!YandexGame.savesData.gotGiftToday) { Instantiate(giftPrefab, spawnPoint); }
         Instantiate(wheelPrefab, spawnPoint);
         Instantiate(capsulePrefab, spawnPoint);
 

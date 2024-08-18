@@ -26,6 +26,8 @@ namespace YG
         public string lastShopUpdateTime;
         public List<string> carsInShop = new List<string>();
         public string musicState = "true";
+        public bool gotGiftToday;
+        public int gems;
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
