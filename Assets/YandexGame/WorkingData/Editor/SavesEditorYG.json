@@ -1,9 +1,9 @@
 {
-    "idSave": 1583,
+    "idSave": 1606,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 17717,
+    "money": 17769,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
@@ -17,15 +17,15 @@
         "ToyotaAE-86"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "18.08.2024 2:58:06",
+    "lastShopUpdateTime": "18.08.2024 3:09:33",
     "carsInShop": [
+        "BMWM3E36",
         "GreenCar",
         "ChevroletCamaro",
-        "MazdaRX-7",
-        "PurpleCar",
-        "DodgeChallenger2008"
+        "WhiteCar",
+        "MazdaRX-7"
     ],
     "musicState": "true",
-    "gotGiftToday": true,
+    "gotGiftToday": false,
     "gems": 81
 }
