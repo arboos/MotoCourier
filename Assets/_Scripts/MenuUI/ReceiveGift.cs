@@ -16,6 +16,8 @@ public class ReceiveGift : MonoBehaviour
 
     private int amountToGive;
 
+    public static Action OnReceiveGift;
+
     private void Start()
     {
         switch (gameObject.name)
@@ -31,6 +33,8 @@ public class ReceiveGift : MonoBehaviour
         }
         
         amountText.text = amountToGive.ToString();
+        
+        OnReceiveGift?.Invoke();
     }
 
     public void DestroyItself()

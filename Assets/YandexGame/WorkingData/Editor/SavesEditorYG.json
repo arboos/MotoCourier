@@ -1,9 +1,9 @@
 {
-    "idSave": 1606,
+    "idSave": 2023,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 17769,
+    "money": 23172,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
@@ -13,19 +13,18 @@
     "SelectedCarName": "ToyotaAE-86",
     "ownedCars": [
         "Orange Car",
-        "NissanSkyline",
         "ToyotaAE-86"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "18.08.2024 3:09:33",
+    "lastShopUpdateTime": "18.08.2024 17:23:46",
     "carsInShop": [
+        "MazdaRX-7",
+        "NissanGTR50",
+        "DodgeChallenger2008",
         "BMWM3E36",
-        "GreenCar",
-        "ChevroletCamaro",
-        "WhiteCar",
-        "MazdaRX-7"
+        "WhiteCar"
     ],
     "musicState": "true",
     "gotGiftToday": false,
-    "gems": 81
+    "gems": 27
 }

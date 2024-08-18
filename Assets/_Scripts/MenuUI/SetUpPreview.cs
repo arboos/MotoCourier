@@ -17,6 +17,8 @@ public class SetUpPreview : MonoBehaviour
 
     [HideInInspector] public GameObject itemInShop;
 
+    public static Action OnBuyItem;
+
     private void Start()
     {
         ShopManager.OnShopUpdate += DestroyItself;
@@ -36,6 +38,8 @@ public class SetUpPreview : MonoBehaviour
             YandexGame.SaveProgress();
 
             Debug.Log("Car selected and saved (bought): " + carData.carName);
+            
+            OnBuyItem?.Invoke();
 
             // Deleting this object
             DestroyItself();
@@ -54,6 +58,5 @@ public class SetUpPreview : MonoBehaviour
         ShopManager.OnShopUpdate -= DestroyItself;
         
         Destroy(this.gameObject);
-        Debug.Log("Destroyed preview object");
     }
 }

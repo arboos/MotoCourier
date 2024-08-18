@@ -125,7 +125,6 @@ public class ShopManager : MonoBehaviour
         Invoke(nameof(MoveToStartOfShop), 0.05f);
         
         OnShopUpdate?.Invoke();
-        Debug.Log("Updating shop");
 
         YandexGame.savesData.gotGiftToday = false;
         YandexGame.SaveProgress();
