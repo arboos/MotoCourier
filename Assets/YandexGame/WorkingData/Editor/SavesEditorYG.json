@@ -1,29 +1,31 @@
 {
-    "idSave": 382,
+    "idSave": 1606,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 4500,
+    "money": 17769,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "NissanGTR50",
+    "SelectedCarName": "ToyotaAE-86",
     "ownedCars": [
         "Orange Car",
-        "White Car",
-        "Green Car",
-        "Purple Car",
-        "MazdaRX-7",
-        "ToyotaAE-86",
         "NissanSkyline",
-        "YellowCar",
-        "Dodge Challenger 2008",
-        "Chevrolet Camaro",
-        "NissanGTR50",
-        "BMWM3E36"
+        "ToyotaAE-86"
     ],
-    "energy": 4
+    "energy": 10,
+    "lastShopUpdateTime": "18.08.2024 3:09:33",
+    "carsInShop": [
+        "BMWM3E36",
+        "GreenCar",
+        "ChevroletCamaro",
+        "WhiteCar",
+        "MazdaRX-7"
+    ],
+    "musicState": "true",
+    "gotGiftToday": false,
+    "gems": 81
 }

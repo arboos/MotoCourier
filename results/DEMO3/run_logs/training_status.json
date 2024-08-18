@@ -1,0 +1,65 @@
+{
+    "DemoMoveToTarget": {
+        "checkpoints": [
+            {
+                "steps": 12999997,
+                "file_path": "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-12999997.onnx",
+                "reward": 1.007822844001266,
+                "creation_time": 1723814636.178722,
+                "auxillary_file_paths": [
+                    "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-12999997.pt"
+                ]
+            },
+            {
+                "steps": 13499993,
+                "file_path": "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-13499993.onnx",
+                "reward": 0.8180409600163063,
+                "creation_time": 1723814840.5696688,
+                "auxillary_file_paths": [
+                    "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-13499993.pt"
+                ]
+            },
+            {
+                "steps": 13999987,
+                "file_path": "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-13999987.onnx",
+                "reward": 1.6010000109672546,
+                "creation_time": 1723815046.8250582,
+                "auxillary_file_paths": [
+                    "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-13999987.pt"
+                ]
+            },
+            {
+                "steps": 14302909,
+                "file_path": "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-14302909.onnx",
+                "reward": 0.8494059626418765,
+                "creation_time": 1723815293.3377528,
+                "auxillary_file_paths": [
+                    "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-14302909.pt"
+                ]
+            },
+            {
+                "steps": 14340488,
+                "file_path": "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-14340488.onnx",
+                "reward": 0.9518292919407046,
+                "creation_time": 1723815478.7699788,
+                "auxillary_file_paths": [
+                    "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-14340488.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 14340488,
+            "file_path": "results\\DEMO3\\DemoMoveToTarget.onnx",
+            "reward": 0.9518292919407046,
+            "creation_time": 1723815478.7699788,
+            "auxillary_file_paths": [
+                "results\\DEMO3\\DemoMoveToTarget\\DemoMoveToTarget-14340488.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.0+cpu"
+    }
+}

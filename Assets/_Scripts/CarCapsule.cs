@@ -14,7 +14,7 @@ public class CarCapsule : MonoBehaviour
     [SerializeField] private Animator carCapsuleAnim;
 
     [Header("Data")] 
-    [SerializeField] private ChooseCar carsInShop;
+    [SerializeField] private CarContainer carsInShop;
 
     [Header("UI")] 
     public Button openButton;

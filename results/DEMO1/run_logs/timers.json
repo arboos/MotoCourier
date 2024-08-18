@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1723808904",
+        "python_version": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\UnityProjects\\MotoCourier\\venv\\Scripts\\mlagents-learn DemoMoveToTarget.yaml --run-id=DEMO1 --resume",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.4.0+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1723808911"
+    },
+    "total": 6.384653899999999,
+    "count": 1,
+    "self": 0.004746399999999262,
+    "children": {
+        "run_training.setup": {
+            "total": 0.10449339999999996,
+            "count": 1,
+            "self": 0.10449339999999996
+        },
+        "TrainerController.start_learning": {
+            "total": 6.2754141,
+            "count": 1,
+            "self": 7.0199999998799e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 6.216582600000001,
+                    "count": 1,
+                    "self": 6.216582600000001
+                },
+                "TrainerController._save_models": {
+                    "total": 0.05876130000000046,
+                    "count": 1,
+                    "self": 0.011912000000000589,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.04684929999999987,
+                            "count": 1,
+                            "self": 0.04684929999999987
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
