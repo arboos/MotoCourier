@@ -14,7 +14,7 @@ public class CurrencyManager : MonoBehaviour
     {
         UpdateCurrency();
         ShopManager.OnShopUpdate += UpdateCurrency;
-        BuyResources.OnBuyReresources += UpdateCurrency;
+        ResourcePreview.OnBuyReresources += UpdateCurrency;
         ReceiveGift.OnReceiveGift += UpdateCurrency;
         SetUpPreview.OnBuyItem += UpdateCurrency;
     }
@@ -28,7 +28,7 @@ public class CurrencyManager : MonoBehaviour
     private void OnDisable()
     {
         ShopManager.OnShopUpdate -= UpdateCurrency;
-        BuyResources.OnBuyReresources -= UpdateCurrency;
+        ResourcePreview.OnBuyReresources -= UpdateCurrency;
         ReceiveGift.OnReceiveGift -= UpdateCurrency;
         SetUpPreview.OnBuyItem -= UpdateCurrency;
     }
