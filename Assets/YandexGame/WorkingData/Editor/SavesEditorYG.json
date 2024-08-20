@@ -1,5 +1,5 @@
 {
-    "idSave": 2723,
+    "idSave": 2735,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -31,5 +31,9 @@
     ],
     "musicState": "true",
     "gotGiftToday": true,
-    "gems": 104
+    "gems": 104,
+    "AccountLevel": 0,
+    "AccountMoney": 0,
+    "ExpToNextLevel": 50,
+    "CurrentExp": 0
 }
