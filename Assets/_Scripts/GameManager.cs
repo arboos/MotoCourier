@@ -7,11 +7,18 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public static Action OnAddCoins;
+
     public static Action OnDealDamage;
     public static Action OnTakeHealth;
     
     public int localCoins;
+    
+    // public void AddCoins(int count)
+    // {
+    //     localCoins += count;
+    //     OnAddCoins?.Invoke();
+    //     //UIManager.Instance.CoinAddReact();
+    // }
     
     private void Awake()
     {
@@ -26,11 +33,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddCoins(int count)
-    {
-       localCoins += count;
-       OnAddCoins?.Invoke();
-       //UIManager.Instance.CoinAddReact();
-    }
+
     
 }

@@ -1,16 +1,16 @@
 {
-    "idSave": 2735,
+    "idSave": 2809,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 1800,
+    "money": 2775,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "NissanGTR50",
+    "SelectedCarName": "Chevrolet Camaro",
     "ownedCars": [
         "Orange Car",
         "Purple Car",
@@ -23,7 +23,7 @@
         "White Car",
         "NissanGTR50"
     ],
-    "energy": 10,
+    "energy": 5,
     "lastShopUpdateTime": "19.08.2024 23:16:33",
     "carsInShop": [
         "MazdaRX-7",
@@ -32,8 +32,11 @@
     "musicState": "true",
     "gotGiftToday": true,
     "gems": 104,
-    "AccountLevel": 0,
+    "AccountLevel": 5,
     "AccountMoney": 0,
-    "ExpToNextLevel": 50,
-    "CurrentExp": 0
+    "ExpToNextLevel": 125,
+    "CurrentExp": 75,
+    "BattlePass_Level": 1,
+    "BattlePass_ExpToNextLevel": 50,
+    "BattlePass_CurrentExp": 0
 }

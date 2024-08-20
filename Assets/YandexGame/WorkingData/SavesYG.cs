@@ -31,12 +31,17 @@ namespace YG
         
         
         //Информация аккаунта
-        public int AccountLevel;
-        public int AccountMoney;
+        public int AccountLevel = 1;
+        public int AccountMoney = 0;
         
         
-        public int ExpToNextLevel;
-        public int CurrentExp;
+        public int ExpToNextLevel = 50;
+        public int CurrentExp = 0;
+        
+        public int BattlePass_Level = 1;
+        public int BattlePass_ExpToNextLevel = 50;
+        public int BattlePass_CurrentExp = 0;
+        
         
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 

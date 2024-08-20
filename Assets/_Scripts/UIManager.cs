@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
     private Tween healthImagePositionReactionTween;
     
     private Tween healthImagePositionTakeHealthReactionTween;
+    public static Action OnAddCoins;
     
     private void Awake()
     {
@@ -53,14 +54,14 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.OnAddCoins += CoinAddReact;
+        OnAddCoins += CoinAddReact;
         GameManager.OnDealDamage += DealDamageReact;
         GameManager.OnTakeHealth += TakeHealthReact;
     }
 
     private void OnDisable()
     {
-        GameManager.OnAddCoins -= CoinAddReact;
+        OnAddCoins -= CoinAddReact;
         GameManager.OnDealDamage -= DealDamageReact;
         GameManager.OnTakeHealth -= TakeHealthReact;
     }
@@ -81,7 +82,7 @@ public class UIManager : MonoBehaviour
         {
             coinReactionTween = coinsImage.DOPunchScale(new Vector3(0.4f, 0.4f, 0.4f), 0.1f).SetEase(Ease.InOutElastic);
             await coinReactionTween.ToUniTask();
-            coinsText.text = GameManager.Instance.localCoins.ToString();
+            coinsText.text = GameResultInfo.Instance.Money.ToString();
             coinReactionTween = null;
         }
     }
