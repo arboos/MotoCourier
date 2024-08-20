@@ -8315,7 +8315,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -40.000183, y: -165}
+  m_AnchoredPosition: {x: -40.000366, y: -165}
   m_SizeDelta: {x: 175, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &630966630
@@ -8694,7 +8694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -40.000183, y: 85}
+  m_AnchoredPosition: {x: -40.000366, y: 85}
   m_SizeDelta: {x: 175, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &654251121
@@ -12531,7 +12531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -40.000183, y: -40}
+  m_AnchoredPosition: {x: -40.000366, y: -40}
   m_SizeDelta: {x: 175, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &947678674
@@ -22743,7 +22743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offersAmount: 2
-  carsAmount: 5
+  carsAmount: 7
   refreshTimeInHours: 0.005
   offerPrefab: {fileID: 1644720955842617965, guid: 44fc70ce56cc9be4a81237d2bb36950e,
     type: 3}
@@ -26116,7 +26116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -20.000671, y: 340}
+  m_AnchoredPosition: {x: -20.000732, y: 340}
   m_SizeDelta: {x: 550, y: 80}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1987309651
@@ -27927,7 +27927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -40.000183, y: 40}
+  m_AnchoredPosition: {x: -40.000366, y: 40}
   m_SizeDelta: {x: 417.54, y: 139.51}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2118587680

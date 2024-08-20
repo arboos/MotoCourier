@@ -35,6 +35,7 @@ public class SetUpPreview : MonoBehaviour
             YandexGame.savesData.money -= carData.cost;
             YandexGame.savesData.SelectedCarName = carData.carName;
             YandexGame.savesData.AddCar(carData.carName);
+            YandexGame.savesData.carsInShop.Remove(carData.carName.Replace(" ", "")); 
             YandexGame.SaveProgress();
 
             Debug.Log("Car selected and saved (bought): " + carData.carName);

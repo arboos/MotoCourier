@@ -1,30 +1,35 @@
 {
-    "idSave": 2248,
+    "idSave": 2615,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 26970,
+    "money": 4142,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "ToyotaAE-86",
+    "SelectedCarName": "Dodge Challenger 2008",
     "ownedCars": [
         "Orange Car",
-        "ToyotaAE-86"
+        "MazdaRX-7",
+        "NissanSkyline",
+        "Green Car",
+        "BMWM3E36",
+        "Chevrolet Camaro",
+        "ToyotaAE-86",
+        "Dodge Challenger 2008"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "18.08.2024 21:23:50",
+    "lastShopUpdateTime": "19.08.2024 18:04:00",
     "carsInShop": [
-        "YellowCar",
-        "ChevroletCamaro",
+        "PurpleCar",
+        "WhiteCar",
         "NissanGTR50",
-        "BMWM3E36",
-        "MazdaRX-7"
+        "YellowCar"
     ],
     "musicState": "true",
     "gotGiftToday": false,
-    "gems": 59
+    "gems": 0
 }
