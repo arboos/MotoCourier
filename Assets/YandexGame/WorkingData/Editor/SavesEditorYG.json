@@ -1,35 +1,35 @@
 {
-    "idSave": 2615,
+    "idSave": 2723,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 4142,
+    "money": 1800,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "Dodge Challenger 2008",
+    "SelectedCarName": "NissanGTR50",
     "ownedCars": [
         "Orange Car",
-        "MazdaRX-7",
-        "NissanSkyline",
-        "Green Car",
-        "BMWM3E36",
-        "Chevrolet Camaro",
+        "Purple Car",
         "ToyotaAE-86",
-        "Dodge Challenger 2008"
+        "YellowCar",
+        "Chevrolet Camaro",
+        "Green Car",
+        "NissanSkyline",
+        "Dodge Challenger 2008",
+        "White Car",
+        "NissanGTR50"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "19.08.2024 18:04:00",
+    "lastShopUpdateTime": "19.08.2024 23:16:33",
     "carsInShop": [
-        "PurpleCar",
-        "WhiteCar",
-        "NissanGTR50",
-        "YellowCar"
+        "MazdaRX-7",
+        "BMWM3E36"
     ],
     "musicState": "true",
-    "gotGiftToday": false,
-    "gems": 0
+    "gotGiftToday": true,
+    "gems": 104
 }
