@@ -231,7 +231,6 @@ GameObject:
   - component: {fileID: 8097834846204980486}
   - component: {fileID: 7455181452347368814}
   - component: {fileID: 7019592000051606349}
-  - component: {fileID: 4737142181813856570}
   m_Layer: 5
   m_Name: NissanGTR50
   m_TagString: Player
@@ -333,21 +332,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4737142181813856570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031493162167391605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a6891511bb5d5848b33eb638b7ffa4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  copTrigger: {fileID: 0}
-  currentHealth: 3
-  speed: 0
 --- !u!1 &2518088852568243960
 GameObject:
   m_ObjectHideFlags: 0

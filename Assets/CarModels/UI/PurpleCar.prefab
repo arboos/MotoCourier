@@ -2374,7 +2374,6 @@ GameObject:
   - component: {fileID: 8006539814967744769}
   - component: {fileID: 8280404126336526428}
   - component: {fileID: 8858465194710466020}
-  - component: {fileID: 2021161839725546746}
   m_Layer: 5
   m_Name: PurpleCar
   m_TagString: Player
@@ -2476,21 +2475,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2021161839725546746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8701164611604439024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a6891511bb5d5848b33eb638b7ffa4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  copTrigger: {fileID: 0}
-  currentHealth: 3
-  speed: 0
 --- !u!1 &8757234341923322366
 GameObject:
   m_ObjectHideFlags: 0
