@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d6475b695ba2f6458afa8c5e1bdcffc, type: 3}
-  m_Name: YellowCar
+  m_Name: LexusLFA
   m_EditorClassIdentifier: 
-  carName: YellowCar
+  carName: LexusLFA
   carPrefab: {fileID: 7532750628291047865, guid: 58abf31a24a26854ba516620a60da135,
     type: 3}
   carDescription: 111

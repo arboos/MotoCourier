@@ -89,34 +89,45 @@ public class ShopManager : MonoBehaviour
         // Clear the saved cars list to avoid duplication
         YandexGame.savesData.carsInShop.Clear();
         
+        // Load saved offersAmount or keep the current one if already set
+        YandexGame.savesData.offersAmount = 2;
+        YandexGame.SaveProgress();
+
+        offersAmount = YandexGame.savesData.offersAmount;
+
         Instantiate(giftPrefab, spawnPoint);
         Instantiate(wheelPrefab, spawnPoint);
         Instantiate(capsulePrefab, spawnPoint);
-       
+        
         int availableUnownedCars = unownedCarList.GetUnownedCars().Count;  // Get the number of unowned cars available
         carsAmount = Mathf.Min(carsAmount, availableUnownedCars, 7); // Ensure carsAmount doesn't exceed the available unowned cars or the maximum of 7
-        List<CarData> carData = unownedCarList.GetNonRepeatingUnownedCars(carsAmount);
-        
-        Debug.Log($"Cars amount: {carsAmount}");
-        
-        // Spawn the first 2 cars in offers, if there are enough cars
-        for (int i = 0; i < Math.Min(offersAmount, carsAmount); i++)
+        if (carsAmount > 0)
         {
-            GameObject offerInstance = Instantiate(offerPrefab, spawnPoint);
-            offerInstance.GetComponent<SetUpOffer>().carData = Resources.Load<CarData>("Cars/" + carData[i].name.Replace(" ", ""));
+            List<CarData> carData = unownedCarList.GetNonRepeatingUnownedCars(carsAmount);
             
-            // Save the car's name to the shop save data
-            YandexGame.savesData.carsInShop.Add(carData[i].name);
-        }
+            // Spawn the first 'offersAmount' cars in offers, if there are enough cars
+            for (int i = 0; i < Math.Min(offersAmount, carsAmount); i++)
+            {
+                GameObject offerInstance = Instantiate(offerPrefab, spawnPoint);
+                offerInstance.GetComponent<SetUpOffer>().carData = Resources.Load<CarData>("Cars/" + carData[i].name.Replace(" ", ""));
+                
+                // Save the car's name to the shop save data
+                YandexGame.savesData.carsInShop.Add(carData[i].name);
+            }
 
-        // Spawn the remaining cars as regular shop items, if there are any left
-        for (int i = offersAmount; i < carsAmount; i++)
+            // Spawn the remaining cars as regular shop items, if there are any left
+            for (int i = offersAmount; i < carsAmount; i++)
+            {
+                GameObject carInstance = Instantiate(carPrefab, spawnPoint);
+                carInstance.GetComponent<SetUpItem>().carData = Resources.Load<CarData>("Cars/" + carData[i].name.Replace(" ", ""));
+            
+                // Save the car's name to the shop save data
+                YandexGame.savesData.carsInShop.Add(carData[i].name);
+            }
+        }
+        else
         {
-            GameObject carInstance = Instantiate(carPrefab, spawnPoint);
-            carInstance.GetComponent<SetUpItem>().carData = Resources.Load<CarData>("Cars/" + carData[i].name.Replace(" ", ""));
-        
-            // Save the car's name to the shop save data
-            YandexGame.savesData.carsInShop.Add(carData[i].name);
+            Debug.Log("No unowned cars available to display.");
         }
 
         foreach (GameObject resourcesPrefab in resourcesPrefabs)
@@ -135,6 +146,7 @@ public class ShopManager : MonoBehaviour
         YandexGame.savesData.gotGiftToday = false;
         YandexGame.SaveProgress();
     }
+
     
     // ----------------------------- LOAD -----------------------------  
 
@@ -146,6 +158,8 @@ public class ShopManager : MonoBehaviour
             Destroy(child.gameObject);
         }
         
+        offersAmount = YandexGame.savesData.offersAmount;
+    
         // Load other items
         if (!YandexGame.savesData.gotGiftToday) { Instantiate(giftPrefab, spawnPoint); }
         Instantiate(wheelPrefab, spawnPoint);
@@ -153,20 +167,27 @@ public class ShopManager : MonoBehaviour
 
         List<string> savedCarsInShop = YandexGame.savesData.carsInShop;
 
-        // Spawn the first 2 cars in offers, if there are enough cars
-        for (int i = 0; i < Math.Min(offersAmount, carsAmount); i++)
+        if (savedCarsInShop.Count > 0)
         {
-            GameObject offerInstance = Instantiate(offerPrefab, spawnPoint);
-            offerInstance.GetComponent<SetUpOffer>().carData = Resources.Load<CarData>("Cars/" + savedCarsInShop[i].Replace(" ", ""));
-        }
+            // Spawn the first 'offersAmount' cars in offers, if there are enough cars
+            for (int i = 0; i < Math.Min(offersAmount, savedCarsInShop.Count); i++)
+            {
+                GameObject offerInstance = Instantiate(offerPrefab, spawnPoint);
+                offerInstance.GetComponent<SetUpOffer>().carData = Resources.Load<CarData>("Cars/" + savedCarsInShop[i].Replace(" ", ""));
+            }
 
-        // Spawn the remaining cars as regular shop items, if there are any left
-        for (int i = offersAmount; i < savedCarsInShop.Count; i++)
-        {
-            GameObject carInstance = Instantiate(carPrefab, spawnPoint);
-            carInstance.GetComponent<SetUpItem>().carData = Resources.Load<CarData>("Cars/" + savedCarsInShop[i].Replace(" ", ""));
+            // Spawn the remaining cars as regular shop items, if there are any left
+            for (int i = offersAmount; i < savedCarsInShop.Count; i++)
+            {
+                GameObject carInstance = Instantiate(carPrefab, spawnPoint);
+                carInstance.GetComponent<SetUpItem>().carData = Resources.Load<CarData>("Cars/" + savedCarsInShop[i].Replace(" ", ""));
+            }
         }
-        
+        else
+        {
+            Debug.Log("No saved cars available to load.");
+        }
+    
         // Load resources
         foreach (GameObject resourcesPrefab in resourcesPrefabs)
         {
@@ -176,6 +197,7 @@ public class ShopManager : MonoBehaviour
         // Set the correct view
         Invoke(nameof(MoveToStartOfShop), 0.05f);
     }
+
 
 
     // ----------------------------- DATA MANAGEMENT -----------------------------

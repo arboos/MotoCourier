@@ -1,24 +1,26 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 using YG;
+using System;
 
-public class SetUpPreview : MonoBehaviour
+public class OfferPreview : MonoBehaviour
 {
     [Header("UI")] 
     public TextMeshProUGUI carName;
     public Transform carSpawnPoint;
-    public TextMeshProUGUI carCostText;
+    public TextMeshProUGUI previousCostText;
+    public TextMeshProUGUI currentCostText;
 
     [Header("Car Data")] 
     public CarData carData;
 
     [HideInInspector] public GameObject itemInShop;
 
-    public static Action OnBuyItem;
+    public static Action OnBuyOffer;
+
+    private ShopManager shopManager;
 
     private void Start()
     {
@@ -27,26 +29,29 @@ public class SetUpPreview : MonoBehaviour
         carName.text = carData.carName;
         GameObject carInstance = Instantiate(carData.carPrefab, carSpawnPoint);
         carInstance.GetComponent<PrometeoCarController>().enabled = false;
-        carCostText.text = carData.cost.ToString();
+        currentCostText.text = (carData.cost / 2).ToString();
+        previousCostText.text = carData.cost.ToString();
+        shopManager = FindObjectOfType<ShopManager>();
     }
     
     public void BuyItem()
     {
-        if (YandexGame.savesData.money >= carData.cost)
+        if (YandexGame.savesData.money >= carData.cost / 2)
         {
-            YandexGame.savesData.money -= carData.cost;
+            YandexGame.savesData.money -= carData.cost / 2;
             YandexGame.savesData.SelectedCarName = carData.carName;
             YandexGame.savesData.AddCar(carData.carName);
-            YandexGame.savesData.carsInShop.Remove(carData.carName.Replace(" ", "")); 
+            YandexGame.savesData.carsInShop.Remove(carData.carName.Replace(" ", ""));
+            YandexGame.savesData.offersAmount -= 1;
             YandexGame.SaveProgress();
-
+        
             Debug.Log("Car selected and saved (bought): " + carData.carName);
-            
-            OnBuyItem?.Invoke();
+        
+            OnBuyOffer?.Invoke();
 
             // Deleting this object
             DestroyItself();
-            
+        
             // Deleting item in shop
             Destroy(itemInShop);
         }
@@ -55,6 +60,7 @@ public class SetUpPreview : MonoBehaviour
             Debug.Log("Not enough money to buy!");
         }
     }
+
 
     public void DestroyItself()
     {

@@ -1534,5 +1534,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carName: {fileID: 1076616029465820462}
   carSpawnPoint: {fileID: 901076051173409244}
+  carCostText: {fileID: 6735734801331005564}
   carData: {fileID: 0}
   itemInShop: {fileID: 0}

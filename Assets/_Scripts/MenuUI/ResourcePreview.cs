@@ -40,6 +40,7 @@ public class ResourcePreview : MonoBehaviour
                 {
                     YandexGame.savesData.gems -= cost;
                     YandexGame.savesData.money += amount;
+                    YandexGame.SaveProgress();
                     Debug.Log($"Buying coins: amount {amount}, cost {cost}");
                     OnBuyReresources?.Invoke();
                     DestroyItself();

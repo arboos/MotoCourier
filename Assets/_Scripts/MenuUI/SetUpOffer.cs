@@ -9,15 +9,19 @@ public class SetUpOffer : MonoBehaviour
     [Header("UI")] 
     public TextMeshProUGUI carNameText;
     public Transform carSpawnPointTransform;
-    //public TextMeshProUGUI rarityText;
-    //public Sprite[] raritiesImages;
-    //public Image rarityImage;
+    public TextMeshProUGUI rarityText;
+    public Sprite[] raritiesImages;
+    public Image rarityImage;
+    public TextMeshProUGUI previousCostText;
+    public TextMeshProUGUI currentCostText;
 
     [Header("Preview")]
     public GameObject ItemPreview;
 
     [Header("Car Data")]
     public CarData carData;
+    
+    [HideInInspector] public GameObject itemInShop;
 
     private void Start()
     {
@@ -25,32 +29,34 @@ public class SetUpOffer : MonoBehaviour
         carNameText.text = carData.carName;
         GameObject carInstance = Instantiate(carData.carPrefab, carSpawnPointTransform);
         carInstance.GetComponent<PrometeoCarController>().enabled = false;
-        //rarityText.text = carData.rarity;
-        //rarityImage.sprite = GetRarityImage(carData.rarity);
+        rarityText.text = carData.rarity;
+        rarityImage.sprite = GetRarityImage(carData.rarity);
+        previousCostText.text = carData.cost.ToString();
+        currentCostText.text = (carData.cost / 2).ToString();
     }
 
-    public void ShowItem()
+    public void ShowOffer()
     {
         Transform previewSpawnPoint = transform.parent.parent.parent.parent;
         GameObject offerPreview = Instantiate(ItemPreview, previewSpawnPoint);
-        offerPreview.GetComponent<SetUpPreview>().carData = carData;
-        offerPreview.GetComponent<SetUpPreview>().itemInShop = this.gameObject;
+        offerPreview.GetComponent<OfferPreview>().carData = carData;
+        offerPreview.GetComponent<OfferPreview>().itemInShop = this.gameObject;
     }
 
-    // private Sprite GetRarityImage(string rarity)
-    // {
-    //     switch (rarity)
-    //     {
-    //         case "Rare":
-    //             return raritiesImages[0];
-    //         case "Epic":
-    //             return raritiesImages[1];
-    //         case "Mythic":
-    //             return raritiesImages[2];
-    //         case "Legendary":
-    //             return raritiesImages[3];
-    //     }
-    //
-    //     return raritiesImages[3];
-    // }
+    private Sprite GetRarityImage(string rarity)
+    {
+        switch (rarity)
+        {
+            case "Rare":
+                return raritiesImages[0];
+            case "Epic":
+                return raritiesImages[1];
+            case "Mythic":
+                return raritiesImages[2];
+            case "Legendary":
+                return raritiesImages[3];
+        }
+    
+        return raritiesImages[3];
+    }
 }

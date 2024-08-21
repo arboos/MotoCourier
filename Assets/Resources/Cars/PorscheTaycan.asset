@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d6475b695ba2f6458afa8c5e1bdcffc, type: 3}
-  m_Name: WhiteCar
+  m_Name: PorscheTaycan
   m_EditorClassIdentifier: 
-  carName: White Car
+  carName: Porsche Taycan
   carPrefab: {fileID: 5306259618547339612, guid: 9f0bf97fc2a7f2340b7818ac2d2d8b34,
     type: 3}
   carDescription: "\u042D\u0442\u0430 \u043C\u0430\u0448\u0438\u043D\u0430 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442

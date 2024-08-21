@@ -28,6 +28,7 @@ namespace YG
         public string musicState = "true";
         public bool gotGiftToday;
         public int gems;
+        public int offersAmount = 2;
         
         
         //Информация аккаунта
