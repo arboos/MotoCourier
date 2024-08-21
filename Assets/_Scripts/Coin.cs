@@ -18,6 +18,7 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Trigger enter by: " + other.gameObject.name);
         if (other.CompareTag("PlayerDamagable") && spawned)
         {
             spawned = false;
