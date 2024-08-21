@@ -32,7 +32,6 @@ public class Breakable : MonoBehaviour
             await UniTask.Delay(TimeSpan.FromSeconds(3f), DelayType.DeltaTime, PlayerLoopTiming.FixedUpdate, _cancelerationToken.Token);
             
             Destroy(gameObject);
-
         }
     }
 }
