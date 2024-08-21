@@ -20,7 +20,8 @@ public class LoadCarData : MonoBehaviour
         carData = Resources.Load<CarData>(resourceFilePath + YandexGame.savesData.SelectedCarName.Replace(" ", ""));
         GameObject carInstance = Instantiate(carData.carPrefab);
         carInstance.GetComponent<Rigidbody>().useGravity = true;
-
+        PlayerCopTrigger copTrigger = carInstance.AddComponent<PlayerCopTrigger>();
+        carInstance.GetComponent<PlayerInfo>().copTrigger = copTrigger;
         prometeoCarController = carInstance.GetComponent<PrometeoCarController>();
         LoadData();
 

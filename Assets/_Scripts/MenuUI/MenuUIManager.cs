@@ -35,6 +35,16 @@ public class MenuUIManager : MonoBehaviour
     public int tempCoins = 0;
 
 
+    public TextMeshProUGUI playerNameText;
+    public TextMeshProUGUI playerIdText;
+
+
+    private void Start()
+    {
+        playerNameText.text = YandexGame.playerName;
+        playerIdText.text = YandexGame.playerId;
+    }
+
 
     public async void AddMoney(int count)
     {

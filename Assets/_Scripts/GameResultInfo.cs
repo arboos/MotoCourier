@@ -23,7 +23,7 @@ public class GameResultInfo : MonoBehaviour
 
     private void Start()
     {
-        AddResults();
+        //AddResults();
     }
 
     public int Exp;
