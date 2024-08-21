@@ -94,10 +94,10 @@ public class ShopManager : MonoBehaviour
         YandexGame.SaveProgress();
 
         offersAmount = YandexGame.savesData.offersAmount;
-
-        Instantiate(giftPrefab, spawnPoint);
+        
         Instantiate(wheelPrefab, spawnPoint);
         Instantiate(capsulePrefab, spawnPoint);
+        Instantiate(giftPrefab, spawnPoint);
         
         int availableUnownedCars = unownedCarList.GetUnownedCars().Count;  // Get the number of unowned cars available
         carsAmount = Mathf.Min(carsAmount, availableUnownedCars, 7); // Ensure carsAmount doesn't exceed the available unowned cars or the maximum of 7
@@ -161,9 +161,9 @@ public class ShopManager : MonoBehaviour
         offersAmount = YandexGame.savesData.offersAmount;
     
         // Load other items
-        if (!YandexGame.savesData.gotGiftToday) { Instantiate(giftPrefab, spawnPoint); }
         Instantiate(wheelPrefab, spawnPoint);
         Instantiate(capsulePrefab, spawnPoint);
+        if (!YandexGame.savesData.gotGiftToday) { Instantiate(giftPrefab, spawnPoint); }
 
         List<string> savedCarsInShop = YandexGame.savesData.carsInShop;
 
@@ -227,6 +227,6 @@ public class ShopManager : MonoBehaviour
 
     private void MoveToStartOfShop()
     {
-        scrollToItem.OnClickScrollTo("OffersTemplate(Clone)");
+        scrollToItem.OnClickScrollTo("FortuneWheelTemplate(Clone)");
     }
 }

@@ -1,9 +1,9 @@
 {
-    "idSave": 3495,
+    "idSave": 3760,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 10000,
+    "money": 10130,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
@@ -14,20 +14,20 @@
     "ownedCars": [
         "Orange Car"
     ],
-    "energy": 8,
-    "lastShopUpdateTime": "21.08.2024 15:34:02",
+    "energy": 10,
+    "lastShopUpdateTime": "21.08.2024 17:14:14",
     "carsInShop": [
         "ChevroletCamaro",
-        "NissanSkyline",
+        "ToyotaAE-86",
         "NissanGTR50",
-        "LexusLFA",
         "BMWM3E36",
-        "PurpleCar",
-        "GreenCar"
+        "MazdaRX-7",
+        "DodgeChallenger2008",
+        "PurpleCar"
     ],
     "musicState": "true",
     "gotGiftToday": false,
-    "gems": 6,
+    "gems": 0,
     "offersAmount": 2,
     "AccountLevel": 1,
     "AccountMoney": 0,
