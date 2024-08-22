@@ -812,6 +812,7 @@ MonoBehaviour:
   resourceFilePath: Cars/
   carData: {fileID: 0}
   cameraFollow: {fileID: 1803151643}
+  spawnPos: {fileID: 745225079}
 --- !u!4 &745225079
 Transform:
   m_ObjectHideFlags: 0
@@ -4450,6 +4451,7 @@ MonoBehaviour:
   resourceFilePath: Cars/
   carData: {fileID: 0}
   cameraFollow: {fileID: 0}
+  spawnPos: {fileID: 0}
 --- !u!33 &8207634622749951818
 MeshFilter:
   m_ObjectHideFlags: 0
