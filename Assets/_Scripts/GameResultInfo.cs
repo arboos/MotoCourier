@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 public class GameResultInfo : MonoBehaviour
 {
     public static GameResultInfo Instance { get; private set; }
+    public List<string> MedalsGotStr;
+
     private void Awake()
     {
         if (Instance == null)
@@ -23,6 +25,7 @@ public class GameResultInfo : MonoBehaviour
 
     private void Start()
     {
+        MedalsGotStr = new List<string>();
         //AddResults();
     }
 
@@ -45,5 +48,6 @@ public class GameResultInfo : MonoBehaviour
             spawnedCoin.transform.localPosition = new Vector3(Random.Range(-500.0f, 500.0f), Random.Range(-400.0f, -300.0f), -2000f);
         }  
     }
-    
+
+
 }
