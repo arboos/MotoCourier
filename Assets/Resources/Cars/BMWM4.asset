@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BMWM4
   m_EditorClassIdentifier: 
   carName: BMW M4
-  carPrefab: {fileID: 2784817930102705505, guid: 782978a796eedf84b98c1e2b4d3b011c,
+  carPrefab: {fileID: 8611324347544405343, guid: 80a0d44769ecdd943bd8e1f6c69b3e2c,
     type: 3}
   carDescription: ///
   rarity: Mythic

@@ -31840,6 +31840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d34562edbc4e448b6f93d7bb721f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MedalsGotStr: []
   Exp: 10
   BattlePass_Exp: 15
   Money: 75
@@ -35760,6 +35761,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c9bfb55f9faad7a48b39add2f6d811da, type: 2}
   - {fileID: 11400000, guid: da902a52e57b2794eba48f50f9e99d03, type: 2}
   - {fileID: 11400000, guid: 1f880030e40a4f9469ea6be4601d66a8, type: 2}
+  - {fileID: 11400000, guid: 0f9c58471bdf1504b81a6e68d29476f9, type: 2}
 --- !u!114 &1676810506
 MonoBehaviour:
   m_ObjectHideFlags: 0
