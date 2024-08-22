@@ -1,34 +1,39 @@
 {
-    "idSave": 3760,
+    "idSave": 3825,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 10130,
+    "money": 3439,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "Orange Car",
+    "SelectedCarName": "MazdaRX-7",
     "ownedCars": [
-        "Orange Car"
-    ],
-    "energy": 10,
-    "lastShopUpdateTime": "21.08.2024 17:14:14",
-    "carsInShop": [
-        "ChevroletCamaro",
+        "Orange Car",
         "ToyotaAE-86",
         "NissanGTR50",
+        "Purple Car",
+        "LexusLFA",
         "BMWM3E36",
-        "MazdaRX-7",
-        "DodgeChallenger2008",
-        "PurpleCar"
+        "Chevrolet Camaro",
+        "Dodge Challenger 2008",
+        "Lamborghini Aventador",
+        "MazdaRX-7"
+    ],
+    "energy": 7,
+    "lastShopUpdateTime": "21.08.2024 23:55:14",
+    "carsInShop": [
+        "NissanSkyline",
+        "PorscheTaycan",
+        "GreenCar"
     ],
     "musicState": "true",
     "gotGiftToday": false,
     "gems": 0,
-    "offersAmount": 2,
+    "offersAmount": 1,
     "AccountLevel": 1,
     "AccountMoney": 0,
     "ExpToNextLevel": 50,
