@@ -13,7 +13,6 @@ public class MasterVolume : MonoBehaviour
     [SerializeField] private GameObject MusicON;
     [SerializeField] private GameObject MusicOFF;
 
-
     private void Start()
     {
         isMusicOn = YandexGame.savesData.musicState == "false";
@@ -41,5 +40,10 @@ public class MasterVolume : MonoBehaviour
 
         MusicON.SetActive(isMusicOn);
         MusicOFF.SetActive(!isMusicOn);
+    }
+
+    public void PlaySound(AudioSource sound)
+    {
+        sound.Play();
     }
 }

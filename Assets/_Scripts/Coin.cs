@@ -18,6 +18,7 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Trigger enter by: " + other.gameObject.name);
         if (other.CompareTag("PlayerDamagable") && spawned)
         {
             spawned = false;
@@ -36,7 +37,8 @@ public class Coin : MonoBehaviour
     {
         //ADD COINS TO MANAGER
         meshAnimator.SetTrigger("Collect");
-        GameManager.Instance.AddCoins(25);
+        GameResultInfo.Instance.Money += 25;
+        UIManager.OnAddCoins.Invoke();
         GameObject coinAudio = Instantiate(SoundsBaseCollection.Instance.Coin_Collected);
         coinAudio.transform.position = transform.position;
         coinAudio.GetComponent<AudioSource>().Play();

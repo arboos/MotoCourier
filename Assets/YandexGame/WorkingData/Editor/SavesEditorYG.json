@@ -1,31 +1,44 @@
 {
-    "idSave": 1606,
+    "idSave": 3825,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 17769,
+    "money": 3439,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "ToyotaAE-86",
+    "SelectedCarName": "MazdaRX-7",
     "ownedCars": [
         "Orange Car",
-        "NissanSkyline",
-        "ToyotaAE-86"
-    ],
-    "energy": 10,
-    "lastShopUpdateTime": "18.08.2024 3:09:33",
-    "carsInShop": [
+        "ToyotaAE-86",
+        "NissanGTR50",
+        "Purple Car",
+        "LexusLFA",
         "BMWM3E36",
-        "GreenCar",
-        "ChevroletCamaro",
-        "WhiteCar",
+        "Chevrolet Camaro",
+        "Dodge Challenger 2008",
+        "Lamborghini Aventador",
         "MazdaRX-7"
+    ],
+    "energy": 7,
+    "lastShopUpdateTime": "21.08.2024 23:55:14",
+    "carsInShop": [
+        "NissanSkyline",
+        "PorscheTaycan",
+        "GreenCar"
     ],
     "musicState": "true",
     "gotGiftToday": false,
-    "gems": 81
+    "gems": 0,
+    "offersAmount": 1,
+    "AccountLevel": 1,
+    "AccountMoney": 0,
+    "ExpToNextLevel": 50,
+    "CurrentExp": 0,
+    "BattlePass_Level": 1,
+    "BattlePass_ExpToNextLevel": 50,
+    "BattlePass_CurrentExp": 0
 }

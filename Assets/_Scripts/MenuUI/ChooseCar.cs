@@ -22,13 +22,11 @@ public class ChooseCar : MonoBehaviour
     public TextMeshProUGUI selectText;
     public GameObject shopUI;
     public GameObject lobbyUI;
-    public TextMeshProUGUI moneyText;
     public Sprite[] raritiesImages;
     public Image rarityImage;
 
     void OnEnable()
     {
-        UpdateMoneyText();
         PopulateOwnedCars();
 
         if (ownedCars.Count == 0)
@@ -161,11 +159,7 @@ public class ChooseCar : MonoBehaviour
 
         return 0;
     }
-
-    public void UpdateMoneyText()
-    {
-        moneyText.text = YandexGame.savesData.money.ToString();
-    }
+    
 
     private Sprite GetRarityImage(string rarity)
     {
@@ -234,10 +228,20 @@ public class ChooseCarEditor : Editor
         {
             YandexGame.savesData.money += 1000;
             YandexGame.SaveProgress();
-            ChooseCar chooseCar = (ChooseCar)target;
-            chooseCar.UpdateMoneyText();
+            
             Debug.Log($"Money after add: {YandexGame.savesData.money}");
         }
         GUILayout.Label("By clicking this button you will add to player's \n current balance 1000$ (IN-GAME ONLY)", EditorStyles.centeredGreyMiniLabel);
+        GUILayout.Space(10);
+        
+        if (GUILayout.Button("Add 100 gems"))
+        {
+            YandexGame.savesData.gems += 100;
+            YandexGame.SaveProgress();
+
+            Debug.Log($"Money after add: {YandexGame.savesData.money}");
+        }
+        GUILayout.Label("By clicking this button you will add to player's \n current balance 100 gems (IN-GAME ONLY)", EditorStyles.centeredGreyMiniLabel);
+        GUILayout.Space(10);
     }
 }

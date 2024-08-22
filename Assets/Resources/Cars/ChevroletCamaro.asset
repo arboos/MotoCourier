@@ -16,10 +16,10 @@ MonoBehaviour:
   carPrefab: {fileID: 4830527368437521726, guid: 8185e9b0476d3024da9d7eebd3ea79d2,
     type: 3}
   carDescription: 222
-  rarity: Rare
-  maxSpeed: 120
-  maxReverseSpeed: 80
-  accelerationMultiplier: 6
+  rarity: Legendary
+  maxSpeed: 160
+  maxReverseSpeed: 120
+  accelerationMultiplier: 9
   maxSteeringAngle: 45
   steeringSpeed: 1
   brakeForce: 450

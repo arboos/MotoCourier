@@ -15,6 +15,7 @@ public class SetUpItem : MonoBehaviour
     public TextMeshProUGUI rarityText;
     public Sprite[] raritiesImages;
     public Image rarityImage;
+    public TextMeshProUGUI carCostText;
 
     [Header("Preview")]
     public GameObject ItemPreview;
@@ -30,6 +31,7 @@ public class SetUpItem : MonoBehaviour
         carInstance.GetComponent<PrometeoCarController>().enabled = false;
         rarityText.text = carData.rarity;
         rarityImage.sprite = GetRarityImage(carData.rarity);
+        carCostText.text = carData.cost.ToString();
     }
 
     public void ShowItem()

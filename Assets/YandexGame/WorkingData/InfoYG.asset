@@ -244,6 +244,36 @@ MonoBehaviour:
     it: []
     de: []
     hi: []
+  fontsTMP:
+    defaultFont:
+    - {fileID: 11400000, guid: 02a5a7494b36ca24688d4992fafe4669, type: 2}
+    ru: []
+    en: []
+    tr: []
+    az: []
+    be: []
+    he: []
+    hy: []
+    ka: []
+    et: []
+    fr: []
+    kk: []
+    ky: []
+    lt: []
+    lv: []
+    ro: []
+    tg: []
+    tk: []
+    uk: []
+    uz: []
+    es: []
+    pt: []
+    ar: []
+    id: []
+    ja: []
+    it: []
+    de: []
+    hi: []
   fontsSizeCorrect:
     ru: 
     en: 

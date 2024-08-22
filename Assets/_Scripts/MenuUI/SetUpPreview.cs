@@ -11,11 +11,14 @@ public class SetUpPreview : MonoBehaviour
     [Header("UI")] 
     public TextMeshProUGUI carName;
     public Transform carSpawnPoint;
+    public TextMeshProUGUI carCostText;
 
     [Header("Car Data")] 
     public CarData carData;
 
     [HideInInspector] public GameObject itemInShop;
+
+    public static Action OnBuyItem;
 
     private void Start()
     {
@@ -24,6 +27,7 @@ public class SetUpPreview : MonoBehaviour
         carName.text = carData.carName;
         GameObject carInstance = Instantiate(carData.carPrefab, carSpawnPoint);
         carInstance.GetComponent<PrometeoCarController>().enabled = false;
+        carCostText.text = carData.cost.ToString();
     }
     
     public void BuyItem()
@@ -33,9 +37,12 @@ public class SetUpPreview : MonoBehaviour
             YandexGame.savesData.money -= carData.cost;
             YandexGame.savesData.SelectedCarName = carData.carName;
             YandexGame.savesData.AddCar(carData.carName);
+            YandexGame.savesData.carsInShop.Remove(carData.carName.Replace(" ", "")); 
             YandexGame.SaveProgress();
 
             Debug.Log("Car selected and saved (bought): " + carData.carName);
+            
+            OnBuyItem?.Invoke();
 
             // Deleting this object
             DestroyItself();
@@ -54,6 +61,5 @@ public class SetUpPreview : MonoBehaviour
         ShopManager.OnShopUpdate -= DestroyItself;
         
         Destroy(this.gameObject);
-        Debug.Log("Destroyed preview object");
     }
 }

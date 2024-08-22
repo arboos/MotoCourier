@@ -28,7 +28,22 @@ namespace YG
         public string musicState = "true";
         public bool gotGiftToday;
         public int gems;
-
+        public int offersAmount = 2;
+        
+        
+        //Информация аккаунта
+        public int AccountLevel = 1;
+        public int AccountMoney = 0;
+        
+        
+        public int ExpToNextLevel = 50;
+        public int CurrentExp = 0;
+        
+        public int BattlePass_Level = 1;
+        public int BattlePass_ExpToNextLevel = 50;
+        public int BattlePass_CurrentExp = 0;
+        
+        
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
 

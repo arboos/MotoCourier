@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6475b695ba2f6458afa8c5e1bdcffc, type: 3}
+  m_Name: LamborghiniAventador
+  m_EditorClassIdentifier: 
+  carName: Lamborghini Aventador
+  carPrefab: {fileID: 1812531063514535614, guid: f1f61cd855c738b4fa34e703502d50d6,
+    type: 3}
+  carDescription: ///
+  rarity: Mythic
+  maxSpeed: 120
+  maxReverseSpeed: 80
+  accelerationMultiplier: 6
+  maxSteeringAngle: 45
+  steeringSpeed: 1
+  brakeForce: 450
+  decelerationMultiplier: 3
+  handbrakeDriftMultiplier: 3
+  bodyMassCenter: {x: 0, y: 0, z: 0}
+  cost: 1200
