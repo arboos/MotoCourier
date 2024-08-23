@@ -1075,6 +1075,7 @@ GameObject:
   - component: {fileID: 1192289397938980137}
   - component: {fileID: 2821062096719517632}
   - component: {fileID: 2282022028489429388}
+  - component: {fileID: -510282927007913330}
   m_Layer: 5
   m_Name: FortuneWheelTemplate
   m_TagString: Untagged
@@ -1200,7 +1201,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1192289397938980137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -510282927007913330}
+        m_TargetAssemblyTypeName: WheelManager, Assembly-CSharp
+        m_MethodName: CreateWheelWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-510282927007913330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2892102299323850196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0071dc7131aec06468b1aab2d9cbb43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelWindow: {fileID: 2832536907853898838, guid: 89b796a9d5cd65f4fbc0e07f60973723,
+    type: 3}
 --- !u!1 &2981594689500643250
 GameObject:
   m_ObjectHideFlags: 0
