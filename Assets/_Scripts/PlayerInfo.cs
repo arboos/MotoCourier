@@ -16,6 +16,8 @@ public class PlayerInfo : MonoBehaviour
     private Vector3 lastPosition;
 
     public float AliveTime;
+
+    public Rigidbody rb;
     
     private void Awake()
     {
@@ -27,6 +29,11 @@ public class PlayerInfo : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
     }
 
     public void FixedUpdate()
