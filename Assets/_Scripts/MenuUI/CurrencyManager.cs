@@ -19,6 +19,7 @@ public class CurrencyManager : MonoBehaviour
         ReceiveGift.OnReceiveGift += UpdateCurrency;
         SetUpPreview.OnBuyItem += UpdateCurrency;
         OfferPreview.OnBuyOffer += UpdateCurrency;
+        BoxPreview.OnBuyBox += UpdateCurrency;
     }
 
     private void UpdateCurrency()
@@ -35,5 +36,6 @@ public class CurrencyManager : MonoBehaviour
         ReceiveGift.OnReceiveGift -= UpdateCurrency;
         SetUpPreview.OnBuyItem -= UpdateCurrency;
         OfferPreview.OnBuyOffer -= UpdateCurrency;
+        BoxPreview.OnBuyBox -= UpdateCurrency;
     }
 }

@@ -10,12 +10,10 @@ public class BoxManager : MonoBehaviour
     public Animator anim;
 
     [Header("UI")]
-    public TextMeshProUGUI costText;
     public Button openButton;
 
     private void Start()
     {
-        costText.text = boxCost.ToString();
         openButton.onClick.AddListener(() =>
         {
             openButton.interactable = false;
@@ -28,6 +26,8 @@ public class BoxManager : MonoBehaviour
         Debug.Log("Attempting to give reward from box!");
         anim.SetTrigger("Default");
         openButton.interactable = true;
+        // тут просто потом добавить логику выдачи машины или чего либо там
+        DestroyItself();
     }
 
     public void DestroyItself()
