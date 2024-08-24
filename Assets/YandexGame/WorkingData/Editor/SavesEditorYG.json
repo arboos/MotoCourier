@@ -1,9 +1,9 @@
 {
-    "idSave": 5248,
+    "idSave": 5527,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 2923,
+    "money": 4752,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
@@ -14,20 +14,20 @@
     "ownedCars": [
         "Orange Car"
     ],
-    "energy": 10,
-    "lastShopUpdateTime": "24.08.2024 3:33:56",
+    "energy": 31,
+    "lastShopUpdateTime": "24.08.2024 17:55:48",
     "carsInShop": [
-        "GreenCar",
-        "LamborghiniAventador",
-        "LexusLFA",
         "MazdaRX-7",
-        "ToyotaAE-86",
+        "LamborghiniAventador",
         "BMWM4",
+        "PorscheTaycan",
+        "NissanGTR50",
+        "DodgeChallenger2008",
         "PurpleCar"
     ],
     "musicState": "true",
     "gotGiftToday": false,
-    "gems": 77,
+    "gems": 377,
     "offersAmount": 2,
     "AccountLevel": 1,
     "AccountMoney": 0,

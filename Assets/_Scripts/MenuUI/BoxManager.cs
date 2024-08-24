@@ -12,6 +12,9 @@ public class BoxManager : MonoBehaviour
     [Header("UI")]
     public Button openButton;
 
+    public GameObject[] gifts;
+
+
     private void Start()
     {
         openButton.onClick.AddListener(() =>
@@ -26,7 +29,9 @@ public class BoxManager : MonoBehaviour
         Debug.Log("Attempting to give reward from box!");
         anim.SetTrigger("Default");
         openButton.interactable = true;
-        // тут просто потом добавить логику выдачи машины или чего либо там
+
+        Instantiate(gifts[Random.Range(0, gifts.Length)], transform.parent);
+        
         DestroyItself();
     }
 
