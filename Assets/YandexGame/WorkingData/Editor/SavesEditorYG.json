@@ -1,32 +1,30 @@
 {
-    "idSave": 4796,
+    "idSave": 5044,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
-    "money": 10992,
+    "money": 10658,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "Orange Car",
-    "ownedCars": [
-        "Orange Car"
-    ],
-    "energy": 14,
-    "lastShopUpdateTime": "24.08.2024 1:38:28",
+    "SelectedCarName": "",
+    "ownedCars": [],
+    "energy": 10,
+    "lastShopUpdateTime": "24.08.2024 3:02:25",
     "carsInShop": [
+        "NissanSkyline",
+        "BMWM3E36",
+        "DodgeChallenger2008",
+        "PurpleCar",
         "ChevroletCamaro",
         "BMWM4",
-        "PurpleCar",
-        "PorscheTaycan",
-        "LamborghiniAventador",
-        "MazdaRX-7",
-        "NissanGTR50"
+        "LexusLFA"
     ],
     "musicState": "true",
-    "gotGiftToday": true,
+    "gotGiftToday": false,
     "gems": 0,
     "offersAmount": 2,
     "AccountLevel": 1,

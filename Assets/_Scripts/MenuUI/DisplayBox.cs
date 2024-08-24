@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WheelManager : MonoBehaviour
+public class DisplayBox : MonoBehaviour
 {
-    [Header("Ref")] public GameObject wheelWindow;
+    [Header("Ref")] 
+    public GameObject boxWindow;
     private Transform spawnPoint;
 
-    public void CreateWheelWindow()
+    public void CreateBoxWindow()
     {
         spawnPoint = transform.parent.parent.parent.parent;
-        Instantiate(wheelWindow, spawnPoint);
+        Instantiate(boxWindow, spawnPoint);
     }
 }

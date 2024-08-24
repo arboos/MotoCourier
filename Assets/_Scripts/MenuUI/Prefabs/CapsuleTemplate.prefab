@@ -1076,6 +1076,7 @@ GameObject:
   - component: {fileID: 1192289397938980137}
   - component: {fileID: 2821062096719517632}
   - component: {fileID: 2282022028489429388}
+  - component: {fileID: -5150850763108025383}
   m_Layer: 5
   m_Name: CapsuleTemplate
   m_TagString: Untagged
@@ -1201,7 +1202,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1192289397938980137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -5150850763108025383}
+        m_TargetAssemblyTypeName: BoxManager, Assembly-CSharp
+        m_MethodName: CreateBoxWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-5150850763108025383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2892102299323850196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71c06da0e975fc4da3e46f95a95d0cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxWindow: {fileID: 2832536907853898838, guid: d4ae52a4c684d994d97c727bec2b885c,
+    type: 3}
 --- !u!1 &2981594689500643250
 GameObject:
   m_ObjectHideFlags: 0
