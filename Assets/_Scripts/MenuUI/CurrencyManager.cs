@@ -9,6 +9,7 @@ public class CurrencyManager : MonoBehaviour
 {
     public TextMeshProUGUI coinsText;
     public TextMeshProUGUI gemsText;
+    public TextMeshProUGUI energyText;
 
     private void Start()
     {
@@ -24,6 +25,7 @@ public class CurrencyManager : MonoBehaviour
     {
         coinsText.text = YandexGame.savesData.money.ToString();
         gemsText.text = YandexGame.savesData.gems.ToString();
+        energyText.text = $"{YandexGame.savesData.energy}/10";
     }
 
     private void OnDisable()

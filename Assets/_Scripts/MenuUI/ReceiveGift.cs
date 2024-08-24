@@ -13,6 +13,7 @@ public class ReceiveGift : MonoBehaviour
     [Header("Data")] 
     [Range(1, 1000)] public int giveMaxCoins;
     [Range(1, 1000)] public int giveMaxGems;
+    [Range(1, 1000)] public int giveMaxEnergy;
 
     private int amountToGive;
 
@@ -30,9 +31,15 @@ public class ReceiveGift : MonoBehaviour
                 amountToGive = Random.Range(1, giveMaxGems);
                 YandexGame.savesData.gems += amountToGive;
                 break;
+            case "GotEnergyGift(Clone)":
+                amountToGive = Random.Range(1, giveMaxEnergy);
+                YandexGame.savesData.energy += amountToGive;
+                break;
         }
         
         amountText.text = amountToGive.ToString();
+        
+        YandexGame.SaveProgress();
         
         OnReceiveGift?.Invoke();
     }

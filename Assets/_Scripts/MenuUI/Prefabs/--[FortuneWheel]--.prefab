@@ -4459,22 +4459,28 @@ MonoBehaviour:
   numberOfSpins: 4
   randomOptionForSpin: 0
   prizes:
-  - name: BMW
+  - name: Coins
+    wight: 0.9
+  - name: Gems
+    wight: 0.9
+  - name: Energy
+    wight: 0.9
+  - name: Coins
+    wight: 0.9
+  - name: Gems
+    wight: 0.9
+  - name: Coins
+    wight: 0.9
+  - name: Energy
+    wight: 0.9
+  - name: Car
     wight: 0.1
-  - name: Cash
-    wight: 0.9
-  - name: Cash
-    wight: 0.9
-  - name: Cash
-    wight: 0.9
-  - name: Cash
-    wight: 0.9
-  - name: Cash
-    wight: 0.9
-  - name: Cash
-    wight: 0.9
-  - name: Cash
-    wight: 0.9
+  gotCoinsGift: {fileID: 3438023604487386891, guid: 9715477732109614c9cf74086e8a72e6,
+    type: 3}
+  gotGemsGift: {fileID: 3438023604487386891, guid: 9fc98fdc8603e814b9b0e81072441b7f,
+    type: 3}
+  gotEnergyGift: {fileID: 3438023604487386891, guid: 01a69763f7cb35b4fb3b4a97dab196d1,
+    type: 3}
 --- !u!1 &6700469260595135826
 GameObject:
   m_ObjectHideFlags: 0

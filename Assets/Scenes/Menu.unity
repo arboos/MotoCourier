@@ -1428,6 +1428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinsText: {fileID: 6234475139388232824}
   gemsText: {fileID: 6234475139403085949}
+  energyText: {fileID: 6234475139244930945}
 --- !u!1 &66634400
 GameObject:
   m_ObjectHideFlags: 0
