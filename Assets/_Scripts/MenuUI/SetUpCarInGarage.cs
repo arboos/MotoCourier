@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class SetUpCarInGarage : MonoBehaviour
 {
@@ -14,9 +15,10 @@ public class SetUpCarInGarage : MonoBehaviour
     public TextMeshProUGUI rarityText;
     public Sprite[] raritiesImages;
     public Image rarityImage;
-    
+
     [Header("Car Data")]
     public CarData carData;
+    private ChooseCar chooseCar;
 
     private void Start()
     {
@@ -30,7 +32,16 @@ public class SetUpCarInGarage : MonoBehaviour
 
     public void OpenCar()
     {
+        // Открываем окно с полной информацией о машине где ее можно выбрать / посмотреть когда она выбрана
+
+        Transform canvas = transform.parent.parent.parent.parent.parent;
         
+        YandexGame.savesData.previewCarInGarage = carData.carName;
+        YandexGame.SaveProgress();
+        
+        canvas.Find("--[NewGarage]--").gameObject.SetActive(false); // выключаем новый гараж
+        canvas.Find("--[Garage]--").gameObject.SetActive(true);
+        canvas.Find("--[CARS]--").gameObject.SetActive(true);
     }
     
     

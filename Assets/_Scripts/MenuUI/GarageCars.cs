@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using YG;
 
@@ -9,9 +10,13 @@ public class GarageCars : MonoBehaviour
     public CarData[] ownedCars;
     public Transform content;
     public GameObject carGaragePrefab;
+    public TextMeshProUGUI obtainedCarsFromAllText;
+    public CarContainer carContainer;
 
     private void OnEnable()
     {
+        obtainedCarsFromAllText.text = $"{YandexGame.savesData.ownedCars.Count}/{carContainer.carDataArray.Length} CARS";
+        
         // Initialize a list to hold the owned cars temporarily
         List<CarData> carDataList = new List<CarData>();
 
