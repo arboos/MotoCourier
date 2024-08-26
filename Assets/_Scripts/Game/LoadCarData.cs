@@ -8,20 +8,24 @@ public class LoadCarData : MonoBehaviour
 {
     [Header("Data path")]
     [SerializeField] private string resourceFilePath;
+
     [HideInInspector] public CarData carData;
     
     private PrometeoCarController prometeoCarController;
 
     [Header("Environment")] public CameraFollow cameraFollow;
-
+    [SerializeField] private Transform spawnPos;
     private void Start()
     {
         // Получаем доступ к информации текущей выбранной машины!
         carData = Resources.Load<CarData>(resourceFilePath + YandexGame.savesData.SelectedCarName.Replace(" ", ""));
         GameObject carInstance = Instantiate(carData.carPrefab);
+        carInstance.transform.position = spawnPos.position;
         carInstance.GetComponent<Rigidbody>().useGravity = true;
         PlayerCopTrigger copTrigger = carInstance.AddComponent<PlayerCopTrigger>();
-        carInstance.GetComponent<PlayerInfo>().copTrigger = copTrigger;
+        PlayerInfo playerInfo = carInstance.AddComponent<PlayerInfo>();
+        playerInfo.copTrigger = copTrigger;
+        
         prometeoCarController = carInstance.GetComponent<PrometeoCarController>();
         
         carInstance.gameObject.tag = "PlayerDamagable";

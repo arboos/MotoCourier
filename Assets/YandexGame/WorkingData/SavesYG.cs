@@ -29,6 +29,7 @@ namespace YG
         public bool gotGiftToday;
         public int gems;
         public int offersAmount = 2;
+        public string previewCarInGarage = "";
         
         
         //Информация аккаунта

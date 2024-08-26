@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class FortuneWheel : MonoBehaviour
 {
+    [Header("UI")]
     [SerializeField] private Image wheel;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float rotationTimeMaxSpeed;
@@ -13,9 +16,23 @@ public class FortuneWheel : MonoBehaviour
     [SerializeField] private bool randomOptionForSpin;
     [SerializeField] private List<Prize> prizes;
 
+    [Header("Prefabs")] 
+    public GameObject gotCoinsGift;
+    public GameObject gotGemsGift;
+    public GameObject gotEnergyGift;
+
+    private Transform spawnPoint;
+
     private bool isSpin = false;
     private float slowdownTime;
     private float randomAngle = 0f;
+
+    private int winNum;
+
+    private void Start()
+    {
+        spawnPoint = transform.parent;
+    }
 
     private void Update()
     {
@@ -73,6 +90,30 @@ public class FortuneWheel : MonoBehaviour
         }
         
         isSpin = false;
+
+        switch (winNum)
+        {
+            // COINS
+            case 0:
+            case 3:
+            case 5:
+                Instantiate(gotCoinsGift, spawnPoint);
+                break;
+            // GEMS
+            case 1:
+            case 4:
+                Instantiate(gotGemsGift, spawnPoint);
+                break;
+            // ENERGY
+            case 2:
+            case 6:
+                Instantiate(gotEnergyGift, spawnPoint);
+                break;
+            // CAR
+            case 7:
+                Debug.Log("--Giving car"); 
+                break;
+        }
     }
 
     private void setWin() 
@@ -90,7 +131,8 @@ public class FortuneWheel : MonoBehaviour
         {
             return getRandomPrize();
         }
-        Debug.Log("WIN:" + randomSector);
+        //Debug.Log("WIN:" + randomSector);
+        winNum = randomSector;
         return randomSector;
     }
 

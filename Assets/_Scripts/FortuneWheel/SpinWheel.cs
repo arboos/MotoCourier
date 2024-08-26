@@ -62,4 +62,9 @@ public class SpinWheel : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
     }
+
+    public void DestroyItself()
+    {
+        Destroy(transform.parent.gameObject);
+    }
 }

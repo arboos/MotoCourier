@@ -113,7 +113,6 @@ RectTransform:
   - {fileID: 3632357428520215100}
   - {fileID: 8207097174558593642}
   - {fileID: 7593914793459560037}
-  - {fileID: 7479308641402408699}
   m_Father: {fileID: 8555561027756473805}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -937,12 +936,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2636753069964712468}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7706667816258533142}
+  m_Father: {fileID: 8555561027756473805}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1075,6 +1074,8 @@ GameObject:
   - component: {fileID: 1192289397938980137}
   - component: {fileID: 2821062096719517632}
   - component: {fileID: 2282022028489429388}
+  - component: {fileID: -510282927007913330}
+  - component: {fileID: 635338648545523108}
   m_Layer: 5
   m_Name: FortuneWheelTemplate
   m_TagString: Untagged
@@ -1200,7 +1201,54 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1192289397938980137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -510282927007913330}
+        m_TargetAssemblyTypeName: WheelManager, Assembly-CSharp
+        m_MethodName: CreateWheelWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-510282927007913330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2892102299323850196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0071dc7131aec06468b1aab2d9cbb43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelWindow: {fileID: 2832536907853898838, guid: 89b796a9d5cd65f4fbc0e07f60973723,
+    type: 3}
+--- !u!95 &635338648545523108
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2892102299323850196}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e39e6d1f2d151af4986cec389af2e3c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2981594689500643250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,10 +1877,11 @@ RectTransform:
   m_GameObject: {fileID: 5519032510883162049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7706667816258533142}
+  - {fileID: 7479308641402408699}
   m_Father: {fileID: 2235833180747507033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

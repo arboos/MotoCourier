@@ -14,6 +14,10 @@ public class PlayerInfo : MonoBehaviour
     public float speed;
     
     private Vector3 lastPosition;
+
+    public float AliveTime;
+
+    public Rigidbody rb;
     
     private void Awake()
     {
@@ -27,10 +31,42 @@ public class PlayerInfo : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     public void FixedUpdate()
     {
         speed = Mathf.Lerp(speed, (transform.position - lastPosition).magnitude, 0.7f /*adjust this number in order to make interpolation quicker or slower*/);
         lastPosition = transform.position;
+    }
+
+    private void Update()
+    {
+        AliveTime += Time.deltaTime;
+        CheckMedals();
+    }
+
+    private void CheckMedals()
+    {
+        if (AliveTime >= 60 && !GameResultInfo.Instance.MedalsGotStr.Contains("Survivor_1") && !GameResultInfo.Instance.MedalsGotStr.Contains("Survivor_2") 
+            && !GameResultInfo.Instance.MedalsGotStr.Contains("Survivor_3"))
+        {
+            UIManager.Instance.AddMedal(UIManager.Instance.medals[0], 10, 25);
+            GameResultInfo.Instance.MedalsGotStr.Add("Survivor_1");
+        }
+        else if (AliveTime >= 120 && !GameResultInfo.Instance.MedalsGotStr.Contains("Survivor_2") 
+            && !GameResultInfo.Instance.MedalsGotStr.Contains("Survivor_3"))
+        {
+            UIManager.Instance.AddMedal(UIManager.Instance.medals[1], 25, 50);
+            GameResultInfo.Instance.MedalsGotStr.Add("Survivor_2");
+        }
+        else if (AliveTime >= 180 && !GameResultInfo.Instance.MedalsGotStr.Contains("Survivor_3"))
+        {
+            UIManager.Instance.AddMedal(UIManager.Instance.medals[2], 50, 100);
+            GameResultInfo.Instance.MedalsGotStr.Add("Survivor_3");
+        }
     }
 
     public void DealDamage(int damage)

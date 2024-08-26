@@ -444,7 +444,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2036839127379077809}
   - component: {fileID: 924818812878587382}
-  - component: {fileID: 5310687421552033783}
+  - component: {fileID: -8844033890152233835}
+  - component: {fileID: 8147818093755470756}
   m_Layer: 0
   m_Name: Ambulance_Bonus
   m_TagString: Untagged
@@ -489,8 +490,8 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &5310687421552033783
+  m_ObstacleAvoidanceType: 1
+--- !u!114 &-8844033890152233835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -499,9 +500,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 6943442694307413422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3ccf62f73a4854d94ab08905a3ca97, type: 3}
+  m_Script: {fileID: 11500000, guid: 25525c48f4736764abf8b853e9e17edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoneyToAdd: 75
+  ExpToAdd: 5
+  BP_ExpToAdd: 5
+--- !u!65 &8147818093755470756
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6943442694307413422}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6822793, y: 1.7290044, z: 4.379554}
+  m_Center: {x: -0.025111556, y: 0.96624684, z: -0.070222855}
 --- !u!1 &7696469013263211035
 GameObject:
   m_ObjectHideFlags: 0

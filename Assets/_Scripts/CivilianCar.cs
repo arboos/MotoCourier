@@ -10,6 +10,10 @@ public class CivilianCar : MonoBehaviour
     private NavMeshAgent agent;
     private Vector3 currentPoint;
 
+    public int MoneyToAdd;
+    public int ExpToAdd;
+    public int BP_ExpToAdd;
+
     public void Initialize()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -29,5 +33,15 @@ public class CivilianCar : MonoBehaviour
             SetPoint(CivilianCarManager.Instance.GetRandomPoint(currentPoint));
         }
     }
-    
+
+    public void DestroyCar()
+    {
+        GameResultInfo.Instance.Exp += ExpToAdd;
+        GameResultInfo.Instance.BattlePass_Exp += BP_ExpToAdd;
+        GameResultInfo.Instance.Money += MoneyToAdd;
+        UIManager.OnAddCoins();
+        PlayerInfo.Instance.rb.velocity = new Vector3(PlayerInfo.Instance.rb.velocity.x * 0.75f,
+            PlayerInfo.Instance.rb.velocity.y * 0.75f, PlayerInfo.Instance.rb.velocity.z * 0.75f);
+        Destroy(gameObject);
+    }
 }

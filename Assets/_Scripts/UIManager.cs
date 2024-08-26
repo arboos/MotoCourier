@@ -39,6 +39,9 @@ public class UIManager : MonoBehaviour
     
     private Tween healthImagePositionTakeHealthReactionTween;
     public static Action OnAddCoins;
+
+    public GameObject[] medals;
+    public Transform medalParent;
     
     private void Awake()
     {
@@ -108,5 +111,15 @@ public class UIManager : MonoBehaviour
             await healthImagePositionTakeHealthReactionTween.ToUniTask();
             healthImagePositionTakeHealthReactionTween = null;
         }
+    }
+
+    public async void AddMedal(GameObject prefab, int exp, int bpExp)
+    {
+        GameObject spawnedMedal = Instantiate(prefab, medalParent);
+        GameResultInfo.Instance.Exp += exp;
+        GameResultInfo.Instance.BattlePass_Exp += bpExp;
+
+        await UniTask.Delay(TimeSpan.FromSeconds(4f));
+        Destroy(spawnedMedal);
     }
 }
