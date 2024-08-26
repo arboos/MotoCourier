@@ -17,6 +17,12 @@ public class PlayerInfo : MonoBehaviour
 
     public float AliveTime;
 
+    public SaveSphere saveSphere;
+
+    public bool immunity;
+
+    public float immunityTime;
+    
     public Rigidbody rb;
     
     private void Awake()
@@ -44,6 +50,8 @@ public class PlayerInfo : MonoBehaviour
 
     private void Update()
     {
+        immunityTime -= Time.deltaTime;
+        if (immunityTime <= 0) immunity = false;
         AliveTime += Time.deltaTime;
         CheckMedals();
     }
@@ -71,8 +79,12 @@ public class PlayerInfo : MonoBehaviour
 
     public void DealDamage(int damage)
     {
+        if(immunity) return;
         print("Damage: " + damage);
         currentHealth -= damage;
+        immunity = true;
+        immunityTime = 3f;
+        saveSphere.Play();
         if (currentHealth <= 0)
         {
             Death();

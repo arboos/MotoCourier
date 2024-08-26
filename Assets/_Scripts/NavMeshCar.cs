@@ -74,6 +74,8 @@ public class NavMeshCar : MonoBehaviour
             }
         }
         CopSpawner.Instance.copsSpawned.Remove(gameObject);
+        GameObject spawnedSound = Instantiate(SoundsBaseCollection.Instance.Cop_Explosion.gameObject);
+        Destroy(spawnedSound, 2f);
         Destroy(gameObject);
     }
     

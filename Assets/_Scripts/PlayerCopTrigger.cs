@@ -16,6 +16,7 @@ public class PlayerCopTrigger : MonoBehaviour
     private void Start()
     {
         copsInside = new List<GameObject>();
+        playerRB = PlayerInfo.Instance.rb;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,7 +54,7 @@ public class PlayerCopTrigger : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (copsInside.Count >= 1 && wasted == false && playerRB.velocity.x <= 2f && playerRB.velocity.z <= 2f)
+        if (copsInside.Count >= 1 && wasted == false)
         {
             wasted = true;
             timeToWaste = 4f;

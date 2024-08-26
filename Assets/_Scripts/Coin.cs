@@ -40,6 +40,7 @@ public class Coin : MonoBehaviour
         GameResultInfo.Instance.Money += 25;
         UIManager.OnAddCoins.Invoke();
         GameObject coinAudio = Instantiate(SoundsBaseCollection.Instance.Coin_Collected);
+        coinAudio.GetComponent<AudioSource>().time = 0.1f;
         coinAudio.transform.position = transform.position;
         coinAudio.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(0.6f);

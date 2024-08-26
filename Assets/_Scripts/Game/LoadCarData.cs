@@ -27,11 +27,27 @@ public class LoadCarData : MonoBehaviour
         playerInfo.copTrigger = copTrigger;
         
         prometeoCarController = carInstance.GetComponent<PrometeoCarController>();
+
+        prometeoCarController.carEngineSound = SoundsBaseCollection.Instance.CarEngine;
+        prometeoCarController.tireScreechSound = SoundsBaseCollection.Instance.TireScreech;
+        prometeoCarController.useSounds = true;
+        
+        prometeoCarController.throttleButton = UIManager.Instance.throttleButton;
+        prometeoCarController.reverseButton = UIManager.Instance.breakesButton;
+        prometeoCarController.turnLeftButton = UIManager.Instance.turnLeftButton;
+        prometeoCarController.turnRightButton = UIManager.Instance.turnRightButton;
+        prometeoCarController.handbrakeButton = UIManager.Instance.handbrakeButton;
+
+        
         
         carInstance.gameObject.tag = "PlayerDamagable";
         carInstance.gameObject.layer = 10;
         ChangeChildLayer(carInstance.transform, 10);
         ChangeChildTag(carInstance.transform, "PlayerDamagable");
+        
+        GameObject saveSphere = Instantiate(GameManager.Instance.spaveShperePrefab, playerInfo.gameObject.transform);
+        saveSphere.transform.localPosition = Vector3.zero;
+        playerInfo.saveSphere = saveSphere.GetComponent<SaveSphere>();
         
         LoadData();
 
