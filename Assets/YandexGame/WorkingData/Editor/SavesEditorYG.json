@@ -1,32 +1,25 @@
 {
-    "idSave": 6068,
+    "idSave": 6625,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 8000,
+    "money": 6800,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "ToyotaAE-86",
+    "SelectedCarName": "BMW M4",
     "ownedCars": [
         "Orange Car",
-        "NissanGTR50",
-        "ToyotaAE-86"
+        "ToyotaAE-86",
+        "Porsche Taycan",
+        "BMW M4"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "24.08.2024 21:37:04",
-    "carsInShop": [
-        "LexusLFA",
-        "NissanSkyline",
-        "ChevroletCamaro",
-        "PurpleCar",
-        "MazdaRX-7",
-        "GreenCar",
-        "BMWM3E36"
-    ],
+    "lastShopUpdateTime": "",
+    "carsInShop": [],
     "musicState": "true",
     "gotGiftToday": false,
     "gems": 0,

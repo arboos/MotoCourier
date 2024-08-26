@@ -31638,11 +31638,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedCars: []
+  lockedCars: []
   content: {fileID: 614981315}
   carGaragePrefab: {fileID: 3955652935255601263, guid: 0f8847400fdd9ae47893ea14bae72901,
     type: 3}
+  lockedCarGaragePrefab: {fileID: 4698396305551346052, guid: 516565a7e1cd7c349a6d8eb06c3ccf01,
+    type: 3}
   obtainedCarsFromAllText: {fileID: 638027244}
   carContainer: {fileID: 1676810505}
+  unownedCarList: {fileID: 1676810506}
 --- !u!1 &1517882891
 GameObject:
   m_ObjectHideFlags: 0
