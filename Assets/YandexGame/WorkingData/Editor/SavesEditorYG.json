@@ -1,25 +1,35 @@
 {
-    "idSave": 6625,
+    "idSave": 6686,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 6800,
+    "money": 2800,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "BMW M4",
+    "SelectedCarName": "BMWM3E36",
     "ownedCars": [
         "Orange Car",
         "ToyotaAE-86",
         "Porsche Taycan",
-        "BMW M4"
+        "BMW M4",
+        "Chevrolet Camaro",
+        "Green Car",
+        "Dodge Challenger 2008",
+        "LexusLFA",
+        "BMWM3E36"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "",
-    "carsInShop": [],
+    "lastShopUpdateTime": "25.08.2024 19:33:15",
+    "carsInShop": [
+        "PurpleCar",
+        "MazdaRX-7",
+        "NissanGTR50",
+        "NissanSkyline"
+    ],
     "musicState": "true",
     "gotGiftToday": false,
     "gems": 0,
