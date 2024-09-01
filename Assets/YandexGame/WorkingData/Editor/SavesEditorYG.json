@@ -1,46 +1,32 @@
 {
-  "idSave": 6697,
+  "idSave": 6842,
   "isFirstSession": false,
   "language": "en",
   "promptDone": false,
-  "money": 1600,
+  "money": 13050,
   "newPlayerName": "Hello!",
   "openLevels": [
     false,
     true,
     false
   ],
-  "SelectedCarName": "Lamborghini Aventador",
+  "SelectedCarName": "Orange Car",
   "ownedCars": [
-    "Orange Car",
-    "ToyotaAE-86",
-    "Porsche Taycan",
-    "BMW M4",
-    "Chevrolet Camaro",
-    "Green Car",
-    "Dodge Challenger 2008",
-    "LexusLFA",
-    "BMWM3E36",
-    "Lamborghini Aventador"
+    "Orange Car"
   ],
-  "energy": 8,
-  "lastShopUpdateTime": "25.08.2024 19:33:15",
-  "carsInShop": [
-    "PurpleCar",
-    "MazdaRX-7",
-    "NissanGTR50",
-    "NissanSkyline"
-  ],
+  "energy": 5,
+  "lastShopUpdateTime": null,
+  "carsInShop": [],
   "musicState": "true",
   "gotGiftToday": false,
   "gems": 0,
   "offersAmount": 2,
   "previewCarInGarage": "",
-  "AccountLevel": 1,
+  "AccountLevel": 8,
   "AccountMoney": 0,
-  "ExpToNextLevel": 50,
-  "CurrentExp": 0,
-  "BattlePass_Level": 1,
+  "ExpToNextLevel": 125,
+  "CurrentExp": 60,
+  "BattlePass_Level": 2,
   "BattlePass_ExpToNextLevel": 50,
-  "BattlePass_CurrentExp": 0
+  "BattlePass_CurrentExp": 25
 }

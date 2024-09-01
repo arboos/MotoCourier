@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using YG;
 using Random = UnityEngine.Random;
 
@@ -25,8 +26,21 @@ public class GameResultInfo : MonoBehaviour
 
     private void Start()
     {
+        
+        
+        SceneManager.activeSceneChanged += (arg0, scene) =>
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                print("IF ASD)_");
+                AddResults();
+            }
+        };
+        
+        
+        print("START ASD)_");
         MedalsGotStr = new List<string>();
-        //AddResults();
+        
     }
 
     public int Exp;
@@ -35,9 +49,15 @@ public class GameResultInfo : MonoBehaviour
 
     public void AddResults()
     {
+        print("BPEXP: " + BattlePass_Exp);
         BattlePassManager.Instance.AddExp(BattlePass_Exp);
+        
         ExpManager.Instance.AddExp(Exp);
         YandexGame.savesData.money += Money;
+        
+        MenuUIManager.Instance.AddResultsReact();
+        print("ADD RES ASD)_");
+        Destroy(gameObject);
     }
     
     public void SpawnCoins(int count)
@@ -49,5 +69,9 @@ public class GameResultInfo : MonoBehaviour
         }  
     }
 
-
+    private void OnApplicationQuit()
+    {
+        YandexGame.ResetSaveProgress();
+        YandexGame.SaveProgress();
+    }
 }

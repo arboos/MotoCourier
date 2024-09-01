@@ -46,14 +46,23 @@ public class BattlePassManager : MonoBehaviour
     
     public void AddExp(int count)
     {
-        YandexGame.savesData.CurrentExp += count;
-
-        while(YandexGame.savesData.CurrentExp >= YandexGame.savesData.ExpToNextLevel)
+        YandexGame.savesData.BattlePass_CurrentExp += count;
+        YandexGame.SaveProgress(); 
+        
+        print("1. BP_LVL = " + YandexGame.savesData.BattlePass_Level);
+        print("1. BP_CE = " + YandexGame.savesData.BattlePass_CurrentExp);
+        
+        while(YandexGame.savesData.BattlePass_CurrentExp >= YandexGame.savesData.BattlePass_ExpToNextLevel)
         {
-            YandexGame.savesData.CurrentExp -= YandexGame.savesData.ExpToNextLevel;
-            YandexGame.savesData.AccountLevel++;
+            print("Inside while()");
+            YandexGame.savesData.BattlePass_CurrentExp -= YandexGame.savesData.BattlePass_ExpToNextLevel;
+            YandexGame.savesData.BattlePass_Level++;
             YandexGame.SaveProgress();
             UpdateExpToNextLevel();
         }
+        
+        YandexGame.SaveProgress();
+        print("2. BP_LVL = " + YandexGame.savesData.BattlePass_Level);
+        print("2. BP_CE = " + YandexGame.savesData.BattlePass_CurrentExp);
     }
 }
