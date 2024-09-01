@@ -1,20 +1,18 @@
 {
-  "idSave": 6842,
+  "idSave": 7123,
   "isFirstSession": false,
-  "language": "en",
+  "language": "ru",
   "promptDone": false,
-  "money": 13050,
+  "money": 10000,
   "newPlayerName": "Hello!",
   "openLevels": [
     false,
     true,
     false
   ],
-  "SelectedCarName": "Orange Car",
-  "ownedCars": [
-    "Orange Car"
-  ],
-  "energy": 5,
+  "SelectedCarName": null,
+  "ownedCars": [],
+  "energy": 10,
   "lastShopUpdateTime": null,
   "carsInShop": [],
   "musicState": "true",
@@ -22,11 +20,11 @@
   "gems": 0,
   "offersAmount": 2,
   "previewCarInGarage": "",
-  "AccountLevel": 8,
+  "AccountLevel": 1,
   "AccountMoney": 0,
-  "ExpToNextLevel": 125,
-  "CurrentExp": 60,
-  "BattlePass_Level": 2,
+  "ExpToNextLevel": 50,
+  "CurrentExp": 0,
+  "BattlePass_Level": 1,
   "BattlePass_ExpToNextLevel": 50,
-  "BattlePass_CurrentExp": 25
+  "BattlePass_CurrentExp": 0
 }

@@ -49,11 +49,10 @@ public class GameResultInfo : MonoBehaviour
 
     public void AddResults()
     {
-        print("BPEXP: " + BattlePass_Exp);
         BattlePassManager.Instance.AddExp(BattlePass_Exp);
-        
         ExpManager.Instance.AddExp(Exp);
-        YandexGame.savesData.money += Money;
+        
+        SpawnCoins(Money);
         
         MenuUIManager.Instance.AddResultsReact();
         print("ADD RES ASD)_");

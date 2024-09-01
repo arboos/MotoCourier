@@ -86,12 +86,13 @@ public class MenuUIManager : MonoBehaviour
 
     public async void AddMoney(int count)
     {
-        tempCoins += count;
+        YandexGame.savesData.money += count;
+        YandexGame.SaveProgress();
         if (coinReactionTween == null)
         {
             coinReactionTween = coinsImage.DOPunchScale(new Vector3(0.4f, 0.4f, 0.4f), 0.1f).SetEase(Ease.InOutElastic);
             await coinReactionTween.ToUniTask();
-            coinsText.text = (YandexGame.savesData.money + tempCoins).ToString();
+            coinsText.text = (YandexGame.savesData.money).ToString();
             coinReactionTween = null;
         }
     }
