@@ -15,7 +15,8 @@ MonoBehaviour:
   carName: BMW M4
   carPrefab: {fileID: 8611324347544405343, guid: 80a0d44769ecdd943bd8e1f6c69b3e2c,
     type: 3}
-  carDescription: ///
+  carDescription: A high-performance coupe with aggressive styling, powered by a
+    turbocharged inline-six engine, delivering exhilarating speed and agility.
   rarity: Mythic
   maxSpeed: 120
   maxReverseSpeed: 80

@@ -15,7 +15,8 @@ MonoBehaviour:
   carName: NissanGTR50
   carPrefab: {fileID: 2031493162167391605, guid: 11a7be475e1f4a84e909bdb7ba007f52,
     type: 3}
-  carDescription: 111
+  carDescription: A limited-edition powerhouse blending cutting-edge technology and
+    raw performance, designed to push the limits of speed.
   rarity: Rare
   maxSpeed: 120
   maxReverseSpeed: 80

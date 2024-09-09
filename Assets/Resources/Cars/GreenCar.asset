@@ -15,7 +15,8 @@ MonoBehaviour:
   carName: Green Car
   carPrefab: {fileID: 6984796145895646155, guid: d2f1433116bc6464981e3a0d493c8a25,
     type: 3}
-  carDescription: ???
+  carDescription: A sleek, eco-friendly vehicle with efficient performance, perfect
+    for those who care about both style and sustainability.
   rarity: Rare
   maxSpeed: 120
   maxReverseSpeed: 80

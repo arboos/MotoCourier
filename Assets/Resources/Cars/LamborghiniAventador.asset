@@ -15,7 +15,8 @@ MonoBehaviour:
   carName: Lamborghini Aventador
   carPrefab: {fileID: 1812531063514535614, guid: f1f61cd855c738b4fa34e703502d50d6,
     type: 3}
-  carDescription: ///
+  carDescription: An exotic supercar featuring a roaring V12 engine and breathtaking
+    design, delivering unmatched power and speed.
   rarity: Mythic
   maxSpeed: 120
   maxReverseSpeed: 80

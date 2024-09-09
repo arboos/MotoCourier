@@ -15,7 +15,8 @@ MonoBehaviour:
   carName: BMWM3E36
   carPrefab: {fileID: 1408038810552769605, guid: 96eab255c349e3e4db9b84db22fb87e2,
     type: 3}
-  carDescription: 444
+  carDescription: A classic sports sedan known for its balanced handling, precision,
+    and iconic inline-six engine, making it a favorite among driving enthusiasts.
   rarity: Epic
   maxSpeed: 120
   maxReverseSpeed: 80

@@ -15,7 +15,8 @@ MonoBehaviour:
   carName: Chevrolet Camaro
   carPrefab: {fileID: 4830527368437521726, guid: 8185e9b0476d3024da9d7eebd3ea79d2,
     type: 3}
-  carDescription: 222
+  carDescription: An American muscle car legend with bold design, offering thrilling
+    V8 performance and unmistakable road presence.
   rarity: Legendary
   maxSpeed: 160
   maxReverseSpeed: 120

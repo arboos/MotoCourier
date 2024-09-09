@@ -15,7 +15,8 @@ MonoBehaviour:
   carName: Dodge Challenger 2008
   carPrefab: {fileID: 645725323353723007, guid: c13e058a3d770f1428934c21654a8f92,
     type: 3}
-  carDescription: 111
+  carDescription: A retro-styled muscle car with a powerful V8 engine, offering a
+    nostalgic yet modern driving experience with brute strength.
   rarity: Rare
   maxSpeed: 120
   maxReverseSpeed: 80

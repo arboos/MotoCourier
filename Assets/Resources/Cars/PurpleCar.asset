@@ -15,7 +15,8 @@ MonoBehaviour:
   carName: Purple Car
   carPrefab: {fileID: 8701164611604439024, guid: f6ed8acc7519254488622fae0762fc20,
     type: 3}
-  carDescription: ///
+  carDescription: ' A bold, unique vehicle with a strong visual impact and dynamic
+    handling, perfect for making a statement on the road.'
   rarity: Epic
   maxSpeed: 120
   maxReverseSpeed: 80

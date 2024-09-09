@@ -15,7 +15,8 @@ MonoBehaviour:
   carName: NissanSkyline
   carPrefab: {fileID: 4538848392701099156, guid: 5d8695039ee75fc41b759e5245c3a454,
     type: 3}
-  carDescription: 666
+  carDescription: A legendary sports car with a rich motorsport heritage, offering
+    exceptional performance and advanced engineering.
   rarity: Legendary
   maxSpeed: 120
   maxReverseSpeed: 80

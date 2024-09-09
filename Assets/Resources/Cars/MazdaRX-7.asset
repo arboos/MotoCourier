@@ -15,7 +15,8 @@ MonoBehaviour:
   carName: MazdaRX-7
   carPrefab: {fileID: 3248139659785394444, guid: 28328f8258141174ea285dd5e64df46d,
     type: 3}
-  carDescription: '***'
+  carDescription: "A lightweight, rotary-powered sports car known for its agile handling
+    and timeless design, a true enthusiast\u2019s car."
   rarity: Legendary
   maxSpeed: 120
   maxReverseSpeed: 80
