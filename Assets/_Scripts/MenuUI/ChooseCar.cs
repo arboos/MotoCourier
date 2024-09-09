@@ -25,6 +25,17 @@ public class ChooseCar : MonoBehaviour
     public Sprite[] raritiesImages;
     public Image rarityImage;
 
+    [Header("Sliders")] 
+    public Slider maxSpeedSlider;
+    public Slider maxReverseSpeedSlider;
+    public Slider accelerationMultiplierSlider;
+    public Slider steeringAngleSlider;
+
+    public TextMeshProUGUI maxSpeedSliderText;
+    public TextMeshProUGUI maxReverseSpeedSliderText;
+    public TextMeshProUGUI accelerationMultiplierSliderText;
+    public TextMeshProUGUI steeringAngleSliderText;
+
     void OnEnable()
     {
         PopulateOwnedCars();
@@ -88,6 +99,17 @@ public class ChooseCar : MonoBehaviour
         carRarity.text = carData.rarity;
         rarityImage.sprite = GetRarityImage(carData.rarity);
         selectText.text = isCarOwned ? YandexGame.savesData.SelectedCarName == carData.carName ? "Equipped" : "Equip" : $"{carData.cost}";
+        
+        UpdateSlider(maxSpeedSlider, maxSpeedSliderText, carData.maxSpeed, 190);
+        UpdateSlider(maxReverseSpeedSlider, maxReverseSpeedSliderText, carData.maxReverseSpeed, 120);
+        UpdateSlider(accelerationMultiplierSlider, accelerationMultiplierSliderText, carData.accelerationMultiplier, 10);
+        UpdateSlider(steeringAngleSlider, steeringAngleSliderText, carData.maxSteeringAngle, 45);
+    }
+    
+    private void UpdateSlider(Slider slider, TextMeshProUGUI text, float value, float maxValue, string suffix = "")
+    {
+        slider.value = value / maxValue;
+        text.text = $"{value}/{maxValue} {suffix}";
     }
     
     public void SelectCar()
@@ -229,9 +251,12 @@ public class ChooseCarEditor : Editor
         GUILayout.Label("Data Manage", EditorStyles.boldLabel);
         if (GUILayout.Button("Reset Data"))
         {
-            Debug.Log("Data was reset");
-            YandexGame.ResetSaveProgress();
-            YandexGame.SaveProgress();
+            if (EditorUtility.DisplayDialog("Confirm Reset", "Are you sure you want to reset car data?", "Yes", "No"))
+            {
+                YandexGame.ResetSaveProgress();
+                YandexGame.SaveProgress();
+                Debug.Log("Data was reset");
+            }
         }
         GUILayout.Label("By clicking this button you will reset data of obtained cars (IN-GAME ONLY)", EditorStyles.centeredGreyMiniLabel);
         GUILayout.Label("Made for testing CarCapsule drop!", EditorStyles.centeredGreyMiniLabel);
