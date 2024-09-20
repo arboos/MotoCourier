@@ -45,6 +45,34 @@ public class MenuUIManager : MonoBehaviour
     public TextMeshProUGUI BP_Menu_Points;
 
     public Transform BP_LINE_PARENT;
+
+    [Header("UI Translate texts")]
+    
+    [Header("UI Translate texts")]
+    public TextMeshProUGUI shopText;     
+    public TextMeshProUGUI garageText;    
+    public TextMeshProUGUI giftsText;     
+    public TextMeshProUGUI passText;      
+    public TextMeshProUGUI bestText;      
+    public TextMeshProUGUI questsText;    
+    public TextMeshProUGUI rateText;      
+    public TextMeshProUGUI playText;      
+    public TextMeshProUGUI specialText;   
+    public TextMeshProUGUI offersText;    
+    public TextMeshProUGUI carsText;      
+    public TextMeshProUGUI resourcesText; 
+    public TextMeshProUGUI settingsText; 
+    public TextMeshProUGUI musicText;     
+    public TextMeshProUGUI languageText; 
+    
+    private TextMeshProUGUI[] uiTexts;
+
+    private string[] localizationKeys = 
+    {
+        "shop", "garage", "gifts", "pass", "best", "quests", "rate", 
+        "play", "special", "offers", "cars", "resources", "settings", "music", "language"
+    };
+
     
 
     public void AddResultsReact()
@@ -81,6 +109,14 @@ public class MenuUIManager : MonoBehaviour
     {
         playerNameText.text = YandexGame.playerName;
         playerIdText.text = YandexGame.playerId;
+
+        LocalizationManager.OnChangeLanguage += UpdateTexts;
+        
+        uiTexts = new TextMeshProUGUI[] 
+        {
+            shopText, garageText, giftsText, passText, bestText, questsText, rateText, 
+            playText, specialText, offersText, carsText, resourcesText, settingsText, musicText, languageText
+        };
     }
 
 
@@ -95,5 +131,18 @@ public class MenuUIManager : MonoBehaviour
             coinsText.text = (YandexGame.savesData.money).ToString();
             coinReactionTween = null;
         }
+    }
+
+    private void UpdateTexts()
+    {
+        for (int i = 0; i < uiTexts.Length; i++)
+        {
+            uiTexts[i].text = LocalizationManager.Instance.GetLocalizedValue(localizationKeys[i]);
+        }
+    }
+
+    private void OnDisable()
+    {
+        LocalizationManager.OnChangeLanguage -= UpdateTexts;
     }
 }

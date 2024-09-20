@@ -1,5 +1,5 @@
 {
-    "idSave": 7900,
+    "idSave": 7944,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -16,15 +16,15 @@
         "ToyotaAE-86"
     ],
     "energy": 12,
-    "lastShopUpdateTime": "15.09.2024 0:57:46",
+    "lastShopUpdateTime": "20.09.2024 3:02:04",
     "carsInShop": [
-        "PurpleCar",
-        "BMWM4",
-        "GreenCar",
-        "BMWM3E36",
-        "LamborghiniAventador",
         "ChevroletCamaro",
-        "DodgeChallenger2008"
+        "DodgeChallenger2008",
+        "GreenCar",
+        "PurpleCar",
+        "NissanSkyline",
+        "BMWM4",
+        "PorscheTaycan"
     ],
     "musicState": "false",
     "gotGiftToday": false,
