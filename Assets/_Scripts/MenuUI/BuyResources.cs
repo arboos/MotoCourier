@@ -22,6 +22,7 @@ public class BuyResources : MonoBehaviour
     [Header("UI")] 
     public TextMeshProUGUI costText;
     public TextMeshProUGUI amountText;
+    public TextMeshProUGUI resourceText;
 
     public GameObject coinResourcePreview;
     public GameObject gemResourcePreview;
@@ -61,5 +62,10 @@ public class BuyResources : MonoBehaviour
         }
 
         YandexGame.SaveProgress();
+    }
+    
+    private void OnEnable()
+    {
+        resourceText.text = LocalizationManager.Instance.GetLocalizedValue(resourceType == ItemType.Coins? "coins": "gems");
     }
 }

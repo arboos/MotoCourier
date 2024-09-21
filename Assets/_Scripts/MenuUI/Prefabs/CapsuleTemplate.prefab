@@ -771,6 +771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxWindow: {fileID: 9199382530095477910, guid: 26c80cb64a961714fba579ae0bf14b9c,
     type: 3}
+  boxText: {fileID: 6481591341982571332}
 --- !u!95 &2671538601949329853
 Animator:
   serializedVersion: 5

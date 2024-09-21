@@ -12,6 +12,7 @@ public class SetUpPreview : MonoBehaviour
     public TextMeshProUGUI carName;
     public Transform carSpawnPoint;
     public TextMeshProUGUI carCostText;
+    public TextMeshProUGUI carText;
 
     [Header("Car Data")] 
     public CarData carData;
@@ -61,5 +62,9 @@ public class SetUpPreview : MonoBehaviour
         ShopManager.OnShopUpdate -= DestroyItself;
         
         Destroy(this.gameObject);
+    }
+    private void OnEnable()
+    {
+        carText.text = LocalizationManager.Instance.GetLocalizedValue("car");
     }
 }

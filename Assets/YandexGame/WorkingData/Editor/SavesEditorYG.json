@@ -1,34 +1,33 @@
 {
-    "idSave": 7944,
+    "idSave": 8589,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
-    "money": 8500,
+    "money": 10000,
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
     ],
-    "SelectedCarName": "ToyotaAE-86",
+    "SelectedCarName": "Orange Car",
     "ownedCars": [
-        "Orange Car",
-        "ToyotaAE-86"
+        "Orange Car"
     ],
-    "energy": 12,
-    "lastShopUpdateTime": "20.09.2024 3:02:04",
+    "energy": 10,
+    "lastShopUpdateTime": "20.09.2024 23:24:42",
     "carsInShop": [
-        "ChevroletCamaro",
+        "BMWM3E36",
         "DodgeChallenger2008",
+        "PorscheTaycan",
         "GreenCar",
-        "PurpleCar",
-        "NissanSkyline",
+        "ToyotaAE-86",
         "BMWM4",
-        "PorscheTaycan"
+        "NissanSkyline"
     ],
     "musicState": "false",
     "gotGiftToday": false,
-    "gems": 37,
+    "gems": 0,
     "offersAmount": 2,
     "previewCarInGarage": "",
     "AccountLevel": 1,

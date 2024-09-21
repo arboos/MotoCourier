@@ -3738,8 +3738,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 0
   amount: 0
-  type: 
+  type: Coins
   icon: {fileID: 0}
   mainIcon: {fileID: 7674374619364065071}
   costText: {fileID: 6735734801331005564}
   amountText: {fileID: 1965359018919621229}
+  resourceText: {fileID: 1795000488349369137}

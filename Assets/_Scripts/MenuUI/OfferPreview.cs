@@ -12,6 +12,7 @@ public class OfferPreview : MonoBehaviour
     public Transform carSpawnPoint;
     public TextMeshProUGUI previousCostText;
     public TextMeshProUGUI currentCostText;
+    public TextMeshProUGUI offerText;
 
     [Header("Car Data")] 
     public CarData carData;
@@ -67,5 +68,10 @@ public class OfferPreview : MonoBehaviour
         ShopManager.OnShopUpdate -= DestroyItself;
         
         Destroy(this.gameObject);
+    }
+    
+    private void OnEnable()
+    {
+        offerText.text = LocalizationManager.Instance.GetLocalizedValue("offer");
     }
 }

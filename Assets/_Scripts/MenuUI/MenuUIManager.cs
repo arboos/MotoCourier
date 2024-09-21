@@ -56,11 +56,7 @@ public class MenuUIManager : MonoBehaviour
     public TextMeshProUGUI bestText;      
     public TextMeshProUGUI questsText;    
     public TextMeshProUGUI rateText;      
-    public TextMeshProUGUI playText;      
-    public TextMeshProUGUI specialText;   
-    public TextMeshProUGUI offersText;    
-    public TextMeshProUGUI carsText;      
-    public TextMeshProUGUI resourcesText; 
+    public TextMeshProUGUI playText;
     public TextMeshProUGUI settingsText; 
     public TextMeshProUGUI musicText;     
     public TextMeshProUGUI languageText; 
@@ -70,7 +66,7 @@ public class MenuUIManager : MonoBehaviour
     private string[] localizationKeys = 
     {
         "shop", "garage", "gifts", "pass", "best", "quests", "rate", 
-        "play", "special", "offers", "cars", "resources", "settings", "music", "language"
+        "play", "settings", "music", "language"
     };
 
     
@@ -109,14 +105,8 @@ public class MenuUIManager : MonoBehaviour
     {
         playerNameText.text = YandexGame.playerName;
         playerIdText.text = YandexGame.playerId;
-
-        LocalizationManager.OnChangeLanguage += UpdateTexts;
         
-        uiTexts = new TextMeshProUGUI[] 
-        {
-            shopText, garageText, giftsText, passText, bestText, questsText, rateText, 
-            playText, specialText, offersText, carsText, resourcesText, settingsText, musicText, languageText
-        };
+        LocalizationManager.OnChangeLanguage += UpdateTexts;
     }
 
 
@@ -135,6 +125,11 @@ public class MenuUIManager : MonoBehaviour
 
     private void UpdateTexts()
     {
+        uiTexts = new TextMeshProUGUI[] 
+        {
+            shopText, garageText, giftsText, passText, bestText, questsText, rateText, playText, settingsText, musicText, languageText,
+        };
+        
         for (int i = 0; i < uiTexts.Length; i++)
         {
             uiTexts[i].text = LocalizationManager.Instance.GetLocalizedValue(localizationKeys[i]);

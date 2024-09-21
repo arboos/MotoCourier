@@ -3528,3 +3528,4 @@ MonoBehaviour:
   boxWindow: {fileID: 2832536907853898838, guid: d4ae52a4c684d994d97c727bec2b885c,
     type: 3}
   costText: {fileID: 6735734801331005564}
+  boxText: {fileID: 1795000488349369137}

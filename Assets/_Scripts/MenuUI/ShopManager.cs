@@ -25,6 +25,14 @@ public class ShopManager : MonoBehaviour
     [Header("UI")] 
     public Transform spawnPoint;
     public TextMeshProUGUI countdownText;
+    
+    public TextMeshProUGUI specialText;   
+    public TextMeshProUGUI offersText;    
+    public TextMeshProUGUI carsText;      
+    public TextMeshProUGUI resourcesText;
+    public TextMeshProUGUI shopText;
+    
+    // "special", "offers", "cars", "resources",
 
     [Header("References")] 
     public UnownedCarList unownedCarList;
@@ -38,6 +46,12 @@ public class ShopManager : MonoBehaviour
         LoadLastUpdateTime();
         StartCoroutine(ShopRefreshRoutine());
         StartCoroutine(UpdateCountdownRoutine());
+
+        specialText.text = LocalizationManager.Instance.GetLocalizedValue("special");
+        offersText.text = LocalizationManager.Instance.GetLocalizedValue("offers");
+        carsText.text = LocalizationManager.Instance.GetLocalizedValue("cars");
+        resourcesText.text = LocalizationManager.Instance.GetLocalizedValue("resources");
+        shopText.text = LocalizationManager.Instance.GetLocalizedValue("shop");
     }
 
     private IEnumerator ShopRefreshRoutine()

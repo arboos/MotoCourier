@@ -1359,6 +1359,7 @@ MonoBehaviour:
   rarityImage: {fileID: 964734597596131907}
   previousCostText: {fileID: 6657249664837388985}
   currentCostText: {fileID: 7029289730177499494}
+  offersText: {fileID: 5921439427618396179}
   ItemPreview: {fileID: 9199382530095477910, guid: c08b120aebc06564ca190cae34c2926e,
     type: 3}
   carData: {fileID: 0}

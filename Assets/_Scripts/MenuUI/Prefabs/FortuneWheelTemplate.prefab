@@ -1228,6 +1228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheelWindow: {fileID: 2832536907853898838, guid: 89b796a9d5cd65f4fbc0e07f60973723,
     type: 3}
+  fortuneWheelText: {fileID: 6481591341982571332}
 --- !u!95 &635338648545523108
 Animator:
   serializedVersion: 5

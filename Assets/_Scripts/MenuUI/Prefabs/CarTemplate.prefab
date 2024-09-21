@@ -656,6 +656,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d96f1c6be6b8d42e7a8e1d30ba2f963f, type: 3}
   rarityImage: {fileID: 8298971621813254282}
   carCostText: {fileID: 7643548931046416541}
+  carText: {fileID: 1501692314227609940}
   ItemPreview: {fileID: 9199382530095477910, guid: 70e702d3f61aec741ada4b0347bf93f7,
     type: 3}
   carData: {fileID: 0}

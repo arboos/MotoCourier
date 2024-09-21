@@ -14,7 +14,18 @@
     "resources": "Resources",
     "settings": "Settings",
     "music": "Music",
-    "language": "Language"
+    "language": "Language",
+    "fortuneWheel": "Fortune Wheel",
+    "box": "Box",
+    "gift": "Gift",
+    "offer": "Offer",
+    "car": "Car",
+    "coins": "Coins",
+    "gems": "Gems",
+    "rare": "Rare",
+    "epic": "Epic",
+    "mythic": "Mythic",
+    "legendary": "Legendary"
   },
   "ru": {
     "shop": "Магазин",
@@ -31,7 +42,18 @@
     "resources": "Ресурсы",
     "settings": "Настройки",
     "music": "Музыка",
-    "language": "Язык"
+    "language": "Язык",
+    "fortuneWheel": "Колесо фортуны",
+    "box": "Ящик",
+    "gift": "Подарок",
+    "offer": "Предложение",
+    "car": "Машина",
+    "coins": "Монеты",
+    "gems": "Гемы",
+    "rare": "Редкий",
+    "epic": "Эпический",
+    "mythic": "Мифический",
+    "legendary": "Легендарный"
   },
   "fr": {
     "shop": "Boutique",
@@ -48,7 +70,18 @@
     "resources": "Ressources",
     "settings": "Paramètres",
     "music": "Musique",
-    "language": "Langue"
+    "language": "Langue",
+    "fortuneWheel": "Roue de la Fortune",
+    "box": "Boîte",
+    "gift": "Cadeau",
+    "offer": "Offre",
+    "car": "Voiture",
+    "coins": "Pièces",
+    "gems": "Gems",
+    "rare": "Rare",
+    "epic": "Épique",
+    "mythic": "Mythique",
+    "legendary": "Légendaire"
   },
   "de": {
     "shop": "Laden",
@@ -65,7 +98,18 @@
     "resources": "Ressourcen",
     "settings": "Einstellungen",
     "music": "Musik",
-    "language": "Sprache"
+    "language": "Sprache",
+    "fortuneWheel": "Glücksrad",
+    "box": "Kiste",
+    "gift": "Geschenk",
+    "offer": "Angebot",
+    "car": "Auto",
+    "coins": "Münzen",
+    "gems": "Edelsteine",
+    "rare": "Selten",
+    "epic": "Episch",
+    "mythic": "Mythisch",
+    "legendary": "Legendär"
   },
   "es": {
     "shop": "Tienda",
@@ -82,7 +126,18 @@
     "resources": "Recursos",
     "settings": "Ajustes",
     "music": "Música",
-    "language": "Idioma"
+    "language": "Idioma",
+    "fortuneWheel": "Rueda de la Fortuna",
+    "box": "Caja",
+    "gift": "Regalo",
+    "offer": "Oferta",
+    "car": "Coche",
+    "coins": "Monedas",
+    "gems": "Gemas",
+    "rare": "Raro",
+    "epic": "Épico",
+    "mythic": "Mítico",
+    "legendary": "Legendario"
   },
   "it": {
     "shop": "Negozio",
@@ -99,7 +154,18 @@
     "resources": "Risorse",
     "settings": "Impostazioni",
     "music": "Musica",
-    "language": "Lingua"
+    "language": "Lingua",
+    "fortuneWheel": "Ruota della Fortuna",
+    "box": "Scatola",
+    "gift": "Regalo",
+    "offer": "Offerta",
+    "car": "Auto",
+    "coins": "Monete",
+    "gems": "Gemme",
+    "rare": "Raro",
+    "epic": "Epico",
+    "mythic": "Mitico",
+    "legendary": "Leggendario"
   },
   "pt": {
     "shop": "Loja",
@@ -116,7 +182,18 @@
     "resources": "Recursos",
     "settings": "Configurações",
     "music": "Música",
-    "language": "Idioma"
+    "language": "Idioma",
+    "fortuneWheel": "Roda da Fortuna",
+    "box": "Caixa",
+    "gift": "Presente",
+    "offer": "Oferta",
+    "car": "Carro",
+    "coins": "Moedas",
+    "gems": "Gemas",
+    "rare": "Raro",
+    "epic": "Épico",
+    "mythic": "Mítico",
+    "legendary": "Lendário"
   },
   "zh": {
     "shop": "商店",
@@ -133,7 +210,18 @@
     "resources": "资源",
     "settings": "设置",
     "music": "音乐",
-    "language": "语言"
+    "language": "语言",
+    "fortuneWheel": "幸运转盘",
+    "box": "盒子",
+    "gift": "礼物",
+    "offer": "优惠",
+    "car": "车",
+    "coins": "硬币",
+    "gems": "宝石",
+    "rare": "稀有",
+    "epic": "史诗",
+    "mythic": "神话",
+    "legendary": "传奇"
   },
   "ja": {
     "shop": "ショップ",
@@ -150,6 +238,17 @@
     "resources": "リソース",
     "settings": "設定",
     "music": "音楽",
-    "language": "言語"
+    "language": "言語",
+    "fortuneWheel": "フォーチュンホイール",
+    "box": "ボックス",
+    "gift": "ギフト",
+    "offer": "オファー",
+    "car": "車",
+    "coins": "コイン",
+    "gems": "ジェム",
+    "rare": "レア",
+    "epic": "エピック",
+    "mythic": "ミシック",
+    "legendary": "レジェンダリー"
   }
 }

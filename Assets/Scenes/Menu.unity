@@ -9254,10 +9254,6 @@ MonoBehaviour:
   questsText: {fileID: 1049776268}
   rateText: {fileID: 362811279}
   playText: {fileID: 1692579810}
-  specialText: {fileID: 1636588517}
-  offersText: {fileID: 1548692419}
-  carsText: {fileID: 246894371}
-  resourcesText: {fileID: 1136201393}
   settingsText: {fileID: 278555980}
   musicText: {fileID: 1969712010}
   languageText: {fileID: 78144276}
@@ -32644,6 +32640,11 @@ MonoBehaviour:
   - {fileID: 3830077351140762951, guid: 31ea861d62cd93442a9e65157376b751, type: 3}
   spawnPoint: {fileID: 521504202}
   countdownText: {fileID: 1771886557}
+  specialText: {fileID: 1636588517}
+  offersText: {fileID: 1548692419}
+  carsText: {fileID: 246894371}
+  resourcesText: {fileID: 1136201393}
+  shopText: {fileID: 1016752599}
   unownedCarList: {fileID: 1676810506}
   scrollToItem: {fileID: 1468570261}
 --- !u!114 &1676810505
@@ -34060,6 +34061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107c99aab0aa3c04fb9b8175b0808532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLanguage: ru
 --- !u!1 &1771886555
 GameObject:
   m_ObjectHideFlags: 0

@@ -1255,6 +1255,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: b0cc3e56fe5d54c9eab8a0e93f565355, type: 3}
   costText: {fileID: 6671478453325697618}
   amountText: {fileID: 8688838157243378287}
+  resourceText: {fileID: 559818009451085041}
   coinResourcePreview: {fileID: 9199382530095477910, guid: f3a1ed20d819e32419f9997b9f31d203,
     type: 3}
   gemResourcePreview: {fileID: 0}
@@ -3046,9 +3047,10 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: f6b12332343894ff78362008a77e87bd, type: 3}
   costText: {fileID: 532100476416121024}
   amountText: {fileID: 7465122494160557005}
+  resourceText: {fileID: 559818009451085041}
   coinResourcePreview: {fileID: 9199382530095477910, guid: f3a1ed20d819e32419f9997b9f31d203,
     type: 3}
-  gemResourcePreview: {fileID: 0}
+  gemResourcePreview: {fileID: 6148843527394386375}
 --- !u!1 &4538058370413729604
 GameObject:
   m_ObjectHideFlags: 0
@@ -4133,6 +4135,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 28299b4d6e83f4321b06a570ef68eee8, type: 3}
   costText: {fileID: 1818754851238324080}
   amountText: {fileID: 5034482942754771144}
+  resourceText: {fileID: 559818009451085041}
   coinResourcePreview: {fileID: 9199382530095477910, guid: f3a1ed20d819e32419f9997b9f31d203,
     type: 3}
   gemResourcePreview: {fileID: 0}
@@ -5145,6 +5148,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 0d34e6fcfed4e4783a4410f93223a01a, type: 3}
   costText: {fileID: 6122590698972753753}
   amountText: {fileID: 5028770358752821640}
+  resourceText: {fileID: 559818009451085041}
   coinResourcePreview: {fileID: 9199382530095477910, guid: f3a1ed20d819e32419f9997b9f31d203,
     type: 3}
   gemResourcePreview: {fileID: 0}

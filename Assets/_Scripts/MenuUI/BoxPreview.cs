@@ -14,6 +14,7 @@ public class BoxPreview : MonoBehaviour
 
     [Header("UI")] 
     public TextMeshProUGUI costText;
+    public TextMeshProUGUI boxText;
     
     public static Action OnBuyBox;
 
@@ -44,4 +45,8 @@ public class BoxPreview : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    private void OnEnable()
+    {
+        boxText.text = LocalizationManager.Instance.GetLocalizedValue("box");
+    }
 }

@@ -16,6 +16,7 @@ public class SetUpItem : MonoBehaviour
     public Sprite[] raritiesImages;
     public Image rarityImage;
     public TextMeshProUGUI carCostText;
+    public TextMeshProUGUI carText;
 
     [Header("Preview")]
     public GameObject ItemPreview;
@@ -29,7 +30,7 @@ public class SetUpItem : MonoBehaviour
         carNameText.text = carData.carName;
         GameObject carInstance = Instantiate(carData.carPrefab, carSpawnPointTransform);
         carInstance.GetComponent<PrometeoCarController>().enabled = false;
-        rarityText.text = carData.rarity;
+        rarityText.text = LocalizationManager.Instance.GetLocalizedValue($"{carData.rarity.ToLower()}");
         rarityImage.sprite = GetRarityImage(carData.rarity);
         carCostText.text = carData.cost.ToString();
     }
@@ -57,5 +58,10 @@ public class SetUpItem : MonoBehaviour
         }
 
         return raritiesImages[3];
+    }
+
+    private void OnEnable()
+    {
+        carText.text = LocalizationManager.Instance.GetLocalizedValue("car");
     }
 }

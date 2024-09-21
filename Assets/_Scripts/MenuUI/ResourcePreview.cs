@@ -18,6 +18,7 @@ public class ResourcePreview : MonoBehaviour
     [Header("UI")] 
     public TextMeshProUGUI costText;
     public TextMeshProUGUI amountText;
+    public TextMeshProUGUI resourceText;
     
     public static Action OnBuyReresources;
 
@@ -56,5 +57,10 @@ public class ResourcePreview : MonoBehaviour
         ShopManager.OnShopUpdate -= DestroyItself;
         
         Destroy(this.gameObject);
+    }
+    
+    private void OnEnable()
+    {
+        resourceText.text = LocalizationManager.Instance.GetLocalizedValue(type == "Coins"? "coins": "gems");
     }
 }

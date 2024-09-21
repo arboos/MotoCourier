@@ -1,12 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using YG;
+using Random = UnityEngine.Random;
 
 public class GiveGift : MonoBehaviour
 {
     [Header("UI")] 
     public GameObject[] gifts;
+    public TextMeshProUGUI giftText;
+
+    private void OnEnable()
+    {
+        giftText.text = LocalizationManager.Instance.GetLocalizedValue("gift");
+    }
 
     public void GiveGiftToPlayer()
     {

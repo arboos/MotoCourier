@@ -4444,5 +4444,6 @@ MonoBehaviour:
   carSpawnPoint: {fileID: 901076051173409244}
   previousCostText: {fileID: 4024459740629267584}
   currentCostText: {fileID: 6735734801331005564}
+  offerText: {fileID: 1795000488349369137}
   carData: {fileID: 0}
   itemInShop: {fileID: 0}
