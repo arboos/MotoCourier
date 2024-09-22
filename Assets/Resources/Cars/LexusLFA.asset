@@ -15,8 +15,8 @@ MonoBehaviour:
   carName: LexusLFA
   carPrefab: {fileID: 7532750628291047865, guid: 58abf31a24a26854ba516620a60da135,
     type: 3}
-  carDescription: ' A rare, meticulously crafted supercar with a high-revving V10
-    engine, combining luxury with high-performance engineering.'
+  carDescription: A rare, meticulously crafted supercar with a high-revving V10 engine,
+    combining luxury with high-performance engineering.
   rarity: Epic
   maxSpeed: 120
   maxReverseSpeed: 80

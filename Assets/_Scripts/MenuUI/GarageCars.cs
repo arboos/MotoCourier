@@ -19,7 +19,7 @@ public class GarageCars : MonoBehaviour
 
     private void OnEnable()
     {
-        obtainedCarsFromAllText.text = $"{YandexGame.savesData.ownedCars.Count}/{carContainer.carDataArray.Length} CARS";
+        obtainedCarsFromAllText.text = $"{YandexGame.savesData.ownedCars.Count}/{carContainer.carDataArray.Length} {LocalizationManager.Instance.GetLocalizedValue("cars").ToUpper()}";
         
         foreach (Transform child in content)
         {

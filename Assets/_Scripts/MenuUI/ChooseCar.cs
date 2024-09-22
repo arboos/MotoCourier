@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEditor;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 using YG;
 
@@ -24,6 +25,12 @@ public class ChooseCar : MonoBehaviour
     public GameObject lobbyUI;
     public Sprite[] raritiesImages;
     public Image rarityImage;
+
+    public TextMeshProUGUI dataText;
+    public TextMeshProUGUI maxSpeedText;
+    public TextMeshProUGUI maxReverseSpeedText;
+    public TextMeshProUGUI accelerationMultiplierText;
+    public TextMeshProUGUI steeringAngleText;
 
     [Header("Sliders")] 
     public Slider maxSpeedSlider;
@@ -95,15 +102,21 @@ public class ChooseCar : MonoBehaviour
         currentCarInstance.transform.localScale = new Vector3(currentCarInstance.transform.localScale.x * 200, currentCarInstance.transform.localScale.x * 200, currentCarInstance.transform.localScale.z * 200);
         currentCarInstance.GetComponent<PrometeoCarController>().enabled = false;
         carNameText.text = carData.carName;
-        carDescriptionText.text = carData.carDescription;
-        carRarity.text = carData.rarity;
+        carDescriptionText.text = LocalizationManager.Instance.GetLocalizedValue( $"description{carData.carName.Replace(" ", "")}");
+        carRarity.text = LocalizationManager.Instance.GetLocalizedValue(carData.rarity.Replace(" ", "").ToLower());
         rarityImage.sprite = GetRarityImage(carData.rarity);
-        selectText.text = isCarOwned ? YandexGame.savesData.SelectedCarName == carData.carName ? "Equipped" : "Equip" : $"{carData.cost}";
+        selectText.text = isCarOwned ? YandexGame.savesData.SelectedCarName == carData.carName ? LocalizationManager.Instance.GetLocalizedValue("equipped") : LocalizationManager.Instance.GetLocalizedValue("equip") : $"{carData.cost}";
         
         UpdateSlider(maxSpeedSlider, maxSpeedSliderText, carData.maxSpeed, 190);
         UpdateSlider(maxReverseSpeedSlider, maxReverseSpeedSliderText, carData.maxReverseSpeed, 120);
         UpdateSlider(accelerationMultiplierSlider, accelerationMultiplierSliderText, carData.accelerationMultiplier, 10);
         UpdateSlider(steeringAngleSlider, steeringAngleSliderText, carData.maxSteeringAngle, 45);
+
+        dataText.text = LocalizationManager.Instance.GetLocalizedValue("data");
+        maxSpeedText.text = LocalizationManager.Instance.GetLocalizedValue("maxSpeed");
+        maxReverseSpeedText.text = LocalizationManager.Instance.GetLocalizedValue("maxReverseSpeed");
+        accelerationMultiplierText.text = LocalizationManager.Instance.GetLocalizedValue("accelerationMultiplier");
+        steeringAngleText.text = LocalizationManager.Instance.GetLocalizedValue("steeringAngle");
     }
     
     private void UpdateSlider(Slider slider, TextMeshProUGUI text, float value, float maxValue, string suffix = "")
@@ -129,7 +142,7 @@ public class ChooseCar : MonoBehaviour
     private void EquipCar(CarData carData)
     {
         YandexGame.savesData.SelectedCarName = carData.carName;
-        selectText.text = "Equipped";
+        selectText.text = LocalizationManager.Instance.GetLocalizedValue("equipped");
         shopUI.SetActive(false);
         lobbyUI.SetActive(true);
 

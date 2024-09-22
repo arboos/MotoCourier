@@ -15,7 +15,7 @@ MonoBehaviour:
   carName: Porsche Taycan
   carPrefab: {fileID: 5306259618547339612, guid: 9f0bf97fc2a7f2340b7818ac2d2d8b34,
     type: 3}
-  carDescription: " A cutting-edge electric sports sedan with Porsche\u2019s signature
+  carDescription: "A cutting-edge electric sports sedan with Porsche\u2019s signature
     performance, blending luxury, innovation, and zero-emission driving."
   rarity: Legendary
   maxSpeed: 120
