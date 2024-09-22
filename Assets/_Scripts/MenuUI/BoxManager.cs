@@ -14,6 +14,8 @@ public class BoxManager : MonoBehaviour
 
     public GameObject[] gifts;
 
+    public TextMeshProUGUI tapToOpenText;
+
 
     private void Start()
     {
@@ -22,6 +24,8 @@ public class BoxManager : MonoBehaviour
             openButton.interactable = false;
             anim.SetTrigger("Open");
         });
+
+        tapToOpenText.text = LocalizationManager.Instance.GetLocalizedValue("tapToOpen");
     }
 
     public void OnReceiveReward()

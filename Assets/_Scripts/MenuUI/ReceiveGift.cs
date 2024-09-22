@@ -8,7 +8,9 @@ using Random = UnityEngine.Random;
 
 public class ReceiveGift : MonoBehaviour
 {
-    [Header("UI")] public TextMeshProUGUI amountText;
+    [Header("UI")] 
+    public TextMeshProUGUI amountText;
+    public TextMeshProUGUI tapToGetText;
 
     [Header("Data")] 
     [Range(1, 1000)] public int giveMaxCoins;
@@ -21,6 +23,8 @@ public class ReceiveGift : MonoBehaviour
 
     private void Start()
     {
+        tapToGetText.text = LocalizationManager.Instance.GetLocalizedValue("tapToGet");
+        
         switch (gameObject.name)
         {
             case "GotCoinGift(Clone)":

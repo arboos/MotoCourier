@@ -10,10 +10,12 @@ public class DisplayFortuneWheel : MonoBehaviour
     public GameObject wheelWindow;
     private Transform spawnPoint;
     public TextMeshProUGUI fortuneWheelText;
+    public TextMeshProUGUI timePerText;
 
     private void OnEnable()
     {
         fortuneWheelText.text = LocalizationManager.Instance.GetLocalizedValue("fortuneWheel");
+        timePerText.text = LocalizationManager.Instance.GetLocalizedValue("1per24hours");
     }
 
     public void CreateWheelWindow()

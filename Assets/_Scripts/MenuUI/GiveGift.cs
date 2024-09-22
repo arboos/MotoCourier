@@ -11,10 +11,12 @@ public class GiveGift : MonoBehaviour
     [Header("UI")] 
     public GameObject[] gifts;
     public TextMeshProUGUI giftText;
+    public TextMeshProUGUI freeText;
 
     private void OnEnable()
     {
         giftText.text = LocalizationManager.Instance.GetLocalizedValue("gift");
+        freeText.text = LocalizationManager.Instance.GetLocalizedValue("free");
     }
 
     public void GiveGiftToPlayer()

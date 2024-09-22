@@ -2279,8 +2279,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountText: {fileID: 2824508649244433200}
+  tapToGetText: {fileID: 8026066490398125670}
   giveMaxCoins: 1000
   giveMaxGems: 80
+  giveMaxEnergy: 0
 --- !u!114 &2580044878471960322
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,7 +25,15 @@
     "rare": "Rare",
     "epic": "Epic",
     "mythic": "Mythic",
-    "legendary": "Legendary"
+    "legendary": "Legendary",
+    "free": "Free",
+    "tapToOpen": "Tap to open",
+    "tapToGet": "Tap to get",
+    "1per24hours": "1 per 24 hours",
+    "spin": "Spin",
+    "nextSpinIn": "Next spin in",
+    "goldPass": "Gold Pass",
+    "freePass": "Free Pass"
   },
   "ru": {
     "shop": "Магазин",
@@ -53,7 +61,15 @@
     "rare": "Редкий",
     "epic": "Эпический",
     "mythic": "Мифический",
-    "legendary": "Легендарный"
+    "legendary": "Легендарный",
+    "free": "Бесплатно",
+    "tapToOpen": "Нажмите, чтобы открыть",
+    "tapToGet": "Нажмите, чтобы получить",
+    "1per24hours": "1 раз в 24 часа",
+    "spin": "Крутить",
+    "nextSpinIn": "Следующее вращение через",
+    "goldPass": "Золотой пропуск",
+    "freePass": "Бесплатный пропуск"
   },
   "fr": {
     "shop": "Boutique",
@@ -81,7 +97,15 @@
     "rare": "Rare",
     "epic": "Épique",
     "mythic": "Mythique",
-    "legendary": "Légendaire"
+    "legendary": "Légendaire",
+    "free": "Gratuit",
+    "tapToOpen": "Appuyez pour ouvrir",
+    "tapToGet": "Appuyez pour obtenir",
+    "1per24hours": "1 par 24 heures",
+    "spin": "Tourner",
+    "nextSpinIn": "Prochain tour dans",
+    "goldPass": "Pass Or",
+    "freePass": "Pass gratuit"
   },
   "de": {
     "shop": "Laden",
@@ -109,7 +133,15 @@
     "rare": "Selten",
     "epic": "Episch",
     "mythic": "Mythisch",
-    "legendary": "Legendär"
+    "legendary": "Legendär",
+    "free": "Kostenlos",
+    "tapToOpen": "Tippen, um zu öffnen",
+    "tapToGet": "Tippen, um zu erhalten",
+    "1per24hours": "1 pro 24 Stunden",
+    "spin": "Drehen",
+    "nextSpinIn": "Nächstes Drehen in",
+    "goldPass": "Gold-Pass",
+    "freePass": "Kostenloser Pass"
   },
   "es": {
     "shop": "Tienda",
@@ -137,7 +169,15 @@
     "rare": "Raro",
     "epic": "Épico",
     "mythic": "Mítico",
-    "legendary": "Legendario"
+    "legendary": "Legendario",
+    "free": "Gratis",
+    "tapToOpen": "Toca para abrir",
+    "tapToGet": "Toca para obtener",
+    "1per24hours": "1 cada 24 horas",
+    "spin": "Girar",
+    "nextSpinIn": "Próximo giro en",
+    "goldPass": "Pase de oro",
+    "freePass": "Pase gratuito"
   },
   "it": {
     "shop": "Negozio",
@@ -165,7 +205,15 @@
     "rare": "Raro",
     "epic": "Epico",
     "mythic": "Mitico",
-    "legendary": "Leggendario"
+    "legendary": "Leggendario",
+    "free": "Gratuito",
+    "tapToOpen": "Tocca per aprire",
+    "tapToGet": "Tocca per ottenere",
+    "1per24hours": "1 ogni 24 ore",
+    "spin": "Gira",
+    "nextSpinIn": "Prossimo giro tra",
+    "goldPass": "Pass Oro",
+    "freePass": "Pass gratuito"
   },
   "pt": {
     "shop": "Loja",
@@ -193,7 +241,15 @@
     "rare": "Raro",
     "epic": "Épico",
     "mythic": "Mítico",
-    "legendary": "Lendário"
+    "legendary": "Lendário",
+    "free": "Grátis",
+    "tapToOpen": "Toque para abrir",
+    "tapToGet": "Toque para obter",
+    "1per24hours": "1 a cada 24 horas",
+    "spin": "Girar",
+    "nextSpinIn": "Próxima rodada em",
+    "goldPass": "Passe de Ouro",
+    "freePass": "Passe grátis"
   },
   "zh": {
     "shop": "商店",
@@ -221,7 +277,15 @@
     "rare": "稀有",
     "epic": "史诗",
     "mythic": "神话",
-    "legendary": "传奇"
+    "legendary": "传奇",
+    "free": "免费",
+    "tapToOpen": "点击打开",
+    "tapToGet": "点击获取",
+    "1per24hours": "24小时一次",
+    "spin": "旋转",
+    "nextSpinIn": "下一次旋转在",
+    "goldPass": "黄金通行证",
+    "freePass": "免费通行证"
   },
   "ja": {
     "shop": "ショップ",
@@ -249,6 +313,14 @@
     "rare": "レア",
     "epic": "エピック",
     "mythic": "ミシック",
-    "legendary": "レジェンダリー"
+    "legendary": "レジェンダリー",
+    "free": "無料",
+    "tapToOpen": "開くためにタップ",
+    "tapToGet": "取得するためにタップ",
+    "1per24hours": "24時間に1回",
+    "spin": "スピン",
+    "nextSpinIn": "次のスピンは",
+    "goldPass": "ゴールドパス",
+    "freePass": "フリーパス"
   }
 }

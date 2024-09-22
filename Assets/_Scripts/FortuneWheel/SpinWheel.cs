@@ -16,13 +16,11 @@ public class SpinWheel : MonoBehaviour
 
     private void Start()
     {
-        // Инициализируем состояние кнопки и таймера
-        nextSpinTime = PlayerPrefs.HasKey("NextSpinTime") 
-            ? DateTime.Parse(PlayerPrefs.GetString("NextSpinTime")) 
-            : DateTime.MinValue;
+        timerText.text = LocalizationManager.Instance.GetLocalizedValue("spin");
+    
+        nextSpinTime = PlayerPrefs.HasKey("NextSpinTime") ? DateTime.Parse(PlayerPrefs.GetString("NextSpinTime")) : DateTime.MinValue;
         canSpin = DateTime.Now >= nextSpinTime;
-
-        // Настраиваем начальное состояние кнопки
+        
         spinButton.interactable = canSpin;
         StartCoroutine(UpdateTimer());
     }
@@ -32,8 +30,7 @@ public class SpinWheel : MonoBehaviour
         if (!canSpin) return;
 
         fortuneWheel.Spin();
-
-        // Обновляем время следующего возможного нажатия
+        
         nextSpinTime = DateTime.Now.AddHours(hoursToNextSpin);
         PlayerPrefs.SetString("NextSpinTime", nextSpinTime.ToString());
         PlayerPrefs.Save();
@@ -52,11 +49,11 @@ public class SpinWheel : MonoBehaviour
             {
                 canSpin = true;
                 spinButton.interactable = true;
-                timerText.text = "You can spin now!";
+                timerText.text = LocalizationManager.Instance.GetLocalizedValue("spin");
             }
             else
             {
-                timerText.text = string.Format("Next spin in: {0:D2}:{1:D2}:{2:D2}", 
+                timerText.text = LocalizationManager.Instance.GetLocalizedValue("nextSpinIn") + string.Format(" {0:D2}:{1:D2}:{2:D2}", 
                     remainingTime.Hours, remainingTime.Minutes, remainingTime.Seconds);
             }
             yield return new WaitForSeconds(1);
