@@ -13859,7 +13859,7 @@ GameObject:
   - component: {fileID: 778032702}
   - component: {fileID: 778032704}
   m_Layer: 5
-  m_Name: ChooseLangITS
+  m_Name: it
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15004,7 +15004,7 @@ GameObject:
   - component: {fileID: 845507495}
   - component: {fileID: 845507497}
   m_Layer: 5
-  m_Name: ChooseLangPOR
+  m_Name: pt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18005,7 +18005,7 @@ GameObject:
   - component: {fileID: 1015787279}
   - component: {fileID: 1015787281}
   m_Layer: 5
-  m_Name: ChooseLangCHI
+  m_Name: zh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20154,7 +20154,7 @@ GameObject:
   - component: {fileID: 1079697270}
   - component: {fileID: 1079697272}
   m_Layer: 5
-  m_Name: ChooseLangDEU
+  m_Name: de
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20805,7 +20805,7 @@ GameObject:
   - component: {fileID: 1145365768}
   - component: {fileID: 1145365770}
   m_Layer: 5
-  m_Name: ChooseLangRUS
+  m_Name: ru
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26532,7 +26532,7 @@ GameObject:
   - component: {fileID: 1383189611}
   - component: {fileID: 1383189613}
   m_Layer: 5
-  m_Name: ChooseLangFRA
+  m_Name: fr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30423,7 +30423,7 @@ GameObject:
   - component: {fileID: 1581822642}
   - component: {fileID: 1581822644}
   m_Layer: 5
-  m_Name: ChooseLangESP
+  m_Name: es
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33818,7 +33818,7 @@ GameObject:
   - component: {fileID: 1759200656}
   - component: {fileID: 1759200658}
   m_Layer: 5
-  m_Name: ChooseLangJAP
+  m_Name: ja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34062,6 +34062,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLanguage: ru
+  buttonOn: {r: 0.18039216, g: 0.8509804, b: 0.3019608, a: 1}
+  buttonOff: {r: 0.2901961, g: 0.40784314, b: 0.43529412, a: 1}
+  buttons:
+  - {fileID: 1949912604}
+  - {fileID: 1383189611}
+  - {fileID: 1079697270}
+  - {fileID: 1581822642}
+  - {fileID: 778032702}
+  - {fileID: 845507495}
+  - {fileID: 1145365768}
+  - {fileID: 1015787279}
+  - {fileID: 1759200656}
 --- !u!1 &1771886555
 GameObject:
   m_ObjectHideFlags: 0
@@ -37246,7 +37258,7 @@ GameObject:
   - component: {fileID: 1949912604}
   - component: {fileID: 1949912606}
   m_Layer: 5
-  m_Name: ChooseLangENG
+  m_Name: en
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37285,7 +37297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13536847, g: 0.735849, b: 0.24250638, a: 1}
+  m_Color: {r: 0.1802243, g: 0.8490566, b: 0.29825348, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

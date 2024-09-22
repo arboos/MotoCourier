@@ -1,5 +1,5 @@
 {
-    "idSave": 8589,
+    "idSave": 8885,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -15,21 +15,22 @@
         "Orange Car"
     ],
     "energy": 10,
-    "lastShopUpdateTime": "20.09.2024 23:24:42",
+    "lastShopUpdateTime": "22.09.2024 3:07:27",
     "carsInShop": [
-        "BMWM3E36",
-        "DodgeChallenger2008",
-        "PorscheTaycan",
         "GreenCar",
-        "ToyotaAE-86",
+        "DodgeChallenger2008",
+        "NissanGTR50",
         "BMWM4",
-        "NissanSkyline"
+        "LexusLFA",
+        "MazdaRX-7",
+        "BMWM3E36"
     ],
-    "musicState": "false",
+    "musicState": "true",
     "gotGiftToday": false,
     "gems": 0,
     "offersAmount": 2,
     "previewCarInGarage": "",
+    "lang": "it",
     "AccountLevel": 1,
     "AccountMoney": 0,
     "ExpToNextLevel": 50,

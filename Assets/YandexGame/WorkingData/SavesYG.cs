@@ -30,6 +30,7 @@ namespace YG
         public int gems;
         public int offersAmount = 2;
         public string previewCarInGarage = "";
+        public string lang = "ru";
         
         
         //Информация аккаунта

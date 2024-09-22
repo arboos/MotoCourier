@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
 using YG;
+using UnityEngine.UI;
 
 public class LocalizationManager : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class LocalizationManager : MonoBehaviour
     private Dictionary<string, Dictionary<string, string>> localizedTexts;
     public string currentLanguage = "ru";  // Язык по умолчанию
     public static Action OnChangeLanguage;
+
+    [Header("Button")] 
+    public Color buttonOn;
+    public Color buttonOff;
+
+    public Image[] buttons;
 
     void Awake()
     {
@@ -25,11 +32,8 @@ public class LocalizationManager : MonoBehaviour
     }
 
     private void Start()
-    {
-        //currentLanguage = !string.IsNullOrEmpty(YandexGame.savesData.language) ? YandexGame.savesData.language : "ru";
-        currentLanguage = PlayerPrefs.HasKey("language") ? PlayerPrefs.GetString("language") : "ru"; 
-
-        SetLanguage(currentLanguage);
+    { 
+        SetLanguage(YandexGame.savesData.lang);
     }
 
     void LoadLocalization()
@@ -44,17 +48,21 @@ public class LocalizationManager : MonoBehaviour
         {
             return localizedTexts[currentLanguage][key];
         }
-        return key;  // Если ключ не найден, возвращаем сам ключ
+        return key;
     }
 
     public void SetLanguage(string language)
     {
         currentLanguage = language;
-        
-        //YandexGame.savesData.language = currentLanguage;  
-        //YandexGame.SaveProgress();  
-        
-        PlayerPrefs.SetString("language", currentLanguage);
+
+        YandexGame.savesData.lang = currentLanguage;
+        YandexGame.SaveProgress();
+
+
+        foreach (var button in buttons)
+        {
+            button.color = button.name == currentLanguage ? buttonOn : buttonOff;
+        }
 
         OnChangeLanguage?.Invoke();
     }
