@@ -26,7 +26,7 @@ public class SetUpCarInGarage : MonoBehaviour
         GameObject carInstance = Instantiate(carData.carPrefab, spawnPoint);
         carInstance.GetComponent<PrometeoCarController>().enabled = false;
         
-        rarityText.text = carData.rarity;
+        rarityText.text = LocalizationManager.Instance.GetLocalizedValue(carData.rarity.Replace(" ", "").ToLower());
         rarityImage.sprite = GetRarityImage(carData.rarity);
     }
 

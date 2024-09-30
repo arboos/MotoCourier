@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MapDisplayer : MonoBehaviour
@@ -12,12 +13,16 @@ public class MapDisplayer : MonoBehaviour
     public GameObject gameMapPrefab;
     public Transform content;
 
+    [Header("UI")] public TextMeshProUGUI backText;
+
     private void Start()
     {
-        for (int i = 0; i < gameMaps.Length; i++)
+        backText.text = LocalizationManager.Instance.GetLocalizedValue("back");
+
+        foreach (var gameMap in gameMaps)
         {
             GameObject newGameMap = Instantiate(gameMapPrefab, content);
-            newGameMap.GetComponent<MapPrefab>().gameMap = gameMaps[i];
+            newGameMap.GetComponent<MapPrefab>().gameMap = gameMap;
         }
     }
 }
